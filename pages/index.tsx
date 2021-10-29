@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import Header from '../components/Header'
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
     <div>
       <Head>
@@ -35,5 +35,3 @@ const Home: NextPage = () => {
     </div>
   )
 }
-
-export default Home
