@@ -9,9 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "^12.0.1",
-    "react": "^18.0.0-alpha-9c8161ba8-20211028",
-    "react-dom": "^18.0.0-alpha-9c8161ba8-20211028"
+    "next": "^12.0.1-canary.3",
+    "react": "npm:react@18.0.0-alpha-3c4c1c470-20211021",
+    "react-dom": "npm:react-dom@18.0.0-alpha-3c4c1c470-20211021"
   },
   "devDependencies": {
     "@types/node": "16.11.6",
