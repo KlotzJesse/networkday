@@ -1,3 +1,5 @@
-export default function middleware(req, ev) {
-    return new Response('Hello, world!');
+import type { NextFetchEvent, NextRequest } from 'next/server'
+
+export function middleware(req: NextRequest, ev: NextFetchEvent) {
+  return new Response('Hello, world!')
 }
