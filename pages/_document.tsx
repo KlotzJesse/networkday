@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html>
       <Head />
+      <noscript id="__next_css__DO_NOT_USE__" />
       <body>
         <Main />
         <NextScript />
