@@ -5,4 +5,7 @@ module.exports = {
     serverComponents: true,
     reactRoot: true,
   },
+  images: {
+    domains: ['images.unsplash.com'],
+  },
 }
