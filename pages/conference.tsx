@@ -118,16 +118,12 @@ export default function Conference() {
         </div>
         <div className="flex">
           <div className="flex items-center justify-center w-full space-x-6">
-            <div
-              className="bg-white shadow-md rounded-3xl w-full mr-5"
-              style={{ height: "600px" }}
-            >
+            <div className="bg-white shadow-md rounded-3xl w-full mr-5 aspect-w-16 aspect-h-9">
               <iframe
                 title="BlueJeans"
                 src="https://bluejeans.com/784330684/quick?embed=true&amp;chat=false&amp;ll=de&amp;parent=https://www.network-day.de&amp;sign_in=false&amp;footer=false&amp;apps=false&amp;room_pairing=false&amp;layout=true&amp;copy_link=false&amp;rating=false&amp;app_pitch=false&amp;lockMeetingControls=true&amp;locale=de"
                 allow="autoplay; fullscreen; microphone; camera; display-capture"
                 className="p-2 rounded-3xl"
-                style={{ position: "relative", width: "100%", height: "100%" }}
               ></iframe>
             </div>
           </div>
@@ -194,7 +190,9 @@ export default function Conference() {
                 </svg>
               </div>
               <hr className="-mx-3" />
-              <div className="flex-grow"><p>Test</p></div>
+              <div className="flex-grow">
+                <p>Test</p>
+              </div>
               <div className="flex space-x-2 p-3 border rounded-xl items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

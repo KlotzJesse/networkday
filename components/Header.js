@@ -13,27 +13,30 @@ import {
   ShieldCheckIcon,
   SupportIcon,
   ViewGridIcon,
+  GlobeIcon,
   XIcon,
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 
-const topics = [
+export const topics = [
   {
     name: "Einsparungen durch Mehrwegprodukte",
     description:
       "Ein Pfand-Mehrwegsystem verspricht nicht nur weniger Abfall, sondern zugleich auch eine Entlastung von Gastronom*Innen.",
     href: "#",
-    icon: ChartBarIcon,
+    icon: GlobeIcon,
   },
   {
     name: "Wie Vegane Produkte Nachhaltigkeit beeinflussen",
-    description: "Für die Gastronomie bieten vegane Speisen großes Potenzial, denn Kunden reduzieren bewusst ihren Fleischkonsum und wählen immer häufiger pflanzliche Alternativen.",
+    description:
+      "Für die Gastronomie bieten vegane Speisen großes Potenzial, denn Kunden reduzieren bewusst ihren Fleischkonsum und wählen immer häufiger pflanzliche Alternativen.",
     href: "#",
-    icon: CursorClickIcon,
+    icon: RefreshIcon,
   },
   {
     name: "Nachhaltigkeit in die Hygiene integrieren",
-    description: "Your customers' data will be safe and secure.",
+    description:
+      "Hygiene ist im Moment für viele Gastronomen wie auch Gäste oberste Priorität. Insbesondere Einwegprodukte rücken bei der Umsetzung der Auflagen wieder stärker in den Fokus.",
     href: "#",
     icon: ShieldCheckIcon,
   },
@@ -91,8 +94,8 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#">
-              <span className="sr-only">Workflow</span>
+            <a href="/">
+              <span className="sr-only">#NetworkDay</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-10 w-10"
@@ -112,7 +115,7 @@ export default function Header() {
           </div>
           <div className="-mr-2 -my-2 md:hidden">
             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-              <span className="sr-only">Open menu</span>
+              <span className="sr-only">Menü öffnen</span>
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
@@ -145,7 +148,7 @@ export default function Header() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                    <Popover.Panel className="z-50 absolute -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {topics.map((item) => (
@@ -214,7 +217,7 @@ export default function Header() {
                       "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     )}
                   >
-                    <span>More</span>
+                    <span>Mehr</span>
                     <ChevronDownIcon
                       className={classNames(
                         open ? "text-gray-600" : "text-gray-400",
@@ -233,7 +236,7 @@ export default function Header() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0">
+                    <Popover.Panel className="absolute z-50 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0">
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {resources.map((item) => (
@@ -324,17 +327,27 @@ export default function Header() {
       >
         <Popover.Panel
           focus
-          className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+          className="z-50 absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
         >
           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                    alt="Workflow"
-                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-10 w-10"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      className="text-pink-500"
+                      d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"
+                    />
+                    <path
+                      className="text-blue-900"
+                      d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"
+                    />
+                  </svg>
                 </div>
                 <div className="-mr-2">
                   <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -369,14 +382,14 @@ export default function Header() {
                   href="#"
                   className="text-base font-medium text-gray-900 hover:text-gray-700"
                 >
-                  Pricing
+                  Speaker
                 </a>
 
                 <a
                   href="#"
                   className="text-base font-medium text-gray-900 hover:text-gray-700"
                 >
-                  Docs
+                  Online Messe
                 </a>
                 {resources.map((item) => (
                   <a
@@ -393,12 +406,12 @@ export default function Header() {
                   href="#"
                   className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                 >
-                  Sign up
+                  Zugang reservieren
                 </a>
                 <p className="mt-6 text-center text-base font-medium text-gray-500">
-                  Existing customer?{" "}
+                  Sie suchen Lösungen zu den Themen?{" "}
                   <a href="#" className="text-indigo-600 hover:text-indigo-500">
-                    Sign in
+                    zur online Messe
                   </a>
                 </p>
               </div>
