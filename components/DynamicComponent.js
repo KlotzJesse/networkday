@@ -1,10 +1,20 @@
 import SbEditable from "storyblok-react";
 import Header from "./Header";
 import Page from "./Page";
+import Hero from "./Hero";
+import Speaker from "./Speaker";
+import Steps from "./Steps";
+import Topics from "./Topics";
+import Footer from "./Footer";
 
 // resolve Storyblok components to Next.js components
 const Components = {
   header: Header,
+  hero: Hero,
+  speaker: Speaker,
+  steps: Steps,
+  topics: Topics,
+  footer: Footer,
   page: Page,
 };
 
