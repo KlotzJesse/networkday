@@ -9,9 +9,9 @@ export default function Exhibitors() {
           <div className="h-1 ml-auto duration-300 origin-left transform bg-deep-purple-accent-400 scale-x-30 group-hover:scale-x-100" />
         </h2>
         <p className="text-gray-700 lg:text-sm lg:max-w-md">
-          "Sed ut perspiciatis unde omnis iste natus error sit iste voluptatem
-          accusantium doloremque rem aperiam, ipsa eaque quae. Sed ut
-          perspiciatis unde omnis iste."
+          &quot;Sed ut perspiciatis unde omnis iste natus error sit iste
+          voluptatem accusantium doloremque rem aperiam, ipsa eaque quae. Sed ut
+          perspiciatis unde omnis iste.&quot;
         </p>
       </div>
       <section className="px-4 py-24 mx-auto max-w-7xl">
