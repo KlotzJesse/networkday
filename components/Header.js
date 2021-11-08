@@ -89,7 +89,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Header() {
+const Header = ({ blok }) => {
   return (
     <Popover className="relative bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -424,4 +424,6 @@ export default function Header() {
       </Transition>
     </Popover>
   );
-}
+};
+
+export default Header;
