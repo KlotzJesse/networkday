@@ -12,34 +12,35 @@ export default function Footer() {
               className="inline-flex items-center"
             >
               <svg
-                className="w-8 text-deep-purple-accent-400"
-                viewBox="0 0 24 24"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeMiterlimit="10"
-                stroke="currentColor"
-                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-8"
+                viewBox="0 0 20 20"
+                fill="currentColor"
               >
-                <rect x="3" y="1" width="7" height="12" />
-                <rect x="3" y="17" width="7" height="6" />
-                <rect x="14" y="1" width="7" height="6" />
-                <rect x="14" y="11" width="7" height="12" />
+                <path
+                  className="text-pink-500"
+                  d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"
+                />
+                <path
+                  className="text-blue-900"
+                  d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"
+                />
               </svg>
               <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                Company
+                #NetworkDay
               </span>
             </a>
           </Link>
 
           <div className="mt-4 lg:max-w-sm">
             <p className="text-sm text-gray-800">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam.
+              Treffen Sie Kollegen, tauschen sich gemeinsam aus und lassen sich
+              von unseren Branchenexperten die neuesten (Food)-trends, Ideen,
+              Produkte und Entwicklungen rund um Ihr Geschäft vorstellen.
             </p>
             <p className="mt-4 text-sm text-gray-800">
-              Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-              beatae vitae dicta sunt explicabo.
+              Wir haben Experten aus der Branche eingeladen um Ihre Erfahrungen
+              mit Euch zu teilen.
             </p>
           </div>
         </div>
@@ -198,7 +199,7 @@ export default function Footer() {
       </div>
       <div className="flex flex-col justify-between pt-5 pb-10 border-t sm:flex-row">
         <p className="text-sm text-gray-600">
-          © Copyright 2020 Lorem Inc. All rights reserved.
+          © Copyright 2021 @gastronomy.world. All rights reserved.
         </p>
         <div className="flex items-center mt-4 space-x-4 sm:mt-0">
           <Link href={"/"} passHref>
