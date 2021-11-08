@@ -16,7 +16,7 @@ export default function Home(props) {
   const story = props.story;
   return (
     <div>
-      <Header></Header>
+      <DynamicComponent blok={story.content} />
       <div className="bg-gray-50">
         <div className="relative bg-white">
           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
@@ -74,7 +74,6 @@ export default function Home(props) {
       <Speaker></Speaker>
       <Exhibitors></Exhibitors>
       <Footer></Footer>
-      <DynamicComponent blok={story.content} />
     </div>
   );
 }
@@ -92,7 +91,7 @@ export async function getStaticProps(context) {
     // loads the draft version
     params.version = "draft";
     // appends the cache version to get the latest content
-    params.cv = Date.now();
+    //params.cv = Date.now();
   }
 
   // loads the story from the Storyblok API
