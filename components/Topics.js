@@ -8,24 +8,24 @@ export default function Topics() {
         <div className="flex flex-wrap -m-4">
           {topics.map((item) => (
             <div key={item.name} className="p-4 md:w-1/3">
-              <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+              <div className="h-full overflow-hidden border-2 border-gray-200 rounded-lg border-opacity-60">
                 <Image
                   width="720px"
                   height="400px"
-                  className="lg:h-48 md:h-36 w-full object-cover object-center"
+                  className="object-cover object-center w-full lg:h-48 md:h-36"
                   src="https://source.unsplash.com/720x400/?gastronomy,sustainable,health"
                   alt="blog"
                 />
                 <div className="p-6">
-                  <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                  <h2 className="mb-1 text-xs font-medium tracking-widest text-gray-400 title-font">
                     Thema
                   </h2>
-                  <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                  <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">
                     {item.name}
                   </h1>
-                  <p className="leading-relaxed mb-3">{item.description}</p>
-                  <div className="flex items-center flex-wrap ">
-                    <a className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
+                  <p className="mb-3 leading-relaxed">{item.description}</p>
+                  <div className="flex flex-wrap items-center ">
+                    <a className="inline-flex items-center text-indigo-500 md:mb-2 lg:mb-0">
                       Mehr erfahren
                       <svg
                         className="w-4 h-4 ml-2"

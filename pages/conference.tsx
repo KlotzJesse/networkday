@@ -10,11 +10,11 @@ export default function Conference() {
         <meta name="description" content="Virtual Conference" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="bg-white flex flex-col h-screen sticky items-center px-7 py-5 space-y-10 shadow">
+      <div className="sticky flex flex-col items-center h-screen py-5 space-y-10 bg-white shadow px-7">
         <div className="pb-10">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-10 w-10"
+            className="w-10 h-10"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -28,10 +28,10 @@ export default function Conference() {
             />
           </svg>
         </div>
-        <div className="bg-blue-900 p-2 rounded-xl text-white">
+        <div className="p-2 text-white bg-blue-900 rounded-xl">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
+            className="w-5 h-5"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -44,7 +44,7 @@ export default function Conference() {
             />
           </svg>
         </div>
-        <div className="p-2 rounded-xl text-gray-700">
+        <div className="p-2 text-gray-700 rounded-xl">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-7 w-7"
@@ -64,27 +64,11 @@ export default function Conference() {
 
       <main className="flex flex-col flex-grow px-4 py-5 mx-auto md:px-24 lg:px-8">
         <div>
-          <div className="relative flex w-1/4 mb-16 items-center">
-            <span
-              className="flex z-10
-      h-full
-      leading-snug
-      font-normal
-      text-center
-      text-gray-300
-      absolute
-      bg-transparent
-      rounded
-      text-base
-      items-center
-      justify-center
-      w-8
-      pl-3
-      py-3"
-            >
+          <div className="relative flex items-center w-1/4 mb-16">
+            <span className="absolute z-10 flex items-center justify-center w-8 h-full py-3 pl-3 text-base font-normal leading-snug text-center text-gray-300 bg-transparent rounded">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4"
+                className="w-4 h-4"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -100,25 +84,13 @@ export default function Conference() {
             <input
               type="text"
               placeholder="Search"
-              className="px-3
-      py-3
-      placeholder-gray-300
-      text-gray-600
-      relative
-      bg-white bg-white
-      rounded
-      text-sm
-      border border-gray-400
-      outline-none
-      focus:outline-none focus:ring
-      w-full
-      pl-10"
+              className="relative w-full px-3 py-3 pl-10 text-sm text-gray-600 placeholder-gray-300 bg-white border border-gray-400 rounded outline-none focus:outline-none focus:ring"
             />
           </div>
         </div>
         <div className="flex">
           <div className="flex items-center justify-center w-full space-x-6">
-            <div className="bg-white shadow-md rounded-3xl w-full mr-5 aspect-w-16 aspect-h-9">
+            <div className="w-full mr-5 bg-white shadow-md rounded-3xl aspect-w-16 aspect-h-9">
               <iframe
                 title="BlueJeans"
                 src="https://bluejeans.com/784330684/quick?embed=true&amp;chat=false&amp;ll=de&amp;parent=https://www.network-day.de&amp;sign_in=false&amp;footer=false&amp;apps=false&amp;room_pairing=false&amp;layout=true&amp;copy_link=false&amp;rating=false&amp;app_pitch=false&amp;lockMeetingControls=true&amp;locale=de"
@@ -127,14 +99,14 @@ export default function Conference() {
               ></iframe>
             </div>
           </div>
-          <div className="w-3/6 flex space-y-5 flex-col">
-            <div className="bg-white rounded-xl p-3 space-y-3 shadow-md">
+          <div className="flex flex-col w-3/6 space-y-5">
+            <div className="p-3 space-y-3 bg-white shadow-md rounded-xl">
               <h2 style={{ fontWeight: "bold" }}>Kontaktmöglichkeiten</h2>
-              <div className="flex cursor-pointer hover:bg-gray-200 bg-gray-100 rounded-xl p-3 items-center space-x-5">
-                <div className="bg-white p-3 rounded-xl">
+              <div className="flex items-center p-3 space-x-5 bg-gray-100 cursor-pointer hover:bg-gray-200 rounded-xl">
+                <div className="p-3 bg-white rounded-xl">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4"
+                    className="w-4 h-4"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -149,11 +121,11 @@ export default function Conference() {
                 </div>
                 <p>Rückruf vereinbaren</p>
               </div>
-              <div className="flex cursor-pointer hover:bg-gray-200 bg-gray-100 rounded-xl p-3 items-center space-x-5">
-                <div className="bg-white p-3 rounded-xl">
+              <div className="flex items-center p-3 space-x-5 bg-gray-100 cursor-pointer hover:bg-gray-200 rounded-xl">
+                <div className="p-3 bg-white rounded-xl">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4"
+                    className="w-4 h-4"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -169,14 +141,14 @@ export default function Conference() {
                 <p>Messestand öffnen</p>
               </div>
             </div>
-            <div className="flex flex-col flex-1 bg-white rounded-xl p-3 space-y-3 shadow-md">
+            <div className="flex flex-col flex-1 p-3 space-y-3 bg-white shadow-md rounded-xl">
               <div className="flex">
                 <h2 className="flex-grow" style={{ fontWeight: "bold" }}>
                   Chats
                 </h2>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
+                  className="w-6 h-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -193,10 +165,10 @@ export default function Conference() {
               <div className="flex-grow">
                 <p>Test</p>
               </div>
-              <div className="flex space-x-2 p-3 border rounded-xl items-center">
+              <div className="flex items-center p-3 space-x-2 border rounded-xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-gray-400"
+                  className="w-4 h-4 text-gray-400"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -215,7 +187,7 @@ export default function Conference() {
                 ></input>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-blue-500"
+                  className="w-4 h-4 text-blue-500"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"

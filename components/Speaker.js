@@ -45,12 +45,12 @@ export default function Speaker() {
                 width="720px"
                 height="400px"
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                src="https://www.gastronomy.world/app/download/8644572015/Neues+Projekt+%283%29.png?t=1620151396"
                 alt=""
               />
               <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
                 <p className="text-sm font-medium tracking-wide text-white">
-                  Sed ut perspiciatis unde omnis iste natus error
+                  Herr Patrick Pfeiffer
                 </p>
               </div>
             </div>

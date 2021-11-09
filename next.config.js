@@ -13,6 +13,7 @@ module.exports = {
       "www.homann-foodservice.de",
       "images.pexels.com",
       "image.jimcdn.com",
+      "www.gastronomy.world",
     ],
   },
 };
