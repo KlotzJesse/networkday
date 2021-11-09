@@ -12,6 +12,7 @@ module.exports = {
       "source.unsplash.com",
       "www.homann-foodservice.de",
       "images.pexels.com",
+      "image.jimcdn.com",
     ],
   },
 };
