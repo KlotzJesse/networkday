@@ -11,7 +11,7 @@ const Hero = ({ blok }) => {
               <img
                 alt="HeaderImage"
                 className="h-full w-full object-cover"
-                src={blok.HeaderImage}
+                src={blok.BackgroundImage.filename}
               />
               <div
                 className="absolute inset-0 bg-green-900"
