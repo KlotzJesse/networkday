@@ -6,6 +6,6 @@ module.exports = {
     reactRoot: true,
   },
   images: {
-    domains: ['images.unsplash.com'],
+    domains: ["images.unsplash.com", "a.storyblok.com"],
   },
-}
+};
