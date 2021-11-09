@@ -1,4 +1,5 @@
 import { topics } from "../components/Header";
+import Image from "next/image";
 
 export default function Topics() {
   return (
@@ -8,7 +9,9 @@ export default function Topics() {
           {topics.map((item) => (
             <div key={item.name} className="p-4 md:w-1/3">
               <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                <img
+                <Image
+                  width="720px"
+                  height="400px"
                   className="lg:h-48 md:h-36 w-full object-cover object-center"
                   src="https://source.unsplash.com/720x400/?gastronomy,sustainable,health"
                   alt="blog"

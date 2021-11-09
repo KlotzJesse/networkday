@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Speaker() {
   return (
@@ -22,7 +23,9 @@ export default function Speaker() {
         <Link href={"/"} passHref>
           <a aria-label="View Item">
             <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-              <img
+              <Image
+                width="720px"
+                height="400px"
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
                 src="https://www.homann-foodservice.de/fileadmin/images/team/Baune_Michael.jpg"
                 alt=""
@@ -38,7 +41,9 @@ export default function Speaker() {
         <Link href={"/"} passHref>
           <a aria-label="View Item">
             <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-              <img
+              <Image
+                width="720px"
+                height="400px"
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
                 src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                 alt=""
@@ -54,7 +59,9 @@ export default function Speaker() {
         <Link href={"/"} passHref>
           <a aria-label="View Item">
             <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-              <img
+              <Image
+                width="720px"
+                height="400px"
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
                 src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
                 alt=""
