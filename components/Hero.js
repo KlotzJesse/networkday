@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const Hero = ({ blok }) => {
   return (
@@ -8,7 +9,8 @@ const Hero = ({ blok }) => {
         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
           <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
             <div className="absolute inset-0">
-              <img
+              <Image
+                layout="fill"
                 alt="HeaderImage"
                 className="h-full w-full object-cover"
                 src={blok.BackgroundImage.filename}
