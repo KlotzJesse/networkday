@@ -24,12 +24,12 @@ export default function Speaker() {
             <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                src="https://www.homann-foodservice.de/fileadmin/images/team/Baune_Michael.jpg"
                 alt=""
               />
               <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
                 <p className="text-sm font-medium tracking-wide text-white">
-                  Sed ut perspiciatis unde omnis iste natus error
+                  Herr Michael Baune
                 </p>
               </div>
             </div>

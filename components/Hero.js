@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Hero() {
+const Hero = ({ blok }) => {
   return (
     <div className="bg-gray-50">
       <div className="relative bg-white">
@@ -20,16 +20,12 @@ export default function Hero() {
             </div>
             <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
               <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                <span className="block text-white">Nachhaltigkeit</span>
-                <span className="block text-blue-100">
-                  für mehr Wertschöpfung
-                </span>
+                <span className="block text-white">{blok.Heading}</span>
+                <span className="block text-blue-100">{blok.Subtitle}</span>
               </h1>
               <p className="mt-6 max-w-lg mx-auto text-center text-xl text-blue-100 sm:max-w-3xl">
                 {" "}
-                Netzwerken Sie mit Experten aus Ihrer Branche und Kollegen aus
-                dem Gastgewerbe, dem Care & Catering und Food-Handwerk Bereich,
-                <br /> rundum die Welt der Nachhaltigkeit.{" "}
+                {blok.Description}{" "}
               </p>
               <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                 <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
@@ -53,4 +49,6 @@ export default function Hero() {
       </div>
     </div>
   );
-}
+};
+
+export default Hero;
