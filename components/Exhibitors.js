@@ -20,7 +20,8 @@ export default function Exhibitors() {
         <div className="grid grid-cols-2 gap-2 text-center lg:grid-cols-4">
           <div className="flex items-center justify-center p-6 bg-opacity-25 bg-primary-light">
             <Image
-              layout="fill"
+              height="100px;"
+              width="100px;"
               src="https://image.jimcdn.com/app/cms/image/transf/dimension=150x150:format=png/path/s4c680ef60d53e150/image/i914c634a47327602/version/1623683275/image.png"
               alt="Homann Foodservice"
               className="block object-contain h-16"
@@ -28,7 +29,8 @@ export default function Exhibitors() {
           </div>
           <div className="flex items-center justify-center p-6 bg-opacity-25 bg-primary-light">
             <Image
-              layout="fill"
+              height="100px;"
+              width="100px;"
               src="https://image.jimcdn.com/app/cms/image/transf/dimension=150x150:format=jpg/path/s4c680ef60d53e150/image/i5f9877dbfed40f11/version/1623683275/image.jpg"
               alt="Byodo Cateringline"
               className="block object-contain h-16"
@@ -36,7 +38,8 @@ export default function Exhibitors() {
           </div>
           <div className="flex items-center justify-center p-6 bg-opacity-25 bg-primary-light">
             <Image
-              layout="fill"
+              height="100px;"
+              width="100px;"
               src="https://image.jimcdn.com/app/cms/image/transf/dimension=150x150:format=png/path/s4c680ef60d53e150/image/i7c232e2c1c0aafe3/version/1634893175/image.png"
               alt="Brunner-Anliker"
               className="block object-contain h-16"
@@ -44,7 +47,8 @@ export default function Exhibitors() {
           </div>
           <div className="flex items-center justify-center p-6 bg-opacity-25 bg-primary-light">
             <Image
-              layout="fill"
+              height="100px;"
+              width="100px;"
               src="https://image.jimcdn.com/app/cms/image/transf/dimension=150x150:format=png/path/s4c680ef60d53e150/image/i31e051902fb25fcd/version/1623683275/image.png"
               alt="Ecolab"
               className="block object-contain h-16"

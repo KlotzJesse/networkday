@@ -6,6 +6,7 @@ import Speaker from "./Speaker";
 import Steps from "./Steps";
 import Topics from "./Topics";
 import Footer from "./Footer";
+import Exhibitors from "./Exhibitors";
 
 // resolve Storyblok components to Next.js components
 const Components = {
@@ -16,6 +17,7 @@ const Components = {
   topics: Topics,
   footer: Footer,
   page: Page,
+  exhibitors: Exhibitors,
 };
 
 const DynamicComponent = ({ blok }) => {
