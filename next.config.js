@@ -6,6 +6,12 @@ module.exports = {
     reactRoot: true,
   },
   images: {
-    domains: ["images.unsplash.com", "a.storyblok.com"],
+    domains: [
+      "images.unsplash.com",
+      "a.storyblok.com",
+      "source.unsplash.com",
+      "www.homann-foodservice.de",
+      "images.pexels.com",
+    ],
   },
 };
