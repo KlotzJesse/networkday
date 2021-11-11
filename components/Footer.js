@@ -1,14 +1,16 @@
 import Link from "next/link";
 
+import { topics } from "./Header";
+
 export default function Footer() {
   return (
     <div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
         <div className="md:max-w-md lg:col-span-2">
-          <Link href={"/register"} passHref>
+          <Link href={"/"} passHref>
             <a
               aria-label="Go home"
-              title="Company"
+              title="#NetworkDay"
               className="inline-flex items-center"
             >
               <svg
@@ -45,39 +47,20 @@ export default function Footer() {
           </div>
         </div>
         <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
-          <div>
-            <p className="font-semibold tracking-wide text-gray-800">
-              Category
-            </p>
+          <div className="col-span-2">
+            <p className="font-semibold tracking-wide text-gray-800">Themen</p>
             <ul className="mt-2 space-y-2">
-              <li>
-                <Link href={"/"} passHref>
-                  <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-                    News
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href={"/"} passHref>
-                  <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-                    World
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href={"/"} passHref>
-                  <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-                    Games
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href={"/"} passHref>
-                  <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-                    References
-                  </a>
-                </Link>
-              </li>
+              {topics.map((topic) => {
+                return (
+                  <li key={topic.name}>
+                    <Link href={"/"} passHref>
+                      <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
+                        {topic.name}
+                      </a>
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div>
@@ -157,39 +140,6 @@ export default function Footer() {
                 <Link href={"/"} passHref>
                   <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
                     Projects
-                  </a>
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <p className="font-semibold tracking-wide text-gray-800">Cherry</p>
-            <ul className="mt-2 space-y-2">
-              <li>
-                <Link href={"/"} passHref>
-                  <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-                    Infopreneur
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href={"/"} passHref>
-                  <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-                    Personal
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href={"/"} passHref>
-                  <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-                    Wiki
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href={"/"} passHref>
-                  <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-                    Forum
                   </a>
                 </Link>
               </li>
