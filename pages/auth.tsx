@@ -4,66 +4,71 @@ import Image from "next/image";
 export default function Auth() {
   return (
     <section>
-      <div className="flex min-h-screen overflow-hidden">
-        <div className="w-full flex flex-wrap">
-          {/* Login Section */}
-          <div className="w-full md:w-1/2 flex flex-col">
-            <div className="flex justify-center md:justify-start pt-12 md:pl-12 md:-mb-24">
-              <a href="#" className="bg-black text-white font-bold text-xl p-4">
-                Logo
+      <div className="flex max-h-screen">
+        <div
+          className="md:w-2/6 md:p-10"
+          style={{ backgroundColor: "#F8F5ED" }}
+        >
+          <div className="h-full p-10 bg-white rounded-xl">
+            <Link href={"/register"} passHref>
+              <a
+                aria-label="Go home"
+                title="Company"
+                className="inline-flex items-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-8"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    className="text-pink-500"
+                    d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"
+                  />
+                  <path
+                    className="text-blue-900"
+                    d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"
+                  />
+                </svg>
+                <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+                  #NetworkDay
+                </span>
               </a>
-            </div>
-            <div className="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
-              <p className="text-center text-3xl">Welcome.</p>
-              <form className="flex flex-col pt-3 md:pt-8">
-                <div className="flex flex-col pt-4">
-                  <label htmlFor="email" className="text-lg">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    placeholder="your@email.com"
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
-                  />
-                </div>
-                <div className="flex flex-col pt-4">
-                  <label htmlFor="password" className="text-lg">
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    id="password"
-                    placeholder="Password"
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline"
-                  />
-                </div>
-                <input
-                  type="submit"
-                  defaultValue="Log In"
-                  className="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8"
-                />
-              </form>
-              <div className="text-center pt-12 pb-12">
-                <p>
-                  Don&apos;t have an account?{" "}
-                  <a href="register.html" className="underline font-semibold">
-                    Register here.
-                  </a>
-                </p>
-              </div>
-            </div>
+            </Link>
+            <h1 className="my-24 text-2xl font-bold">
+              👋 Willkommen beim #NetworkDay
+            </h1>
+            <input
+              type="text"
+              placeholder="Max Mustermann"
+              className="w-full px-5 py-3 my-2 rounded-xl bg-trueGray-50 hover:bg-gray-100"
+            ></input>
+            <input
+              type="password"
+              placeholder="Hotel Grünheide"
+              className="w-full px-5 py-3 my-2 rounded-xl bg-trueGray-50 hover:bg-gray-100"
+            ></input>
+            <input
+              type="email"
+              placeholder="max@musterfirma.de"
+              className="w-full px-5 py-3 my-2 rounded-xl bg-trueGray-50 hover:bg-gray-100"
+            ></input>
+            <button className="w-full py-3 my-5 text-white bg-coolGray-500 rounded-xl">
+              Anmelden
+            </button>
+            <p className="text-sm text-center">
+              Mit der Anmeldung bestätigen Sie unsere Nutzungsbedingungen und
+              Datenschutzrichtlinien.
+            </p>
           </div>
-          {/* Image Section */}
-          <div className="w-1/2 shadow-2xl">
-            <Image
-              width="1920px"
-              height="2000px"
-              alt="Background"
-              className="object-cover w-full h-screen hidden md:block"
-              src="https://source.unsplash.com/IXUM4cJynP0"
-            />
-          </div>
+        </div>
+        <div className="relative flex-1 hidden bg-orange-900 md:block h-100">
+          <Image
+            alt="BackgroundImage"
+            layout="fill"
+            src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/d32e3f70396087.5ba22dac2c486.gif"
+          ></Image>
         </div>
       </div>
     </section>
