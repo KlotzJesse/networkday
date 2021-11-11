@@ -14,6 +14,7 @@ module.exports = {
       "images.pexels.com",
       "image.jimcdn.com",
       "www.gastronomy.world",
+      "mir-s3-cdn-cf.behance.net",
     ],
   },
 };

@@ -34,7 +34,7 @@ const DynamicComponent = ({ blok }) => {
 
   // fallback if the component doesn't exist
   return (
-    <p>
+    <p className="text-center">
       The component <strong>{blok.component}</strong> has not been created yet.
     </p>
   );
