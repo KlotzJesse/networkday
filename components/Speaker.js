@@ -1,6 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
 
+const speakerList = [
+  {
+    name: "Herr Michael Baune",
+    imgsrc:
+      "https://www.homann-foodservice.de/fileadmin/images/team/Baune_Michael.jpg",
+  },
+  {
+    name: "Herr Patrick Pfeiffer",
+    imgsrc:
+      "https://www.gastronomy.world/app/download/8644572015/Neues+Projekt+%283%29.png?t=1620151396",
+  },
+];
+
 export default function Speaker() {
   return (
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
@@ -20,68 +33,36 @@ export default function Speaker() {
         </p>
       </div>
       <div className="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
-        <Link href={"/"} passHref>
-          <a aria-label="View Item">
-            <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-              <Image
-                width="720px"
-                height="400px"
-                className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://www.homann-foodservice.de/fileadmin/images/team/Baune_Michael.jpg"
-                alt=""
-              />
-              <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
-                <p className="text-sm font-medium tracking-wide text-white">
-                  Herr Michael Baune
-                </p>
-              </div>
-            </div>
-          </a>
-        </Link>
-        <Link href={"/"} passHref>
-          <a aria-label="View Item">
-            <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-              <Image
-                width="720px"
-                height="400px"
-                className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://www.gastronomy.world/app/download/8644572015/Neues+Projekt+%283%29.png?t=1620151396"
-                alt=""
-              />
-              <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
-                <p className="text-sm font-medium tracking-wide text-white">
-                  Herr Patrick Pfeiffer
-                </p>
-              </div>
-            </div>
-          </a>
-        </Link>
-        <Link href={"/"} passHref>
-          <a aria-label="View Item">
-            <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
-              <Image
-                width="720px"
-                height="400px"
-                className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                alt=""
-              />
-              <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
-                <p className="text-sm font-medium tracking-wide text-white">
-                  Sed ut perspiciatis unde omnis iste natus error
-                </p>
-              </div>
-            </div>
-          </a>
-        </Link>
+        {speakerList.map((speaker) => {
+          return (
+            <Link key={speaker.name} href={"/"} passHref>
+              <a aria-label="View Item">
+                <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
+                  <Image
+                    width="720px"
+                    height="400px"
+                    className="object-cover w-full h-56 md:h-64 xl:h-80"
+                    src={speaker.imgsrc}
+                    alt=""
+                  />
+                  <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
+                    <p className="text-sm font-medium tracking-wide text-white">
+                      {speaker.name}
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </Link>
+          );
+        })}
       </div>
       <div className="text-center">
-        <Link href={"/"} passHref>
+        <Link href={"/speaker"} passHref>
           <a
             aria-label=""
             className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
           >
-            See more
+            Mehr sehen
             <svg
               className="inline-block w-3 ml-2"
               fill="currentColor"

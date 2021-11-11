@@ -6,11 +6,11 @@ export default function Auth() {
     <section>
       <div className="flex max-h-screen">
         <div
-          className="md:w-2/6 md:p-10"
+          className="h-screen md:w-2/6 md:p-10"
           style={{ backgroundColor: "#F8F5ED" }}
         >
           <div className="h-full p-10 bg-white rounded-xl">
-            <Link href={"/register"} passHref>
+            <Link href={"/"} passHref>
               <a
                 aria-label="Go home"
                 title="Company"
@@ -36,7 +36,7 @@ export default function Auth() {
                 </span>
               </a>
             </Link>
-            <h1 className="my-24 text-2xl font-bold">
+            <h1 className="my-16 text-2xl font-bold">
               👋 Willkommen beim #NetworkDay
             </h1>
             <input
@@ -57,13 +57,16 @@ export default function Auth() {
             <button className="w-full py-3 my-5 text-white bg-coolGray-500 rounded-xl">
               Anmelden
             </button>
-            <p className="text-sm text-center">
+            <p className="text-xs text-center">
               Mit der Anmeldung bestätigen Sie unsere Nutzungsbedingungen und
               Datenschutzrichtlinien.
             </p>
           </div>
         </div>
-        <div className="relative flex-1 hidden bg-orange-900 md:block h-100">
+        <div
+          className="relative flex-1 hidden md:block h-100"
+          style={{ backgroundColor: "#F8F5ED" }}
+        >
           <Image
             alt="BackgroundImage"
             layout="fill"
