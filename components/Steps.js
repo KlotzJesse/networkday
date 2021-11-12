@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Step() {
   return (
     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-      <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+      {/* <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
         <div>
           <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
             Brand new
@@ -41,7 +41,7 @@ export default function Step() {
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
           accusantium doloremque rem aperiam, eaque ipsa quae.
         </p>
-      </div>
+      </div> */}
       <div className="relative grid gap-8 row-gap-5 mb-8 md:row-gap-8 lg:grid-cols-4 sm:grid-cols-2">
         <div className="absolute inset-0 flex items-center justify-center sm:hidden lg:flex">
           <div className="w-px h-full bg-gray-300 lg:w-full lg:h-px" />
@@ -104,7 +104,7 @@ export default function Step() {
       <div className="text-center">
         <Link href={"/"} passHref>
           <a className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md md:w-auto bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
-            Learn more
+            Jetzt anmelden
           </a>
         </Link>
       </div>
