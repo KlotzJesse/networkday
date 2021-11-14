@@ -58,10 +58,7 @@ export default function Speaker() {
       </div>
       <div className="text-center">
         <Link href={"/speaker"} passHref>
-          <a
-            aria-label=""
-            className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-          >
+          <a className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">
             Mehr sehen
             <svg
               className="inline-block w-3 ml-2"
