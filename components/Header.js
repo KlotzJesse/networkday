@@ -155,39 +155,36 @@ const Header = ({ blok }) => {
                       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                           {topics.map((item) => (
-                            <a
-                              key={item.name}
-                              href={item.href}
-                              className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50"
-                            >
-                              <item.icon
-                                className="flex-shrink-0 w-6 h-6 text-indigo-600"
-                                aria-hidden="true"
-                              />
-                              <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">
-                                  {item.name}
-                                </p>
-                                <p className="mt-1 text-sm text-gray-500">
-                                  {item.description}
-                                </p>
-                              </div>
-                            </a>
+                            <Link key={item.name} href={item.href} passHref>
+                              <a className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50">
+                                <item.icon
+                                  className="flex-shrink-0 w-6 h-6 text-indigo-600"
+                                  aria-hidden="true"
+                                />
+                                <div className="ml-4">
+                                  <p className="text-base font-medium text-gray-900">
+                                    {item.name}
+                                  </p>
+                                  <p className="mt-1 text-sm text-gray-500">
+                                    {item.description}
+                                  </p>
+                                </div>
+                              </a>
+                            </Link>
                           ))}
                         </div>
                         <div className="px-5 py-5 space-y-6 bg-gray-50 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                           {callsToAction.map((item) => (
                             <div key={item.name} className="flow-root">
-                              <a
-                                href={item.href}
-                                className="flex items-center p-3 -m-3 text-base font-medium text-gray-900 rounded-md hover:bg-gray-100"
-                              >
-                                <item.icon
-                                  className="flex-shrink-0 w-6 h-6 text-gray-400"
-                                  aria-hidden="true"
-                                />
-                                <span className="ml-3">{item.name}</span>
-                              </a>
+                              <Link href={item.href} passHref>
+                                <a className="flex items-center p-3 -m-3 text-base font-medium text-gray-900 rounded-md hover:bg-gray-100">
+                                  <item.icon
+                                    className="flex-shrink-0 w-6 h-6 text-gray-400"
+                                    aria-hidden="true"
+                                  />
+                                  <span className="ml-3">{item.name}</span>
+                                </a>
+                              </Link>
                             </div>
                           ))}
                         </div>
@@ -198,12 +195,11 @@ const Header = ({ blok }) => {
               )}
             </Popover>
 
-            <a
-              href="/speaker"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              Speaker
-            </a>
+            <Link href="/speaker" passHref>
+              <a className="text-base font-medium text-gray-500 hover:text-gray-900">
+                Speaker
+              </a>
+            </Link>
 
             <Popover className="relative">
               {({ open }) => (
@@ -237,24 +233,22 @@ const Header = ({ blok }) => {
                       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                           {resources.map((item) => (
-                            <a
-                              key={item.name}
-                              href={item.href}
-                              className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50"
-                            >
-                              <item.icon
-                                className="flex-shrink-0 w-6 h-6 text-indigo-600"
-                                aria-hidden="true"
-                              />
-                              <div className="ml-4">
-                                <p className="text-base font-medium text-gray-900">
-                                  {item.name}
-                                </p>
-                                <p className="mt-1 text-sm text-gray-500">
-                                  {item.description}
-                                </p>
-                              </div>
-                            </a>
+                            <Link key={item.name} href={item.href} passHref>
+                              <a className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50">
+                                <item.icon
+                                  className="flex-shrink-0 w-6 h-6 text-indigo-600"
+                                  aria-hidden="true"
+                                />
+                                <div className="ml-4">
+                                  <p className="text-base font-medium text-gray-900">
+                                    {item.name}
+                                  </p>
+                                  <p className="mt-1 text-sm text-gray-500">
+                                    {item.description}
+                                  </p>
+                                </div>
+                              </a>
+                            </Link>
                           ))}
                         </div>
                         <div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
@@ -268,25 +262,23 @@ const Header = ({ blok }) => {
                                   key={post.id}
                                   className="text-base truncate"
                                 >
-                                  <a
-                                    href={post.href}
-                                    className="font-medium text-gray-900 hover:text-gray-700"
-                                  >
-                                    {post.name}
-                                  </a>
+                                  <Link href={post.href} passHref>
+                                    <a className="font-medium text-gray-900 hover:text-gray-700">
+                                      {post.name}
+                                    </a>
+                                  </Link>
                                 </li>
                               ))}
                             </ul>
                           </div>
                           <div className="mt-5 text-sm">
-                            <a
-                              href="#"
-                              className="font-medium text-indigo-600 hover:text-indigo-500"
-                            >
-                              {" "}
-                              View all posts{" "}
-                              <span aria-hidden="true">&rarr;</span>
-                            </a>
+                            <Link href="#" passHref>
+                              <a className="font-medium text-indigo-600 hover:text-indigo-500">
+                                {" "}
+                                View all posts{" "}
+                                <span aria-hidden="true">&rarr;</span>
+                              </a>
+                            </Link>
                           </div>
                         </div>
                       </div>
@@ -297,18 +289,16 @@ const Header = ({ blok }) => {
             </Popover>
           </Popover.Group>
           <div className="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
-            <a
-              href="#"
-              className="text-base font-medium text-gray-500 whitespace-nowrap hover:text-gray-900"
-            >
-              Zugang reservieren
-            </a>
-            <a
-              href="https://www.gastronomy.world"
-              className="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm whitespace-nowrap hover:bg-indigo-700"
-            >
-              zur Online Messe
-            </a>
+            <Link href="#" passHref>
+              <a className="text-base font-medium text-gray-500 whitespace-nowrap hover:text-gray-900">
+                Zugang reservieren
+              </a>
+            </Link>
+            <Link href="https://www.gastronomy.world" passHref>
+              <a className="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm whitespace-nowrap hover:bg-indigo-700">
+                zur Online Messe
+              </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -356,60 +346,55 @@ const Header = ({ blok }) => {
               <div className="mt-6">
                 <nav className="grid gap-y-8">
                   {topics.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="flex items-center p-3 -m-3 rounded-md hover:bg-gray-50"
-                    >
-                      <item.icon
-                        className="flex-shrink-0 w-6 h-6 text-indigo-600"
-                        aria-hidden="true"
-                      />
-                      <span className="ml-3 text-base font-medium text-gray-900">
-                        {item.name}
-                      </span>
-                    </a>
+                    <Link key={item.name} href={item.href} passHref>
+                      <a className="flex items-center p-3 -m-3 rounded-md hover:bg-gray-50">
+                        <item.icon
+                          className="flex-shrink-0 w-6 h-6 text-indigo-600"
+                          aria-hidden="true"
+                        />
+                        <span className="ml-3 text-base font-medium text-gray-900">
+                          {item.name}
+                        </span>
+                      </a>
+                    </Link>
                   ))}
                 </nav>
               </div>
             </div>
             <div className="px-5 py-6 space-y-6">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Speaker
-                </a>
-
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Online Messe
-                </a>
-                {resources.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
-                  >
-                    {item.name}
+                <Link href="#" passHref>
+                  <a className="text-base font-medium text-gray-900 hover:text-gray-700">
+                    Speaker
                   </a>
+                </Link>
+
+                <Link href="#">
+                  <a className="text-base font-medium text-gray-900 hover:text-gray-700">
+                    Online Messe
+                  </a>
+                </Link>
+                {resources.map((item) => (
+                  <Link key={item.name} href={item.href} passHref>
+                    <a className="text-base font-medium text-gray-900 hover:text-gray-700">
+                      {item.name}
+                    </a>
+                  </Link>
                 ))}
               </div>
               <div>
-                <a
-                  href="#"
-                  className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700"
-                >
-                  Zugang reservieren
-                </a>
+                <Link href="#" passHref>
+                  <a className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700">
+                    Zugang reservieren
+                  </a>
+                </Link>
                 <p className="mt-6 text-base font-medium text-center text-gray-500">
                   Sie suchen Lösungen zu den Themen?{" "}
-                  <a href="#" className="text-indigo-600 hover:text-indigo-500">
-                    zur online Messe
-                  </a>
+                  <Link href="#" passHref>
+                    <a className="text-indigo-600 hover:text-indigo-500">
+                      zur online Messe
+                    </a>
+                  </Link>
                 </p>
               </div>
             </div>
