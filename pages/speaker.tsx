@@ -2,16 +2,26 @@ import React from "react";
 import Storyblok from "../utils/storyblok";
 import DynamicComponent from "../components/DynamicComponent";
 
+import { PrismaClient } from "@prisma/client";
+const prisma = new PrismaClient();
+
+import Speaker from "../components/Speaker";
+
 export const speaker = (props) => {
   const story = props.story;
   return (
     <div>
       <DynamicComponent blok={story.content} />
+      {props.speakerList.map((el) => {
+        return <p key={el.name}>{el.name}</p>;
+      })}
     </div>
   );
 };
 
 export async function getStaticProps(context) {
+  const speakerList = await prisma.speaker.findMany({});
+
   // the slug of the story
   let slug = "speaker";
   // the storyblok params
@@ -35,6 +45,7 @@ export async function getStaticProps(context) {
     props: {
       story: data ? data.story : false,
       preview: context.preview || false,
+      speakerList: speakerList,
     },
     revalidate: 10,
   };
