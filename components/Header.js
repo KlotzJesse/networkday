@@ -48,29 +48,29 @@ const callsToAction = [
 ];
 const resources = [
   {
-    name: "Help Center",
+    name: "Hilfe Center",
     description:
-      "Get all of your questions answered in our forums or contact support.",
+      "Holen Sie sich Antworten auf all Ihre Fragen in unseren Foren oder kontaktieren Sie den Support.",
     href: "#",
     icon: SupportIcon,
   },
   {
-    name: "Guides",
+    name: "Leitfäden",
     description:
-      "Learn how to maximize our platform to get the most out of it.",
+      "Erfahren Sie, wie Sie unsere Plattform optimal nutzen können.",
     href: "#",
     icon: BookmarkAltIcon,
   },
   {
-    name: "Events",
+    name: "Veranstaltungen",
     description:
-      "See what meet-ups and other events we might be planning near you.",
+      "Informieren Sie sich, welche Treffen und anderen Veranstaltungen wir in Ihrer Nähe planen.",
     href: "#",
     icon: CalendarIcon,
   },
   {
-    name: "Security",
-    description: "Understand how we take your privacy seriously.",
+    name: "Sicherheit",
+    description: "Verstehen Sie, wie ernst wir Ihre Privatsphäre nehmen.",
     href: "#",
     icon: ShieldCheckIcon,
   },
@@ -254,7 +254,7 @@ const Header = ({ blok }) => {
                         <div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
                           <div>
                             <h3 className="text-sm font-medium tracking-wide text-gray-500 uppercase">
-                              Recent Posts
+                              Neuste Beiträge
                             </h3>
                             <ul role="list" className="mt-4 space-y-4">
                               {recentPosts.map((post) => (
@@ -275,7 +275,7 @@ const Header = ({ blok }) => {
                             <Link href="#" passHref>
                               <a className="font-medium text-indigo-600 hover:text-indigo-500">
                                 {" "}
-                                View all posts{" "}
+                                Alle Beiträge anzeigen{" "}
                                 <span aria-hidden="true">&rarr;</span>
                               </a>
                             </Link>
@@ -338,7 +338,7 @@ const Header = ({ blok }) => {
                 </div>
                 <div className="-mr-2">
                   <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                    <span className="sr-only">Close menu</span>
+                    <span className="sr-only">Menü schließen</span>
                     <XIcon className="w-6 h-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>
