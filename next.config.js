@@ -4,6 +4,7 @@ module.exports = {
   experimental: {
     concurrentFeatures: true,
     serverComponents: true,
+    reactRoot: true,
   },
   images: {
     domains: [
