@@ -2,9 +2,7 @@ import useData from "../lib/useData";
 import fetchData from "../lib/fetchData";
 
 export default function SpeakerList() {
-  const speakerList = useData("speaker", () =>
-    fetchData(`https://networkday.vercel.app/api/speakerap`)
-  );
+  const speakerList = useData("speaker", () => fetchData(`/api/speakerap`));
 
   return (
     <>
