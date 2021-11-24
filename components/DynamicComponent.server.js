@@ -1,12 +1,13 @@
 import SbEditable from "storyblok-react";
-import Header from "./Header";
-import Page from "./Page";
-import Hero from "./Hero";
-import Speaker from "./Speaker";
-import Steps from "./Steps";
-import Topics from "./Topics";
-import Footer from "./Footer";
-import Exhibitors from "./Exhibitors";
+import Header from "./Header.client";
+import Page from "./Page.server";
+import Hero from "./Hero.client";
+import Speaker from "./Speaker.server";
+import Steps from "./Steps.client";
+import Topics from "./Topics.client";
+import Footer from "./Footer.client";
+import Exhibitors from "./Exhibitors.client";
+import { Suspense } from "react";
 
 // resolve Storyblok components to Next.js components
 const Components = {
@@ -26,9 +27,9 @@ const DynamicComponent = ({ blok }) => {
     const Component = Components[blok.component];
     // wrap with SbEditable for visual editing
     return (
-      <SbEditable content={blok}>
+      <Suspense fallback={"Loading..."}>
         <Component blok={blok} />
-      </SbEditable>
+      </Suspense>
     );
   }
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { topics } from "./Header";
+import { topics } from "./Header.client";
 
 export default function Footer() {
   return (

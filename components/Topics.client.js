@@ -1,4 +1,4 @@
-import { topics } from "../components/Header";
+import { topics } from "./Header.client";
 import Image from "next/image";
 
 export default function Topics() {
