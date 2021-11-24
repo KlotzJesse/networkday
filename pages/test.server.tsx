@@ -1,6 +1,6 @@
 import SpeakerList from "../components/SpeakerList.server";
 
-export default function Speaker() {
+export default function Test() {
   return (
     <div>
       <SpeakerList />
