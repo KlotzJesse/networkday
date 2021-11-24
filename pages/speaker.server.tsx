@@ -8,6 +8,8 @@ export default function Speaker() {
     fetchData(`/api/components/speaker`)
   );
 
+  console.log(story);
+
   return (
     <div>
       <DynamicComponent blok={story.content} />
