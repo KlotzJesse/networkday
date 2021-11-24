@@ -63,7 +63,8 @@ export default function Auth() {
               placeholder="max@musterfirma.de"
               className="w-full px-5 py-3 my-2 rounded-xl bg-trueGray-50 hover:bg-gray-100"
             ></input>
-            <button className="w-full py-3 my-5 text-white bg-coolGray-500 rounded-xl">
+            <button className="w-full py-3 my-5 text-white bg-gray-500 rounded-xl">
+              {/*coolgray*/}
               Anmelden
             </button>
             <p className="text-xs text-center">

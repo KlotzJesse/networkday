@@ -13,8 +13,6 @@ module.exports = {
         sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        trueGray: colors.trueGray,
-        coolGray: colors.coolGray,
         red: {
           50: "#ffebee",
           100: "#ffcdd2",
