@@ -20,7 +20,7 @@
     "**/*.ts",
     "**/*.tsx",
     "components/Header.client.js",
-    "pages/test.server.js"
+    "pages/test.server.tsx"
   ],
   "exclude": ["node_modules"]
 }
