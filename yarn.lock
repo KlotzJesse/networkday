@@ -2911,7 +2911,7 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-dom@^18.0.0-beta-c1220ebdd-20211123:
+react-dom@^18.0.0-beta-fdc1d617a-20211118:
   version "18.0.0-beta-fdc1d617a-20211118"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.0.0-beta-fdc1d617a-20211118.tgz#0d2ddaa962fae1bbcf17c0eac5e3879d30793753"
   integrity sha512-BlA0NdAKE+Ibe5orAfHphf76ltL9+PiWsexrjVjtRcumrra3WH3rDYT+evXfLFBzxpbZDjhkL1oQ1/zCjKyWBA==
