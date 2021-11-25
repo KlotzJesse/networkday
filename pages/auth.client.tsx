@@ -12,8 +12,8 @@ export default function Auth() {
           <div className="h-full p-10 bg-white rounded-xl">
             <Link href={"/"} passHref>
               <a
-                aria-label="Go home"
-                title="Company"
+                aria-label="Zur Startseite"
+                title="#NetworkDay"
                 className="inline-flex items-center"
               >
                 <svg
@@ -39,33 +39,35 @@ export default function Auth() {
             <h1 className="my-16 text-2xl font-bold">
               👋 Willkommen beim #NetworkDay
             </h1>
-            <label className="text-sm leading-tight text-gray-600">Name</label>
+            <label className="text-xs leading-tight text-gray-600">Name</label>
             <input
               type="text"
               placeholder="Max Mustermann"
-              className="w-full px-5 py-3 my-2 rounded-xl bg-trueGray-50 hover:bg-gray-100"
+              className="w-full px-5 py-3 my-2 rounded-xl bg-gray-50 hover:bg-gray-100"
             ></input>
 
-            <label className="text-sm leading-tight text-gray-600 ">
+            <label className="text-xs leading-tight text-gray-600 ">
               Firma
             </label>
             <input
               type="text"
               placeholder="Hotel Grünheide"
-              className="w-full px-5 py-3 my-2 rounded-xl bg-trueGray-50 hover:bg-gray-100"
+              className="w-full px-5 py-3 my-2 rounded-xl bg-gray-50 hover:bg-gray-100"
             ></input>
 
-            <label className="text-sm leading-tight text-gray-600 ">
+            <label className="text-xs leading-tight text-gray-600 ">
               E-Mail
             </label>
             <input
               type="email"
               placeholder="max@musterfirma.de"
-              className="w-full px-5 py-3 my-2 rounded-xl bg-trueGray-50 hover:bg-gray-100"
+              className="w-full px-5 py-3 my-2 rounded-xl bg-gray-50 hover:bg-gray-100"
             ></input>
-            <button className="w-full py-3 my-5 text-white bg-gray-500 rounded-xl">
-              Anmelden
-            </button>
+            <Link href="/conference" passHref>
+              <button className="w-full py-3 my-5 text-white bg-gray-500 rounded-xl">
+                Anmelden
+              </button>
+            </Link>
             <p className="text-xs text-center">
               Mit der Anmeldung bestätigen Sie unsere{" "}
               <Link href="/privacy" passHref>

@@ -1,6 +1,5 @@
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Conference() {
   return (
@@ -12,21 +11,25 @@ export default function Conference() {
       </Head>
       <div className="sticky flex flex-col items-center h-screen py-5 space-y-10 bg-white shadow px-7">
         <div className="pb-10">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-10 h-10"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              className="text-pink-500"
-              d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"
-            />
-            <path
-              className="text-blue-900"
-              d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"
-            />
-          </svg>
+          <Link href="/" passHref>
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-10 h-10"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  className="text-pink-500"
+                  d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"
+                />
+                <path
+                  className="text-blue-900"
+                  d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"
+                />
+              </svg>
+            </a>
+          </Link>
         </div>
         <div className="p-2 text-white bg-blue-900 rounded-xl">
           <svg
