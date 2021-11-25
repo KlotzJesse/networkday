@@ -1,10 +1,9 @@
 import useData from "../lib/useData";
 import { Suspense } from "react";
+import fetchData from "../lib/fetchData";
 
 export default function SpeakerList() {
-  const storyIds = useData("top", () =>
-    fetchData("https://hacker-news.firebaseio.com/v0/topstories.json")
-  );
+  const storyIds = useData("top", () => fetchData("/api/news"));
 
   return (
     <>
@@ -17,12 +16,4 @@ export default function SpeakerList() {
       })}
     </>
   );
-}
-
-export async function fetchData(type) {
-  const res = await fetch(type);
-  if (res.status !== 200) {
-    throw new Error(`Status ${res.status}`);
-  }
-  return res.json();
 }
