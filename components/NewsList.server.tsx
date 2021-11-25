@@ -1,8 +1,10 @@
 import useData from "../lib/useData";
-import {Suspense} from "react";
+import { Suspense } from "react";
 
 export default function SpeakerList() {
-  const storyIds = useData('top', () => fetchData('https://hacker-news.firebaseio.com/v0/topstories.json'))
+  const storyIds = useData("top", () =>
+    fetchData("https://hacker-news.firebaseio.com/v0/topstories.json")
+  );
 
   return (
     <>
@@ -11,9 +13,10 @@ export default function SpeakerList() {
           <Suspense fallback={"T"} key={id}>
             <p>{id}</p>
           </Suspense>
-        )
+        );
       })}
     </>
+  );
 }
 
 export async function fetchData(type) {
