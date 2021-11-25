@@ -65,7 +65,7 @@ export default function Auth() {
             ></input>
             <Link href="/conference" passHref>
               <button className="w-full py-3 my-5 text-white bg-gray-500 rounded-xl">
-                Anmelden
+                Weiter als Gast
               </button>
             </Link>
             <p className="text-xs text-center">
