@@ -19,7 +19,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "components/Header.client.js",
+    "components/Header.client.tsx",
     "pages/test.server.tsx"
   ],
   "exclude": ["node_modules"]
