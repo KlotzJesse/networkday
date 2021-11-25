@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { topics } from "./Header.client";
+import slugify from "slugify";
 
 export default function Footer() {
   return (
