@@ -1,4 +1,3 @@
-import SbEditable from "storyblok-react";
 import Header from "./Header.client";
 import Page from "./Page.client";
 import Hero from "./Hero.client";
