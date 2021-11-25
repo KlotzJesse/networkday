@@ -7,7 +7,6 @@ export default function Home() {
   return (
     <div>
       <DynamicComponent blok={story.content} />
-      <p>Test</p>
     </div>
   );
 }
