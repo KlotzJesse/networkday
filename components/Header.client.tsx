@@ -353,7 +353,16 @@ const Header = ({ blok }) => {
               <div className="mt-6">
                 <nav className="grid gap-y-8">
                   {topics.map((item) => (
-                    <Link key={item.name} href={item.href} passHref>
+                    <Link
+                      key={item.name}
+                      href={
+                        "/topics/" +
+                        slugify(item.name, {
+                          lower: true,
+                        })
+                      }
+                      passHref
+                    >
                       <a className="flex items-center p-3 -m-3 rounded-md hover:bg-gray-50">
                         <item.icon
                           className="flex-shrink-0 w-6 h-6 text-indigo-600"
