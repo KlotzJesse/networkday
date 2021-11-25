@@ -1,4 +1,4 @@
-import DynamicComponent from "../components/DynamicComponent.server";
+import DynamicComponent from "../components/DynamicComponent.client";
 
 import useData from "../lib/useData";
 import fetchData from "../lib/fetchData";
