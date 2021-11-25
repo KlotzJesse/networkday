@@ -1,5 +1,5 @@
 import Header from "./Header.client";
-import Page from "./Page.client";
+import Page from "./Page.server";
 import Hero from "./Hero.client";
 import Speaker from "./Speaker.server";
 import Steps from "./Steps.client";
