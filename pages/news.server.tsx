@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import NewsList from "../components/NewsList.server";
 
-export default function Test() {
+export default function News() {
   return (
     <div>
       <Suspense fallback="WTF?">
