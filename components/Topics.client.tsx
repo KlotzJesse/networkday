@@ -1,5 +1,6 @@
 import { topics } from "./Header.client";
 import Image from "next/image";
+import slugify from "slugify";
 
 export default function Topics() {
   return (
@@ -25,7 +26,15 @@ export default function Topics() {
                   </h1>
                   <p className="mb-3 leading-relaxed">{item.description}</p>
                   <div className="flex flex-wrap items-center ">
-                    <a className="inline-flex items-center text-indigo-500 md:mb-2 lg:mb-0">
+                    <a
+                      href={
+                        "/topics/" +
+                        slugify(item.name, {
+                          lower: true,
+                        })
+                      }
+                      className="inline-flex items-center text-indigo-500 md:mb-2 lg:mb-0"
+                    >
                       Mehr erfahren
                       <svg
                         className="w-4 h-4 ml-2"

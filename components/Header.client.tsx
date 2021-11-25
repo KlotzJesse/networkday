@@ -18,27 +18,25 @@ import {
 } from "@heroicons/react/outline";
 import Link from "next/link";
 import { ChevronDownIcon } from "@heroicons/react/solid";
+import slugify from "slugify";
 
 export const topics = [
   {
     name: "Einsparungen durch Mehrwegprodukte",
     description:
       "Ein Pfand-Mehrwegsystem verspricht nicht nur weniger Abfall, sondern zugleich auch eine Entlastung von Gastronom*Innen.",
-    href: "#",
     icon: GlobeIcon,
   },
   {
     name: "Wie Vegane Produkte Nachhaltigkeit beeinflussen",
     description:
       "Für die Gastronomie bieten vegane Speisen großes Potenzial, denn Kunden reduzieren bewusst ihren Fleischkonsum und wählen immer häufiger pflanzliche Alternativen.",
-    href: "#",
     icon: RefreshIcon,
   },
   {
     name: "Nachhaltigkeit in die Hygiene integrieren",
     description:
       "Hygiene ist im Moment für viele Gastronomen wie auch Gäste oberste Priorität. Insbesondere Einwegprodukte rücken bei der Umsetzung der Auflagen wieder stärker in den Fokus.",
-    href: "#",
     icon: ShieldCheckIcon,
   },
 ];
@@ -155,7 +153,16 @@ const Header = ({ blok }) => {
                       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                           {topics.map((item) => (
-                            <Link key={item.name} href={item.href} passHref>
+                            <Link
+                              key={item.name}
+                              href={
+                                "/topics/" +
+                                slugify(item.name, {
+                                  lower: true,
+                                })
+                              }
+                              passHref
+                            >
                               <a className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50">
                                 <item.icon
                                   className="flex-shrink-0 w-6 h-6 text-indigo-600"
