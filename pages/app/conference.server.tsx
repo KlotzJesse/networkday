@@ -1,14 +1,8 @@
-import Head from "next/head";
 import Link from "next/link";
 
 export default function Conference() {
   return (
     <div className="flex">
-      <Head>
-        <title>#NetworkDay</title>
-        <meta name="description" content="Virtual Conference" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <div className="sticky flex flex-col items-center h-screen py-5 space-y-10 bg-white shadow px-7">
         <div className="pb-10">
           <Link href="/" passHref>
