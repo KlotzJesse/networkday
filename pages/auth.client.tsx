@@ -1,5 +1,6 @@
-import Link from "next/link";
+import { signIn } from "next-auth/react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Auth() {
   return (
@@ -63,11 +64,19 @@ export default function Auth() {
               placeholder="max@musterfirma.de"
               className="w-full px-5 py-3 my-2 rounded-xl bg-gray-50 hover:bg-gray-100"
             ></input>
-            <Link href="/conference" passHref>
-              <button className="w-full py-3 my-5 text-white bg-gray-500 rounded-xl">
-                Weiter als Gast
-              </button>
-            </Link>
+
+            <button
+              onClick={() =>
+                signIn("credentials", {
+                  username: "jsmith",
+                  password: "1234",
+                  callbackUrl: "http://localhost:3000/conference",
+                })
+              }
+              className="w-full py-3 my-5 text-white bg-gray-500 rounded-xl"
+            >
+              Weiter als Gast
+            </button>
             <p className="text-xs text-center">
               Mit der Anmeldung bestätigen Sie unsere{" "}
               <Link href="/privacy" passHref>
