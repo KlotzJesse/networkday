@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
+  swcMinify: true,
+  createRoot: true,
   reactStrictMode: true,
   experimental: {
     concurrentFeatures: true,
