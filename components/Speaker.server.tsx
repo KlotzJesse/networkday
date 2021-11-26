@@ -1,8 +1,7 @@
-import Link from "next/link";
 import Image from "next/image";
-
-import useData from "../lib/useData";
+import Link from "next/link";
 import fetchData from "../lib/fetchData";
+import useData from "../lib/useData";
 
 export default function Speaker() {
   const speakerList = useData("speaker", () => fetchData(`/api/speakerap`));
