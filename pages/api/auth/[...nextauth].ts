@@ -32,6 +32,7 @@ export default NextAuth({
   },
 
    pages: {
+    signIn: "/auth",
    },
 
   debug: true,
