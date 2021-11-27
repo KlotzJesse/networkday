@@ -19,7 +19,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/app/_middleware.js",
+    "pages/app/_middleware.ts",
     "pages/api/components/_middleware.js",
     "pages/api/auth/[...nextauth].js"
   ],
