@@ -32,7 +32,7 @@ export default NextAuth({
   },
 
    pages: {
-    signIn: "/auth",
+    signIn: "/auth/signin",
    },
 
   debug: true,

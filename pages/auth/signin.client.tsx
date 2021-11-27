@@ -70,7 +70,7 @@ export default function Auth() {
                 signIn("credentials", {
                   username: "jsmith",
                   password: "1234",
-                  callbackUrl: "http://localhost:3000/conference",
+                  callbackUrl: "/conference",
                 })
               }
               className="w-full py-3 my-5 text-white bg-gray-500 rounded-xl"

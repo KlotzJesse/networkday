@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = ({ blok }) => {
   return (
@@ -31,7 +31,7 @@ const Hero = ({ blok }) => {
               </p>
               <div className="max-w-sm mx-auto mt-10 sm:max-w-none sm:flex sm:justify-center">
                 <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-                  <Link href={"/auth"} passHref>
+                  <Link href={"/auth/signin"} passHref>
                     <a className="flex items-center justify-center px-4 py-3 text-base font-medium text-blue-600 bg-white border border-transparent rounded-md shadow-sm hover:bg-blue-50 sm:px-8">
                       {" "}
                       Jetzt beitreten{" "}
