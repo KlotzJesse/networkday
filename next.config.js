@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   swcMinify: true,
-  createRoot: false,
-  reactStrictMode: false,
+  createRoot: true,
+  reactStrictMode: true,
   experimental: {
     concurrentFeatures: true,
     serverComponents: true,
-    reactRoot: false,
+    reactRoot: true,
   },
   images: {
     domains: [
