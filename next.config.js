@@ -1,12 +1,11 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  swcMinify: true,
-  createRoot: true,
-  reactStrictMode: true,
+  optimizeFonts: true,
   experimental: {
     concurrentFeatures: true,
+    optimizeCss: true,
+    optimizeImages: true,
     serverComponents: true,
-    reactRoot: true,
   },
   images: {
     domains: [
