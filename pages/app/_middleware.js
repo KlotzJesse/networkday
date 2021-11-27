@@ -6,6 +6,12 @@ export default async function middleware(req, event) {
 
   // You could also check for any property on the session object,
   // like role === "admin" or name === "John Doe", etc.
-  if (!session) return NextResponse.next();
+  if (session) return NextResponse.next();
   // If user is authenticated, continue.
+  return new Response("Auth required", {
+    status: 403,
+    headers: {
+      "WWW-Authenticate": 'Basic realm="Secure Area"',
+    },
+  });
 }

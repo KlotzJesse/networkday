@@ -1,13 +1,12 @@
-import NextAuth, { NextAuthOptions } from "next-auth";
+import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
 // For more information on each option (and a full list of options) go to
 // https://next-auth.js.org/configuration/options
-export const authOptions: NextAuthOptions = {
+export default NextAuth({
   // https://next-auth.js.org/configuration/providers
   providers: [
     CredentialsProvider({
-      name: "Credentials",
 
       credentials: {
         username: { label: "Username", type: "text", placeholder: "jsmith" },
@@ -33,14 +32,7 @@ export const authOptions: NextAuthOptions = {
   },
 
    pages: {
-     signIn: "/auth",
    },
 
-  theme: {
-    colorScheme: "light",
-  },
-
-  debug: false,
-}
-
-export default NextAuth(authOptions)
+  debug: true,
+  });
