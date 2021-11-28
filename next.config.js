@@ -3,7 +3,7 @@ module.exports = {
   optimizeFonts: true,
   experimental: {
     concurrentFeatures: true,
-    optimizeCss: true,
+    // optimizeCss: true,
     optimizeImages: true,
     serverComponents: true,
   },

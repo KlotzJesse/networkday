@@ -1,30 +1,10 @@
+import { ErrorMessage, Field, Form, Formik } from "formik";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useRef } from "react";
+import React from "react";
 
 export default function Auth() {
-  let nameInput = useRef(null);
-  let companyInput = useRef(null);
-  let mailInput = useRef(null);
-
-  const handleLogin = (e) => {
-    if (
-      !nameInput.current.value ||
-      !companyInput.current.value ||
-      !mailInput.current.value
-    ) {
-      alert("Missing name");
-      return;
-    }
-    signIn("credentials", {
-      username: nameInput.current.value,
-      company: companyInput.current.value,
-      mail: mailInput.current.value,
-      callbackUrl: "/app/conference",
-    });
-  };
-
   return (
     <section>
       <div className="flex max-h-screen">
@@ -32,7 +12,7 @@ export default function Auth() {
           className="h-screen md:w-2/6 md:p-10"
           style={{ backgroundColor: "#F8F5ED" }}
         >
-          <div className="h-full p-10 bg-white rounded-xl">
+          <div className="flex flex-col justify-center h-full p-10 bg-white rounded-xl">
             <Link href={"/"} passHref>
               <a
                 aria-label="Zur Startseite"
@@ -59,45 +39,119 @@ export default function Auth() {
                 </span>
               </a>
             </Link>
-            <h1 className="my-16 text-2xl font-bold">
-              👋 Willkommen beim #NetworkDay
-            </h1>
-            <label className="text-xs leading-tight text-gray-600">Name</label>
-            <input
-              type="text"
-              ref={nameInput}
-              placeholder="Max Mustermann"
-              className="w-full px-5 py-3 my-2 rounded-xl bg-gray-50 hover:bg-gray-100"
-              autoFocus
-            ></input>
+            <div className="flex items-center py-8">
+              <h1 className="text-2xl font-bold">
+                👋 Willkommen beim #NetworkDay
+              </h1>
+            </div>
+            <div className="flex-1">
+              <Formik
+                initialValues={{ name: "", company: "", email: "" }}
+                validate={(values) => {
+                  const errors = {};
+                  if (!values.email) {
+                    errors.email = "E-Mail darf nicht leer sein.";
+                  } else if (
+                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
+                      values.email
+                    )
+                  ) {
+                    errors.email =
+                      "Ungültige E-Mail Adresse. Benötigt: name@domain.de";
+                  }
+                  if (!values.name) {
+                    errors.name = "Name darf nicht leer sein.";
+                  }
+                  if (!values.company) {
+                    errors.company = "Firmenname darf nicht leer sein.";
+                  }
+                  return errors;
+                }}
+                onSubmit={(values, { setSubmitting }) => {
+                  signIn("credentials", {
+                    username: values.name,
+                    company: values.company,
+                    mail: values.email,
+                    callbackUrl: "/app/conference",
+                  });
+                  setSubmitting(false);
+                }}
+              >
+                {({ isSubmitting, errors, touched }) => (
+                  <Form className="flex flex-col flex-1 w-full h-full">
+                    <div className="flex flex-col justify-end flex-1 md:justify-center">
+                      <label
+                        htmlFor="name"
+                        className="text-xs leading-tight text-gray-600 "
+                      >
+                        Name
+                      </label>
+                      <Field
+                        className={`w-full px-5 py-3 my-2 ${
+                          errors.name && touched.name ? "border" : ""
+                        } border-red-700 rounded-xl bg-gray-50 hover:bg-gray-100`}
+                        type="text"
+                        name="name"
+                        placeholder="Max Mustermann"
+                      />
+                      <ErrorMessage
+                        className="mb-4 text-xs text-red-700"
+                        name="name"
+                        component="div"
+                      />
+                      <label
+                        htmlFor="company"
+                        className="text-xs leading-tight text-gray-600 "
+                      >
+                        Firma
+                      </label>
+                      <Field
+                        className={`w-full px-5 py-3 my-2 ${
+                          errors.company && touched.company ? "border" : ""
+                        } border-red-700 rounded-xl bg-gray-50 hover:bg-gray-100`}
+                        type="text"
+                        name="company"
+                        placeholder="Hotel Krone"
+                      />
+                      <ErrorMessage
+                        className="mb-4 text-xs text-red-700"
+                        name="company"
+                        component="div"
+                      />
+                      <label
+                        htmlFor="email"
+                        className="text-xs leading-tight text-gray-600 "
+                      >
+                        E-Mail
+                      </label>
+                      <Field
+                        className={`w-full px-5 py-3 my-2 ${
+                          errors.email && touched.email ? "border" : ""
+                        } border-red-700 rounded-xl bg-gray-50 hover:bg-gray-100`}
+                        type="email"
+                        name="email"
+                        placeholder="muster@hotel.de"
+                      />
+                      <ErrorMessage
+                        className="mb-4 text-xs text-red-700"
+                        name="email"
+                        component="div"
+                      />
+                    </div>
 
-            <label className="text-xs leading-tight text-gray-600 ">
-              Firma
-            </label>
-            <input
-              type="text"
-              ref={companyInput}
-              placeholder="Hotel Grünheide"
-              className="w-full px-5 py-3 my-2 rounded-xl bg-gray-50 hover:bg-gray-100"
-            ></input>
+                    <button
+                      type="submit"
+                      className="w-full py-3 my-5 text-white bg-gray-500 rounded-xl"
+                      disabled={isSubmitting}
+                    >
+                      Als Gast beitreten
+                    </button>
+                  </Form>
+                )}
+              </Formik>
+            </div>
 
-            <label className="text-xs leading-tight text-gray-600 ">
-              E-Mail
-            </label>
-            <input
-              type="email"
-              ref={mailInput}
-              placeholder="max@musterfirma.de"
-              className="w-full px-5 py-3 my-2 rounded-xl bg-gray-50 hover:bg-gray-100"
-            ></input>
-
-            <button
-              onClick={(e) => handleLogin(e)}
-              className="w-full py-3 my-5 text-white bg-gray-500 rounded-xl"
-            >
-              Weiter als Gast
-            </button>
-            <p className="text-xs text-center">
+            <p className="text-xs text-center text-gray-400">
               Mit der Anmeldung bestätigen Sie unsere{" "}
               <Link href="/privacy" passHref>
                 <a className="underline decoration-yellow-500 hover:decoration-yellow-500/40 focus:decoration-yellow-500/40 motion-safe:transition-all motion-safe:duration-200">
