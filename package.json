@@ -14,6 +14,7 @@
     "@heroicons/react": "^1.0.5",
     "@prisma/client": "^3.4.2",
     "@tailwindcss/aspect-ratio": "^0.3.0",
+    "critters": "^0.0.15",
     "next": "^12.0.5-canary.10",
     "next-auth": "0.0.0-pr.3217.87a21677",
     "react": "^18.0.0-beta-fdc1d617a-20211118",
