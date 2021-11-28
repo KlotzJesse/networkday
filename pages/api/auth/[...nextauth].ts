@@ -31,20 +31,20 @@ export default NextAuth({
   jwt: {
     secret: process.env.AUTH_SECRET,
   },
-  callbacks: {
-    async session({ session, user, token }) {
-      session.user.id = token.sub
-      session.user.company = token.company
-      return session
-    },
-    async jwt({ token, user, account, profile, isNewUser }) {
-      // Persist the OAuth access_token to the token right after signin
-      if (account) {
-        token.company = user.company
-      }
-      return token
-    }
-  },
+  // callbacks: {
+  //   async session({ session, user, token }) {
+  //     session.user.id = token.sub
+  //     session.user.company = token.company
+  //     return session
+  //   },
+  //   async jwt({ token, user, account, profile, isNewUser }) {
+  //     // Persist the OAuth access_token to the token right after signin
+  //     if (account) {
+  //       token.company = user.company
+  //     }
+  //     return token
+  //   }
+  // },
 
    pages: {
     signIn: "/auth/signin",
