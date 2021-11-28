@@ -1,24 +1,22 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import {
   BookmarkAltIcon,
   CalendarIcon,
-  ChartBarIcon,
-  CursorClickIcon,
+  GlobeIcon,
   MenuIcon,
   PhoneIcon,
   PlayIcon,
   RefreshIcon,
   ShieldCheckIcon,
   SupportIcon,
-  ViewGridIcon,
-  GlobeIcon,
   XIcon,
 } from "@heroicons/react/outline";
-import Link from "next/link";
 import { ChevronDownIcon } from "@heroicons/react/solid";
+import Link from "next/link";
+import { Fragment } from "react";
 import slugify from "slugify";
+import useSWR from "swr";
 
 export const topics = [
   {
@@ -73,21 +71,17 @@ const resources = [
     icon: ShieldCheckIcon,
   },
 ];
-const recentPosts = [
-  { id: 1, name: "Boost your conversion rate", href: "#" },
-  {
-    id: 2,
-    name: "How to use search engine optimization to drive traffic to your site",
-    href: "#",
-  },
-  { id: 3, name: "Improve your customer experience", href: "#" },
-];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const Header = ({ blok }) => {
+const Header = ({ user }) => {
+  // const story = useData("posts", () => fetchData(`/api/components/blog`));
+  // console.log(story);
+
+  const recentPosts = useSWR("/api/components/blog", fetcher).data ?? [];
+
   return (
     <Popover className="relative bg-white">
       <div className="px-4 mx-auto max-w-7xl sm:px-6">
@@ -266,10 +260,10 @@ const Header = ({ blok }) => {
                             <ul role="list" className="mt-4 space-y-4">
                               {recentPosts.map((post) => (
                                 <li
-                                  key={post.id}
+                                  key={post.name}
                                   className="text-base truncate"
                                 >
-                                  <Link href={post.href} passHref>
+                                  <Link href={"/" + post.full_slug} passHref>
                                     <a className="font-medium text-gray-900 hover:text-gray-700">
                                       {post.name}
                                     </a>
@@ -420,5 +414,7 @@ const Header = ({ blok }) => {
     </Popover>
   );
 };
+
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export default Header;
