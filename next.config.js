@@ -2,7 +2,6 @@
 module.exports = {
   optimizeFonts: true,
   experimental: {
-    outputFileTracingRoot: true,
     concurrentFeatures: true,
     optimizeCss: true,
     optimizeImages: true,
