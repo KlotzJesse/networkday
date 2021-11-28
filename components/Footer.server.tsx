@@ -76,81 +76,39 @@ export default function Footer() {
           </div>
           <div>
             <p className="font-semibold tracking-wide text-gray-800">
-              Business
+              #NetworkDay
             </p>
             <ul className="mt-2 space-y-2">
               <li>
-                <Link href={"/"} passHref>
+                <Link href={"/blog"} passHref>
                   <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-                    Web
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href={"/"} passHref>
-                  <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-                    eCommerce
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href={"/"} passHref>
-                  <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-                    Business
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href={"/"} passHref>
-                  <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-                    Entertainment
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href={"/"} passHref>
-                  <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-                    Portfolio
+                    Blog
                   </a>
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <p className="font-semibold tracking-wide text-gray-800">Apples</p>
+            <p className="font-semibold tracking-wide text-gray-800">Firma</p>
             <ul className="mt-2 space-y-2">
               <li>
                 <Link href={"/"} passHref>
                   <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-                    Media
+                    Über uns
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href={"/"} passHref>
                   <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-                    Brochure
+                    Datenschutzerklärung
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href={"/"} passHref>
+                <Link href={"/impressum"} passHref>
                   <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-                    Nonprofit
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href={"/"} passHref>
-                  <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-                    Educational
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href={"/"} passHref>
-                  <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
-                    Projects
+                    Impressum
                   </a>
                 </Link>
               </li>

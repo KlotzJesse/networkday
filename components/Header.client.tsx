@@ -296,7 +296,10 @@ const Header = ({ user }) => {
               </a>
             </Link>
             <Link href="https://www.gastronomy.world" passHref>
-              <a className="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm whitespace-nowrap hover:bg-indigo-700">
+              <a
+                target="_blank"
+                className="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm whitespace-nowrap hover:bg-indigo-700"
+              >
                 zur Online Messe
               </a>
             </Link>
@@ -401,7 +404,10 @@ const Header = ({ user }) => {
                 <p className="mt-6 text-base font-medium text-center text-gray-500">
                   Sie suchen Lösungen zu den Themen?{" "}
                   <Link href="#" passHref>
-                    <a className="text-indigo-600 hover:text-indigo-500">
+                    <a
+                      target="_blank"
+                      className="text-indigo-600 hover:text-indigo-500"
+                    >
                       zur online Messe
                     </a>
                   </Link>
