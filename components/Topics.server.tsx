@@ -8,11 +8,11 @@ export default function Topics() {
 
   return (
     <section className="text-gray-600 body-font">
-      <div className="container px-5 py-24 mx-auto">
+      <div className="container px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div className="flex flex-wrap -m-4">
           {topics.map((item) => (
             <div key={item.name} className="p-4 md:w-1/3">
-              <div className="h-full overflow-hidden border-2 border-gray-200 rounded-lg border-opacity-60">
+              <div className="h-full overflow-hidden bg-white border-2 border-gray-200 rounded-lg shadow-xl border-opacity-60">
                 <Image
                   width="720px"
                   height="400px"
