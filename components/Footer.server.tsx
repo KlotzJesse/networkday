@@ -1,5 +1,7 @@
 import Link from "next/link";
 import slugify from "slugify";
+import fetchData from "../lib/fetchData";
+import useData from "../lib/useData";
 
 export default function Footer() {
   const topics = useData("topics", () => fetchData(`/api/topics`));
