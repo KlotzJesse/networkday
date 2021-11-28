@@ -6,7 +6,8 @@
     "dev": "yarn next dev",
     "build": "yarn next build",
     "start": "yarn next start",
-    "lint": "yarn next lint"
+    "lint": "yarn next lint",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@headlessui/react": "^1.4.1",
