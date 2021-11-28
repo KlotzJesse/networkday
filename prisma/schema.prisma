@@ -18,3 +18,12 @@ model Speaker {
   name       String?
   profileImg String?
 }
+
+model Topic {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  name        String?
+  description String?
+  icon        String?
+}
