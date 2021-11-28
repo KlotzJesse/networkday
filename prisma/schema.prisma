@@ -26,4 +26,5 @@ model Topic {
   name        String?
   description String?
   icon        String?
+  img         String?
 }
