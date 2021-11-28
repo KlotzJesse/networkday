@@ -4,9 +4,9 @@ import Link from "next/link";
 import React, { useRef } from "react";
 
 export default function Auth() {
-  let nameInput = useRef();
-  let companyInput = useRef();
-  let mailInput = useRef();
+  let nameInput = useRef(null);
+  let companyInput = useRef(null);
+  let mailInput = useRef(null);
 
   const handleLogin = (e) => {
     if (
