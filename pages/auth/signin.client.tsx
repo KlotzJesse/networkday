@@ -1,10 +1,17 @@
-import { ErrorMessage, Field, Form, Formik } from "formik";
+import { ErrorMessage, Field, Form, Formik, FormikErrors } from "formik";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+interface AuthFormValues {
+  name: string;
+  company: string;
+  email: string;
+}
+
 export default function Auth() {
+  const initialValues: AuthFormValues = { name: "", company: "", email: "" };
   return (
     <section>
       <div className="flex max-h-screen">
@@ -46,9 +53,9 @@ export default function Auth() {
             </div>
             <div className="flex-1">
               <Formik
-                initialValues={{ name: "", company: "", email: "" }}
-                validate={(values) => {
-                  const errors = {};
+                initialValues={initialValues}
+                validate={(values: AuthFormValues) => {
+                  const errors: FormikErrors<AuthFormValues> = {};
                   if (!values.email) {
                     errors.email = "E-Mail darf nicht leer sein.";
                   } else if (
