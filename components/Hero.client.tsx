@@ -10,6 +10,7 @@ const Hero = ({ blok }) => {
           <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
             <div className="absolute inset-0">
               <Image
+                priority
                 layout="fill"
                 alt="HeaderImage"
                 className="object-cover w-full h-full"
