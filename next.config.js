@@ -7,6 +7,9 @@ module.exports = {
     optimizeImages: true,
     serverComponents: true,
   },
+  webpack: {
+    dev: false,
+  },
   images: {
     domains: [
       "images.unsplash.com",
