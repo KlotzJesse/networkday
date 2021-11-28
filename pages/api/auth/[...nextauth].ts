@@ -9,8 +9,9 @@ export default NextAuth({
     CredentialsProvider({
 
       credentials: {
-        username: { label: "Username", type: "text", placeholder: "jsmith" },
-        password: { label: "Password", type: "password" },
+        username: { label: "Username", type: "text" },
+        company: { label: "Company", type: "text" },
+        mail: { label: "E-Mail", type: "text" },
       },
       async authorize(credentials, req) {
         // (i.e., the request IP address)
@@ -22,13 +23,27 @@ export default NextAuth({
         //   const user = await res.json()
 
         // If no error and we have user data, return it
-        return { id: 1, name: "J Smith", email: "jsmith@example.com" };
+        return { id: 10, name: credentials.username, company: credentials.company, email: credentials.mail };
       },
     }),
   ],
   secret: process.env.AUTH_SECRET,
   jwt: {
     secret: process.env.AUTH_SECRET,
+  },
+  callbacks: {
+    async session({ session, user, token }) {
+      session.user.id = token.sub
+      session.user.company = token.company
+      return session
+    },
+    async jwt({ token, user, account, profile, isNewUser }) {
+      // Persist the OAuth access_token to the token right after signin
+      if (account) {
+        token.company = user.company
+      }
+      return token
+    }
   },
 
    pages: {

@@ -1,8 +1,30 @@
 import { signIn } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
+import React, { useRef } from "react";
 
 export default function Auth() {
+  let nameInput = useRef();
+  let companyInput = useRef();
+  let mailInput = useRef();
+
+  const handleLogin = (e) => {
+    if (
+      !nameInput.current.value ||
+      !companyInput.current.value ||
+      !mailInput.current.value
+    ) {
+      alert("Missing name");
+      return;
+    }
+    signIn("credentials", {
+      username: nameInput.current.value,
+      company: companyInput.current.value,
+      mail: mailInput.current.value,
+      callbackUrl: "/app/conference",
+    });
+  };
+
   return (
     <section>
       <div className="flex max-h-screen">
@@ -43,8 +65,10 @@ export default function Auth() {
             <label className="text-xs leading-tight text-gray-600">Name</label>
             <input
               type="text"
+              ref={nameInput}
               placeholder="Max Mustermann"
               className="w-full px-5 py-3 my-2 rounded-xl bg-gray-50 hover:bg-gray-100"
+              autoFocus
             ></input>
 
             <label className="text-xs leading-tight text-gray-600 ">
@@ -52,6 +76,7 @@ export default function Auth() {
             </label>
             <input
               type="text"
+              ref={companyInput}
               placeholder="Hotel Grünheide"
               className="w-full px-5 py-3 my-2 rounded-xl bg-gray-50 hover:bg-gray-100"
             ></input>
@@ -61,18 +86,13 @@ export default function Auth() {
             </label>
             <input
               type="email"
+              ref={mailInput}
               placeholder="max@musterfirma.de"
               className="w-full px-5 py-3 my-2 rounded-xl bg-gray-50 hover:bg-gray-100"
             ></input>
 
             <button
-              onClick={() =>
-                signIn("credentials", {
-                  username: "jsmith",
-                  password: "1234",
-                  callbackUrl: "/app/conference",
-                })
-              }
+              onClick={(e) => handleLogin(e)}
               className="w-full py-3 my-5 text-white bg-gray-500 rounded-xl"
             >
               Weiter als Gast
