@@ -1,12 +1,12 @@
+import { Suspense } from "react";
+import Exhibitors from "./Exhibitors.client";
+import Footer from "./Footer.server";
 import Header from "./Header.client";
-import Page from "./Page.server";
 import Hero from "./Hero.client";
+import Page from "./Page.server";
 import Speaker from "./Speaker.server";
 import Steps from "./Steps.client";
-import Topics from "./Topics.client";
-import Footer from "./Footer.client";
-import Exhibitors from "./Exhibitors.client";
-import { Suspense } from "react";
+import Topics from "./Topics.server";
 
 // resolve Storyblok components to Next.js components
 const Components = {
