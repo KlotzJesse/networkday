@@ -1,31 +1,28 @@
 /* This example requires Tailwind CSS v2.0+ */
-import {
-  BookmarkAltIcon,
-  BookOpenIcon,
-  RssIcon,
-  ViewListIcon,
-} from "@heroicons/react/outline";
+import { BookOpenIcon, RssIcon } from "@heroicons/react/outline";
 import { ChevronRightIcon } from "@heroicons/react/solid";
 
 const links = [
   {
-    title: "Documentation",
-    description: "Learn how to integrate our tools with your app",
+    title: "Startseite",
+    description: "Zurück zur Startseite",
+    href: "/",
     icon: BookOpenIcon,
   },
-  {
-    title: "API Reference",
-    description: "A complete API reference for our libraries",
-    icon: ViewListIcon,
-  },
-  {
-    title: "Guides",
-    description: "Installation guides that cover popular setups",
-    icon: BookmarkAltIcon,
-  },
+  // {
+  //   title: "API Reference",
+  //   description: "A complete API reference for our libraries",
+  //   icon: ViewListIcon,
+  // },
+  // {
+  //   title: "Guides",
+  //   description: "Installation guides that cover popular setups",
+  //   icon: BookmarkAltIcon,
+  // },
   {
     title: "Blog",
-    description: "Read our latest news and articles",
+    description: "Lesen Sie unsere neuesten Nachrichten und Artikel",
+    href: "/blog",
     icon: RssIcon,
   },
 ];
@@ -117,18 +114,18 @@ export default function ErrorPage() {
         <div className="max-w-xl py-16 mx-auto sm:py-24">
           <div className="text-center">
             <p className="text-sm font-semibold tracking-wide text-indigo-600 uppercase">
-              404 error
+              Fehler 404
             </p>
             <h1 className="mt-2 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
-              This page does not exist.
+              Diese Seite existiert nicht.
             </h1>
             <p className="mt-2 text-lg text-gray-500">
-              The page you are looking for could not be found.
+              Die von Ihnen gesuchte Seite konnte nicht gefunden werden.
             </p>
           </div>
           <div className="mt-12">
             <h2 className="text-sm font-semibold tracking-wide text-gray-500 uppercase">
-              Popular pages
+              Beliebte Seiten
             </h2>
             <ul
               role="list"
@@ -150,7 +147,7 @@ export default function ErrorPage() {
                   <div className="flex-1 min-w-0">
                     <h3 className="text-base font-medium text-gray-900">
                       <span className="rounded-sm focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
-                        <a href="#" className="focus:outline-none">
+                        <a href={link.href} className="focus:outline-none">
                           <span
                             className="absolute inset-0"
                             aria-hidden="true"
@@ -174,10 +171,11 @@ export default function ErrorPage() {
             </ul>
             <div className="mt-8">
               <a
-                href="#"
+                href="/"
                 className="text-base font-medium text-indigo-600 hover:text-indigo-500"
               >
-                Or go back home<span aria-hidden="true"> &rarr;</span>
+                Oder zurück zur Startseite
+                <span aria-hidden="true"> &rarr;</span>
               </a>
             </div>
           </div>
@@ -186,7 +184,7 @@ export default function ErrorPage() {
       <footer className="w-full px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="py-12 text-center border-t border-gray-200 md:flex md:justify-between">
           <p className="text-base text-gray-400">
-            &copy; Workflow, Inc. All rights reserved.
+            &copy; #NetworkDay. All rights reserved.
           </p>
           <div className="flex justify-center mt-6 space-x-8 md:mt-0">
             {social.map((item, itemIdx) => (
