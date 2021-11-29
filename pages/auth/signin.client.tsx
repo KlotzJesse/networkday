@@ -1,17 +1,41 @@
-import { ErrorMessage, Field, Form, Formik, FormikErrors } from "formik";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-
-interface AuthFormValues {
-  name: string;
-  company: string;
-  email: string;
-}
+import React, { useRef } from "react";
 
 export default function Auth() {
-  const initialValues: AuthFormValues = { name: "", company: "", email: "" };
+  let nameInput = useRef(null);
+  let companyInput = useRef(null);
+  let mailInput = useRef(null);
+
+  const handleLogin = (e) => {
+    if (!nameInput.current.value) {
+      nameInput.current.classList.add("border");
+      nameInput.current.nextSibling.classList.remove("hidden");
+    }
+    if (!companyInput.current.value) {
+      companyInput.current.classList.add("border");
+      companyInput.current.nextSibling.classList.remove("hidden");
+    }
+    if (!mailInput.current.value) {
+      mailInput.current.classList.add("border");
+      mailInput.current.nextSibling.classList.remove("hidden");
+    }
+    if (
+      !nameInput.current.value ||
+      !companyInput.current.value ||
+      !mailInput.current.value
+    ) {
+      return;
+    }
+    signIn("credentials", {
+      username: nameInput.current.value,
+      company: companyInput.current.value,
+      mail: mailInput.current.value,
+      callbackUrl: "/app/conference",
+    });
+  };
+
   return (
     <section>
       <div className="flex max-h-screen">
@@ -52,110 +76,56 @@ export default function Auth() {
               </h1>
             </div>
             <div className="flex-1">
-              <Formik
-                initialValues={initialValues}
-                validate={(values: AuthFormValues) => {
-                  const errors: FormikErrors<AuthFormValues> = {};
-                  if (!values.email) {
-                    errors.email = "E-Mail darf nicht leer sein.";
-                  } else if (
-                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
-                      values.email
-                    )
-                  ) {
-                    errors.email =
-                      "Ungültige E-Mail Adresse. Benötigt: name@domain.de";
-                  }
-                  if (!values.name) {
-                    errors.name = "Name darf nicht leer sein.";
-                  }
-                  if (!values.company) {
-                    errors.company = "Firmenname darf nicht leer sein.";
-                  }
-                  return errors;
-                }}
-                onSubmit={(values, { setSubmitting }) => {
-                  signIn("credentials", {
-                    username: values.name,
-                    company: values.company,
-                    mail: values.email,
-                    callbackUrl: "/app/conference",
-                  });
-                  setSubmitting(false);
-                }}
-              >
-                {({ isSubmitting, errors, touched }) => (
-                  <Form className="flex flex-col flex-1 w-full h-full">
-                    <div className="flex flex-col justify-end flex-1 md:justify-center">
-                      <label
-                        htmlFor="name"
-                        className="text-xs leading-tight text-gray-600 "
-                      >
-                        Name
-                      </label>
-                      <Field
-                        className={`w-full px-5 py-3 my-2 ${
-                          errors.name && touched.name ? "border" : ""
-                        } border-red-700 rounded-xl bg-gray-50 hover:bg-gray-100`}
-                        type="text"
-                        name="name"
-                        placeholder="Max Mustermann"
-                      />
-                      <ErrorMessage
-                        className="mb-4 text-xs text-red-700"
-                        name="name"
-                        component="div"
-                      />
-                      <label
-                        htmlFor="company"
-                        className="text-xs leading-tight text-gray-600 "
-                      >
-                        Firma
-                      </label>
-                      <Field
-                        className={`w-full px-5 py-3 my-2 ${
-                          errors.company && touched.company ? "border" : ""
-                        } border-red-700 rounded-xl bg-gray-50 hover:bg-gray-100`}
-                        type="text"
-                        name="company"
-                        placeholder="Hotel Krone"
-                      />
-                      <ErrorMessage
-                        className="mb-4 text-xs text-red-700"
-                        name="company"
-                        component="div"
-                      />
-                      <label
-                        htmlFor="email"
-                        className="text-xs leading-tight text-gray-600 "
-                      >
-                        E-Mail
-                      </label>
-                      <Field
-                        className={`w-full px-5 py-3 my-2 ${
-                          errors.email && touched.email ? "border" : ""
-                        } border-red-700 rounded-xl bg-gray-50 hover:bg-gray-100`}
-                        type="email"
-                        name="email"
-                        placeholder="muster@hotel.de"
-                      />
-                      <ErrorMessage
-                        className="mb-4 text-xs text-red-700"
-                        name="email"
-                        component="div"
-                      />
-                    </div>
+              <div className="flex flex-col flex-1 w-full h-full">
+                <div className="flex flex-col justify-end flex-1 md:justify-center">
+                  <label className="text-xs leading-tight text-gray-600">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    ref={nameInput}
+                    placeholder="Max Mustermann"
+                    className="w-full px-5 py-3 my-2 border-red-700 rounded-xl bg-gray-50 hover:bg-gray-100"
+                    autoFocus
+                  ></input>
+                  <p className="hidden mb-4 text-xs text-red-700">
+                    Es muss ein Name angegeben werden.
+                  </p>
 
-                    <button
-                      type="submit"
-                      className="w-full py-3 my-5 text-white bg-gray-500 rounded-xl"
-                      disabled={isSubmitting}
-                    >
-                      Als Gast beitreten
-                    </button>
-                  </Form>
-                )}
-              </Formik>
+                  <label className="text-xs leading-tight text-gray-600 ">
+                    Firma
+                  </label>
+                  <input
+                    type="text"
+                    ref={companyInput}
+                    placeholder="Hotel Grünheide"
+                    className="w-full px-5 py-3 my-2 border-red-700 rounded-xl bg-gray-50 hover:bg-gray-100"
+                  ></input>
+                  <p className="hidden mb-4 text-xs text-red-700">
+                    Es muss ein Firmenname angegeben werden.
+                  </p>
+
+                  <label className="text-xs leading-tight text-gray-600 ">
+                    E-Mail
+                  </label>
+                  <input
+                    type="email"
+                    ref={mailInput}
+                    placeholder="max@musterfirma.de"
+                    className="w-full px-5 py-3 my-2 border-red-700 rounded-xl bg-gray-50 hover:bg-gray-100"
+                  ></input>
+                  <p className="hidden mb-4 text-xs text-red-700">
+                    Es muss eine gültige E-Mail angegeben werden.
+                  </p>
+                </div>
+
+                <button
+                  onClick={(e) => handleLogin(e)}
+                  className="w-full py-3 my-5 text-white bg-gray-500 rounded-xl"
+                >
+                  Weiter als Gast
+                </button>
+              </div>
             </div>
 
             <p className="text-xs text-center text-gray-400">
