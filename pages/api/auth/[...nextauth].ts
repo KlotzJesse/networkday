@@ -1,9 +1,20 @@
-import NextAuth from "next-auth";
+import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+
+declare module 'next-auth' {
+  interface Session {
+      user: {
+          id: string
+          email: string
+          company: string
+          name: string
+      }
+  }
+}
 
 // For more information on each option (and a full list of options) go to
 // https://next-auth.js.org/configuration/options
-export default NextAuth({
+export const authOptions: NextAuthOptions = {
   // https://next-auth.js.org/configuration/providers
   providers: [
     CredentialsProvider({
@@ -13,7 +24,7 @@ export default NextAuth({
         company: { label: "Company", type: "text" },
         mail: { label: "E-Mail", type: "text" },
       },
-      async authorize(credentials, req) {
+      async authorize(credentials) {
         // (i.e., the request IP address)
         //   const res = await fetch("/your/endpoint", {
         //     method: 'POST',
@@ -31,24 +42,25 @@ export default NextAuth({
   jwt: {
     secret: process.env.AUTH_SECRET,
   },
-  // callbacks: {
-  //   async session({ session, user, token }) {
-  //     session.user.id = token.sub
-  //     session.user.company = token.company
-  //     return session
-  //   },
-  //   async jwt({ token, user, account, profile, isNewUser }) {
-  //     // Persist the OAuth access_token to the token right after signin
-  //     if (account) {
-  //       token.company = user.company
-  //     }
-  //     return token
-  //   }
-  // },
+  callbacks: {
+    //  session: async({ session, token, user }) => {
+    //   session.user.id = user.id
+    //   return Promise.resolve(session)
+    // },
+    // async jwt({ token, user, account, profile, isNewUser }) {
+    //   // Persist the OAuth access_token to the token right after signin
+    //   if (account) {
+    //     token.company = user.company
+    //   }
+    //   return token
+    // }
+  },
 
    pages: {
     signIn: "/auth/signin",
    },
 
   debug: true,
-  });
+  }
+  
+  export default NextAuth(authOptions)

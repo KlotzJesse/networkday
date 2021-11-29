@@ -274,7 +274,7 @@ const Header = ({ user }) => {
                             </ul>
                           </div>
                           <div className="mt-5 text-sm">
-                            <Link href="#" passHref>
+                            <Link href="/blog" passHref>
                               <a className="font-medium text-indigo-600 hover:text-indigo-500">
                                 {" "}
                                 Alle Beiträge anzeigen{" "}
@@ -291,7 +291,7 @@ const Header = ({ user }) => {
             </Popover>
           </Popover.Group>
           <div className="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
-            <Link href="#" passHref>
+            <Link href="/register" passHref>
               <a className="text-base font-medium text-gray-500 whitespace-nowrap hover:text-gray-900">
                 Zugang reservieren
               </a>
@@ -377,7 +377,7 @@ const Header = ({ user }) => {
             </div>
             <div className="px-5 py-6 space-y-6">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <Link href="#" passHref>
+                <Link href="/speaker" passHref>
                   <a className="text-base font-medium text-gray-900 hover:text-gray-700">
                     Speaker
                   </a>
@@ -397,7 +397,7 @@ const Header = ({ user }) => {
                 ))}
               </div>
               <div>
-                <Link href="#" passHref>
+                <Link href="/register" passHref>
                   <a className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700">
                     Zugang reservieren
                   </a>
