@@ -17,6 +17,7 @@ import Link from "next/link";
 import { Fragment } from "react";
 import slugify from "slugify";
 import useSWR from "swr";
+import fetcher from "../lib/fetcher";
 
 export const topics = [
   {
@@ -420,7 +421,5 @@ const Header = ({ user }) => {
     </Popover>
   );
 };
-
-const fetcher = (args) => fetch(args).then((res) => res.json());
 
 export default Header;

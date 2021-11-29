@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BlueJeansMeeting from "../../components/BlueJeansMeeting.client";
 
 export default function Conference() {
   return (
@@ -61,7 +62,7 @@ export default function Conference() {
 
       <main className="flex flex-col flex-grow px-4 py-5 mx-auto md:px-24 lg:px-8">
         <div>
-          <div className="relative flex items-center w-1/4 mb-16">
+          {/* <div className="relative flex items-center w-1/4 mb-16">
             <span className="absolute z-10 flex items-center justify-center w-8 h-full py-3 pl-3 text-base font-normal leading-snug text-center text-gray-300 bg-transparent rounded">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -83,17 +84,12 @@ export default function Conference() {
               placeholder="Search"
               className="relative w-full px-3 py-3 pl-10 text-sm text-gray-600 placeholder-gray-300 bg-white border border-gray-400 rounded outline-none focus:outline-none focus:ring"
             />
-          </div>
+          </div> */}
         </div>
         <div className="flex">
           <div className="flex items-center justify-center w-full space-x-6">
             <div className="w-full mr-5 bg-white shadow-md rounded-3xl aspect-w-16 aspect-h-9">
-              <iframe
-                title="BlueJeans"
-                src="https://bluejeans.com/784330684/quick?embed=true&amp;chat=false&amp;ll=de&amp;parent=https://www.network-day.de&amp;sign_in=false&amp;footer=false&amp;apps=false&amp;room_pairing=false&amp;layout=true&amp;copy_link=false&amp;rating=false&amp;app_pitch=false&amp;lockMeetingControls=true&amp;locale=de"
-                allow="autoplay; fullscreen; microphone; camera; display-capture"
-                className="p-2 rounded-3xl"
-              ></iframe>
+              <BlueJeansMeeting />
             </div>
           </div>
           <div className="flex flex-col w-3/6 space-y-5">
@@ -138,7 +134,7 @@ export default function Conference() {
                 <p>Messestand öffnen</p>
               </div>
             </div>
-            <div className="flex flex-col flex-1 p-3 space-y-3 bg-white shadow-md rounded-xl">
+            {/* <div className="flex flex-col flex-1 p-3 space-y-3 bg-white shadow-md rounded-xl">
               <div className="flex">
                 <h2 className="flex-grow" style={{ fontWeight: "bold" }}>
                   Chats
@@ -197,7 +193,7 @@ export default function Conference() {
                   />
                 </svg>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </main>
