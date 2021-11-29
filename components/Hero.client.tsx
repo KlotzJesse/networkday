@@ -5,15 +5,15 @@ const Hero = ({ blok }) => {
   return (
     <div className="">
       <div className="relative bg-white">
-        <div className="absolute inset-x-0 bottom-0  h-1/2" />
+        <div className="absolute inset-x-0 bottom-0 h-1/2" />
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
-            <div className="absolute inset-0">
+            <div className="inset-0">
               <Image
                 priority
                 layout="fill"
                 alt="HeaderImage"
-                className="object-cover w-full h-full"
+                className="w-full h-full"
                 src={blok.BackgroundImage.filename}
               />
               <div
@@ -31,19 +31,19 @@ const Hero = ({ blok }) => {
                 {blok.Description}{" "}
               </p>
               <div className="max-w-sm mx-auto mt-10 sm:max-w-none sm:flex sm:justify-center">
-                <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
+                <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-1 sm:gap-5">
                   <Link href={"/auth/signin"} passHref>
                     <a className="flex items-center justify-center px-4 py-3 text-base font-medium text-blue-600 bg-white border border-transparent rounded-md shadow-sm hover:bg-blue-50 sm:px-8">
                       {" "}
                       Jetzt beitreten{" "}
                     </a>
                   </Link>
-                  <Link href={"/register"} passHref>
+                  {/* <Link href={"/register"} passHref>
                     <a className="flex items-center justify-center px-4 py-3 text-base font-medium text-white bg-blue-500 border border-transparent rounded-md shadow-sm bg-opacity-60 hover:bg-opacity-70 sm:px-8">
                       {" "}
                       Zugang reservieren{" "}
                     </a>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
