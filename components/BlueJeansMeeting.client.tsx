@@ -5,7 +5,7 @@ import fetcher from "../lib/fetcher";
 export const BlueJeansMeeting = () => {
   const session = useSWRImmutable("/api/session", fetcher);
   if (session.error) return session.error.message;
-  if (session.isValidating) return "Loading";
+  if (!session.data) return "Loading";
   return (
     <iframe
       title="BlueJeans"
