@@ -1,9 +1,9 @@
 interface BlueJeansMeetingProps {}
-import useSWR from "swr";
+import useSWRImmutable from "swr/immutable";
 import fetcher from "../lib/fetcher";
 
 export const BlueJeansMeeting = () => {
-  const session = useSWR("/api/session", fetcher);
+  const session = useSWRImmutable("/api/session", fetcher);
   if (session.error) return session.error.message;
   if (session.isValidating) return "Loading";
   return (
