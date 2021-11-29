@@ -21,7 +21,7 @@
     "**/*.tsx",
     "pages/app/disabled.ts",
     "pages/api/components/_middleware.js",
-    "pages/api/auth/[...nextauth].js"
+    "pages/api/auth/[...nextauth].ts"
   ],
   "exclude": ["node_modules"]
 }
