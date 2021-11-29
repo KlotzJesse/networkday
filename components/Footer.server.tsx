@@ -92,14 +92,14 @@ export default function Footer() {
             <p className="font-semibold tracking-wide text-gray-800">Firma</p>
             <ul className="mt-2 space-y-2">
               <li>
-                <Link href={"/"} passHref>
+                <Link href={"/about-us"} passHref>
                   <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
                     Über uns
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href={"/"} passHref>
+                <Link href={"/privacy"} passHref>
                   <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
                     Datenschutzerklärung
                   </a>
@@ -129,14 +129,7 @@ export default function Footer() {
               target="_blank"
               className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                fill="currentColor"
-                className="h-5"
-                viewBox="0 0 192 192"
-              >
+              <svg fill="currentColor" className="h-5" viewBox="0 0 192 192">
                 {
                   <g
                     fill="none"
