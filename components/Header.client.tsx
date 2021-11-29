@@ -3,11 +3,9 @@ import { Popover, Transition } from "@headlessui/react";
 import {
   BookmarkAltIcon,
   CalendarIcon,
-  GlobeIcon,
   MenuIcon,
   PhoneIcon,
   PlayIcon,
-  RefreshIcon,
   ShieldCheckIcon,
   SupportIcon,
   XIcon,
@@ -18,27 +16,28 @@ import { Fragment } from "react";
 import slugify from "slugify";
 import useSWR from "swr";
 import fetcher from "../lib/fetcher";
+import HeroIcon from "./HeroIcon";
 
-export const topics = [
-  {
-    name: "Einsparungen durch Mehrwegprodukte",
-    description:
-      "Ein Pfand-Mehrwegsystem verspricht nicht nur weniger Abfall, sondern zugleich auch eine Entlastung von Gastronom*Innen.",
-    icon: GlobeIcon,
-  },
-  {
-    name: "Wie Vegane Produkte Nachhaltigkeit beeinflussen",
-    description:
-      "Für die Gastronomie bieten vegane Speisen großes Potenzial, denn Kunden reduzieren bewusst ihren Fleischkonsum und wählen immer häufiger pflanzliche Alternativen.",
-    icon: RefreshIcon,
-  },
-  {
-    name: "Nachhaltigkeit in die Hygiene integrieren",
-    description:
-      "Hygiene ist im Moment für viele Gastronomen wie auch Gäste oberste Priorität. Insbesondere Einwegprodukte rücken bei der Umsetzung der Auflagen wieder stärker in den Fokus.",
-    icon: ShieldCheckIcon,
-  },
-];
+// export const topicsOld = [
+//   {
+//     name: "Einsparungen durch Mehrwegprodukte",
+//     description:
+//       "Ein Pfand-Mehrwegsystem verspricht nicht nur weniger Abfall, sondern zugleich auch eine Entlastung von Gastronom*Innen.",
+//     icon: GlobeIcon,
+//   },
+//   {
+//     name: "Wie Vegane Produkte Nachhaltigkeit beeinflussen",
+//     description:
+//       "Für die Gastronomie bieten vegane Speisen großes Potenzial, denn Kunden reduzieren bewusst ihren Fleischkonsum und wählen immer häufiger pflanzliche Alternativen.",
+//     icon: RefreshIcon,
+//   },
+//   {
+//     name: "Nachhaltigkeit in die Hygiene integrieren",
+//     description:
+//       "Hygiene ist im Moment für viele Gastronomen wie auch Gäste oberste Priorität. Insbesondere Einwegprodukte rücken bei der Umsetzung der Auflagen wieder stärker in den Fokus.",
+//     icon: ShieldCheckIcon,
+//   },
+// ];
 const callsToAction = [
   { name: "Zugang reservieren", href: "/register", icon: PlayIcon },
   { name: "Hilfe", href: "/help", icon: PhoneIcon },
@@ -77,11 +76,9 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const Header = ({ user }) => {
-  // const story = useData("posts", () => fetchData(`/api/components/blog`));
-  // console.log(story);
-
+const Header = () => {
   const recentPosts = useSWR("/api/components/blog", fetcher).data ?? [];
+  const topics = useSWR("/api/topics", fetcher).data ?? [];
 
   return (
     <Popover className="relative bg-white">
@@ -159,9 +156,11 @@ const Header = ({ user }) => {
                               passHref
                             >
                               <a className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50">
-                                <item.icon
+                                <HeroIcon
+                                  name={item.icon}
                                   className="flex-shrink-0 w-6 h-6 text-indigo-600"
                                   aria-hidden="true"
+                                  outline
                                 />
                                 <div className="ml-4">
                                   <p className="text-base font-medium text-gray-900">
@@ -361,14 +360,21 @@ const Header = ({ user }) => {
                       }
                       passHref
                     >
-                      <a className="flex items-center p-3 -m-3 rounded-md hover:bg-gray-50">
-                        <item.icon
+                      <a className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50">
+                        <HeroIcon
+                          name={item.icon}
                           className="flex-shrink-0 w-6 h-6 text-indigo-600"
                           aria-hidden="true"
+                          outline
                         />
-                        <span className="ml-3 text-base font-medium text-gray-900">
-                          {item.name}
-                        </span>
+                        <div className="ml-4">
+                          <p className="text-base font-medium text-gray-900">
+                            {item.name}
+                          </p>
+                          <p className="mt-1 text-sm text-gray-500">
+                            {item.description}
+                          </p>
+                        </div>
                       </a>
                     </Link>
                   ))}

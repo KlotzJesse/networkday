@@ -1,11 +1,7 @@
 import Link from "next/link";
 import BlueJeansMeeting from "../../components/BlueJeansMeeting.client";
-import fetchData from "../../lib/fetchData";
-import useData from "../../lib/useData";
 
-export default function Conference() {
-  const session = useData("session", () => fetchData(`/api/session`));
-
+export default function Conference(request) {
   return (
     <div className="flex">
       <div className="sticky flex flex-col items-center h-screen py-5 space-y-10 bg-white shadow px-7">
