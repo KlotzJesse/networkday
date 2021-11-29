@@ -144,9 +144,10 @@ export default function Auth() {
           style={{ backgroundColor: "#F8F5ED" }}
         >
           <Image
+            priority
             alt="BackgroundImage"
             layout="fill"
-            src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/d32e3f70396087.5ba22dac2c486.gif"
+            src="/BackgroundImage.gif"
           ></Image>
         </div>
       </div>
