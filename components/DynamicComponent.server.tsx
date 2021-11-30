@@ -3,6 +3,7 @@ import Exhibitors from "./Exhibitors.client";
 import Footer from "./Footer.server";
 import Header from "./Header.client";
 import Hero from "./Hero.client";
+import SpeakerListHome from "./home/SpeakerListHome.client";
 import Page from "./Page.server";
 import Speaker from "./Speaker.server";
 import Steps from "./Steps.client";
@@ -18,6 +19,7 @@ const Components = {
   footer: Footer,
   page: Page,
   exhibitors: Exhibitors,
+  speakerListHome: SpeakerListHome,
 };
 
 const DynamicComponent = ({ blok }) => {
