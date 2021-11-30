@@ -88,7 +88,7 @@ export default function Conference(request) {
         </div>
         <div className="flex">
           <div className="flex items-center justify-center w-full space-x-6">
-            <div className="w-full mr-5 bg-white shadow-md rounded-3xl aspect-w-16 aspect-h-9">
+            <div className="w-full h-screen mr-5 bg-white shadow-md rounded-3xl aspect-w-16 aspect-h-9">
               <BlueJeansMeeting />
             </div>
           </div>

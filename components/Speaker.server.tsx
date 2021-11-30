@@ -31,7 +31,7 @@ export default function Speaker() {
                 <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
                   <Image
                     width="720px"
-                    height="400px"
+                    height="700px"
                     className="object-cover w-full h-56 md:h-64 xl:h-80"
                     src={speaker.profileImg}
                     alt={speaker.name}
