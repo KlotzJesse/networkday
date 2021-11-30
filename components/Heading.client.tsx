@@ -1,6 +1,4 @@
 export const Heading = ({ blok }) => {
-  console.log(blok);
-
   return (
     <h2 id={blok.title} className="group">
       <a
