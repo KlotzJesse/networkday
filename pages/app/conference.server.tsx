@@ -4,7 +4,7 @@ import BlueJeansMeeting from "../../components/BlueJeansMeeting.client";
 export default function Conference(request) {
   return (
     <div className="flex">
-      <div className="sticky flex flex-col items-center h-screen py-5 space-y-10 bg-white shadow px-7">
+      <div className="sticky flex flex-col items-center hidden h-screen py-5 space-y-10 bg-white shadow px-7 md:block">
         <div className="pb-10">
           <Link href="/" passHref>
             <a>
