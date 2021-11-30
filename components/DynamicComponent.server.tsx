@@ -2,11 +2,13 @@ import { Suspense } from "react";
 import Exhibitors from "./Exhibitors.client";
 import Footer from "./Footer.server";
 import Header from "./Header.client";
+import Heading from "./Heading.client";
 import Hero from "./Hero.client";
 import SpeakerListHome from "./home/SpeakerListHome.client";
 import Page from "./Page.server";
 import Speaker from "./Speaker.server";
 import Steps from "./Steps.client";
+import Text from "./Text.client";
 import Topics from "./Topics.server";
 
 // resolve Storyblok components to Next.js components
@@ -20,6 +22,8 @@ const Components = {
   page: Page,
   exhibitors: Exhibitors,
   speakerListHome: SpeakerListHome,
+  heading: Heading,
+  text: Text,
 };
 
 const DynamicComponent = ({ blok }) => {
