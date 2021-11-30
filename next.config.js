@@ -4,7 +4,7 @@ module.exports = {
   experimental: {
     concurrentFeatures: true,
     // optimizeCss: true,
-    optimizeImages: true,
+    //optimizeImages: true,
     serverComponents: true,
   },
   images: {
