@@ -28,7 +28,7 @@ const CTA = () => {
             <div className="mt-8">
               <div className="inline-flex rounded-md shadow">
                 <a
-                  href="#"
+                  href="/auth"
                   className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-gray-900 bg-white border border-transparent rounded-md hover:bg-gray-50"
                 >
                   Als Gast beitreten
