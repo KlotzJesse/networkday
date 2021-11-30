@@ -86,18 +86,25 @@ export default function Footer() {
                   </a>
                 </Link>
               </li>
+              <li>
+                <Link href={"/speaker"} passHref>
+                  <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
+                    Speaker
+                  </a>
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
             <p className="font-semibold tracking-wide text-gray-800">Firma</p>
             <ul className="mt-2 space-y-2">
-              <li>
+              {/* <li>
                 <Link href={"/about-us"} passHref>
                   <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
                     Über uns
                   </a>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href={"/privacy"} passHref>
                   <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
