@@ -46,7 +46,7 @@ const resources = [
     name: "Hilfe Center",
     description:
       "Holen Sie sich Antworten auf all Ihre Fragen in unseren Foren oder kontaktieren Sie den Support.",
-    href: "#",
+    href: "/help",
     icon: SupportIcon,
   },
   {
