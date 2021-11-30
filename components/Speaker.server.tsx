@@ -34,7 +34,7 @@ export default function Speaker() {
                     height="400px"
                     className="object-cover w-full h-56 md:h-64 xl:h-80"
                     src={speaker.profileImg}
-                    alt=""
+                    alt={speaker.name}
                   />
                   <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
                     <p className="text-sm font-medium tracking-wide text-white">
