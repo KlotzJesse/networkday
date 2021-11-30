@@ -68,15 +68,18 @@ export default function BlogPost({ router }) {
               10 Minuten lesen • <span>30. November 2021</span>
             </p>
           </div>
-          <div className="relative w-full mt-4 prose max-w-none h-96">
-            <Image
-              priority
-              alt="Test"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-xl"
-              src={story.content.image.filename}
-            />
+          <div className="w-full mt-4 prose max-w-none ">
+            <div className="relative h-96">
+              <Image
+                priority
+                alt="Test"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-xl"
+                src={story.content.image.filename}
+              />
+            </div>
+
             {story.content.body.map((entry) => {
               return (
                 <section

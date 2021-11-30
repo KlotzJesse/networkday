@@ -1,5 +1,5 @@
 export const Heading = ({ blok }) => {
-  return <h1>{blok.title}</h1>;
+  return <h2>{blok.title}</h2>;
 };
 
 export default Heading;
