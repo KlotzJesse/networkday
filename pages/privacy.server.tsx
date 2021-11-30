@@ -987,25 +987,27 @@ export default function Impressum() {
               Datenverarbeitung auf dieser Website außerhalb des Europäischen
               Wirtschaftsraumes oder der Schweiz sitzt, dann erfolgt die Google
               Analytics Datenverarbeitung durch Google LLC. Google LLC und
-              Google Ireland Limited werden nachfolgend "Google" genannt.
+              Google Ireland Limited werden nachfolgend &quot;Google&quot;
+              genannt.
             </p>
             <p>
-              Google Analytics verwendet sog. "Cookies", Textdateien, die auf
-              dem Computer des Seitenbesuchers gespeichert werden und die eine
-              Analyse der Benutzung der Website durch den Seitenbesucher
-              ermöglichen. Die durch das Cookie erzeugten Informationen über die
-              Benutzung dieser Website durch den Seitenbesucher (einschließlich
-              der gekürzten IP-Adresse) werden in der Regel an einen Server von
-              Google übertragen und dort gespeichert.
+              Google Analytics verwendet sog. &quot;Cookies&quot;, Textdateien,
+              die auf dem Computer des Seitenbesuchers gespeichert werden und
+              die eine Analyse der Benutzung der Website durch den
+              Seitenbesucher ermöglichen. Die durch das Cookie erzeugten
+              Informationen über die Benutzung dieser Website durch den
+              Seitenbesucher (einschließlich der gekürzten IP-Adresse) werden in
+              der Regel an einen Server von Google übertragen und dort
+              gespeichert.
             </p>
             <p>
               Google Analytics wird ausschließlich mit der Erweiterung
-              "_anonymizeIp()" auf dieser Website verwendet. Diese Erweiterung
-              stellt eine Anonymisierung der IP-Adresse durch Kürzung sicher und
-              schließt eine direkte Personenbeziehbarkeit aus. Durch die
-              Erweiterung wird die IP-Adresse von Google innerhalb von
-              Mitgliedstaaten der Europäischen Union oder in anderen
-              Vertragsstaaten des Abkommens über den Europäischen
+              &quot;_anonymizeIp()&quot; auf dieser Website verwendet. Diese
+              Erweiterung stellt eine Anonymisierung der IP-Adresse durch
+              Kürzung sicher und schließt eine direkte Personenbeziehbarkeit
+              aus. Durch die Erweiterung wird die IP-Adresse von Google
+              innerhalb von Mitgliedstaaten der Europäischen Union oder in
+              anderen Vertragsstaaten des Abkommens über den Europäischen
               Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen wird die
               volle IP-Adresse an einen Server von Google in den USA übertragen
               und dort gekürzt. Die im Rahmen von Google Analytics von dem
