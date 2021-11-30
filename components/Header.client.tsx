@@ -143,7 +143,7 @@ const Header = () => {
                     <Popover.Panel className="absolute z-50 w-screen max-w-md px-2 mt-3 -ml-4 transform sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
-                          {topics.map((item) => (
+                          {topics.slice(0, 3).map((item) => (
                             <Link
                               key={item.name}
                               href={
@@ -348,7 +348,7 @@ const Header = () => {
               </div>
               <div className="mt-6">
                 <nav className="grid gap-y-8">
-                  {topics.map((item) => (
+                  {topics.slice(0, 3).map((item) => (
                     <Link
                       key={item.name}
                       href={
