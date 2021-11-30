@@ -1,11 +1,8 @@
 import { Popover, Transition } from "@headlessui/react";
 import {
-  BookmarkAltIcon,
-  CalendarIcon,
   MenuIcon,
   PhoneIcon,
   PlayIcon,
-  ShieldCheckIcon,
   SupportIcon,
   XIcon,
 } from "@heroicons/react/outline";
@@ -29,26 +26,26 @@ const resources = [
     href: "/help",
     icon: SupportIcon,
   },
-  {
-    name: "Leitfäden",
-    description:
-      "Erfahren Sie, wie Sie unsere Plattform optimal nutzen können.",
-    href: "#",
-    icon: BookmarkAltIcon,
-  },
-  {
-    name: "Veranstaltungen",
-    description:
-      "Informieren Sie sich, welche Treffen und anderen Veranstaltungen wir in Ihrer Nähe planen.",
-    href: "#",
-    icon: CalendarIcon,
-  },
-  {
-    name: "Sicherheit",
-    description: "Verstehen Sie, wie ernst wir Ihre Privatsphäre nehmen.",
-    href: "#",
-    icon: ShieldCheckIcon,
-  },
+  // {
+  //   name: "Leitfäden",
+  //   description:
+  //     "Erfahren Sie, wie Sie unsere Plattform optimal nutzen können.",
+  //   href: "#",
+  //   icon: BookmarkAltIcon,
+  // },
+  // {
+  //   name: "Veranstaltungen",
+  //   description:
+  //     "Informieren Sie sich, welche Treffen und anderen Veranstaltungen wir in Ihrer Nähe planen.",
+  //   href: "#",
+  //   icon: CalendarIcon,
+  // },
+  // {
+  //   name: "Sicherheit",
+  //   description: "Verstehen Sie, wie ernst wir Ihre Privatsphäre nehmen.",
+  //   href: "#",
+  //   icon: ShieldCheckIcon,
+  // },
 ];
 
 function classNames(...classes) {
