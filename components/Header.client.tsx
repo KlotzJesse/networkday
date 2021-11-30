@@ -17,26 +17,6 @@ import useSWR from "swr";
 import fetcher from "../lib/fetcher";
 import HeroIcon from "./HeroIcon";
 
-// export const topicsOld = [
-//   {
-//     name: "Einsparungen durch Mehrwegprodukte",
-//     description:
-//       "Ein Pfand-Mehrwegsystem verspricht nicht nur weniger Abfall, sondern zugleich auch eine Entlastung von Gastronom*Innen.",
-//     icon: GlobeIcon,
-//   },
-//   {
-//     name: "Wie Vegane Produkte Nachhaltigkeit beeinflussen",
-//     description:
-//       "Für die Gastronomie bieten vegane Speisen großes Potenzial, denn Kunden reduzieren bewusst ihren Fleischkonsum und wählen immer häufiger pflanzliche Alternativen.",
-//     icon: RefreshIcon,
-//   },
-//   {
-//     name: "Nachhaltigkeit in die Hygiene integrieren",
-//     description:
-//       "Hygiene ist im Moment für viele Gastronomen wie auch Gäste oberste Priorität. Insbesondere Einwegprodukte rücken bei der Umsetzung der Auflagen wieder stärker in den Fokus.",
-//     icon: ShieldCheckIcon,
-//   },
-// ];
 const callsToAction = [
   { name: "Zugang reservieren", href: "/register", icon: PlayIcon },
   { name: "Hilfe", href: "/help", icon: PhoneIcon },
@@ -143,7 +123,7 @@ const Header = () => {
                     <Popover.Panel className="absolute z-50 w-screen max-w-md px-2 mt-3 -ml-4 transform sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                       <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
-                          {topics.slice(0, 3).map((item) => (
+                          {topics.map((item) => (
                             <Link
                               key={item.name}
                               href={
@@ -257,7 +237,7 @@ const Header = () => {
                               Neuste Beiträge
                             </h3>
                             <ul role="list" className="mt-4 space-y-4">
-                              {recentPosts.map((post) => (
+                              {recentPosts.slice(0, 3).map((post) => (
                                 <li
                                   key={post.name}
                                   className="text-base truncate"
@@ -348,7 +328,7 @@ const Header = () => {
               </div>
               <div className="mt-6">
                 <nav className="grid gap-y-8">
-                  {topics.slice(0, 3).map((item) => (
+                  {topics.map((item) => (
                     <Link
                       key={item.name}
                       href={
