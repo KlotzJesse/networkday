@@ -5,12 +5,15 @@ import Footer from "../../components/Footer.server";
 import Header from "../../components/Header.client";
 import fetchData from "../../lib/fetchData";
 import useData from "../../lib/useData";
+import ErrorPage from "../404";
 
 export default function BlogPost({ router }) {
   const postSlug = router.route.split("/")[2];
   const story = useData("blogPost", () =>
     fetchData(`/api/components/blog/${postSlug}`)
   );
+
+  if (!story.content) return <ErrorPage />;
 
   return (
     <div className="bg-white">

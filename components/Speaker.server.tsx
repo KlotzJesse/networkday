@@ -18,9 +18,9 @@ export default function Speaker() {
           <div className="h-1 ml-auto duration-300 origin-left transform bg-deep-purple-accent-400 scale-x-30 group-hover:scale-x-100" />
         </h2>
         <p className="text-gray-700 lg:text-sm lg:max-w-md">
-          &quot;Sed ut perspiciatis unde omnis iste natus error sit iste
-          voluptatem accusantium doloremque rem aperiam, ipsa eaque quae. Sed ut
-          perspiciatis unde omnis iste.&quot;
+          Am #NetworkDay können Sie sich mit Experten aus Ihrer Branche treffen
+          und sich gemeinsam über neue Trends zu unterhalten oder sich gemeinsam
+          Austauschen.
         </p>
       </div>
       <div className="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
@@ -46,20 +46,6 @@ export default function Speaker() {
             </Link>
           );
         })}
-      </div>
-      <div className="text-center">
-        <Link href={"/speaker"} passHref>
-          <a className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">
-            Mehr sehen
-            <svg
-              className="inline-block w-3 ml-2"
-              fill="currentColor"
-              viewBox="0 0 12 12"
-            >
-              <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
-            </svg>
-          </a>
-        </Link>
       </div>
     </div>
   );
