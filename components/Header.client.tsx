@@ -127,7 +127,7 @@ const Header = () => {
                             <Link
                               key={item.name}
                               href={
-                                "/topics/" +
+                                "/blog/" +
                                 slugify(item.name, {
                                   lower: true,
                                 })
@@ -332,7 +332,7 @@ const Header = () => {
                     <Link
                       key={item.name}
                       href={
-                        "/topics/" +
+                        "/blog/" +
                         slugify(item.name, {
                           lower: true,
                         })

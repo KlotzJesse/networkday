@@ -58,7 +58,7 @@ export default function Footer() {
                   <li key={topic.name}>
                     <Link
                       href={
-                        "/topics/" +
+                        "/blog/" +
                         slugify(topic.name, {
                           lower: true,
                         })

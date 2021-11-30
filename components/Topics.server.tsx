@@ -31,7 +31,7 @@ export default function Topics() {
                   <div className="flex flex-wrap items-center ">
                     <a
                       href={
-                        "/topics/" +
+                        "/blog/" +
                         slugify(item.name, {
                           lower: true,
                         })

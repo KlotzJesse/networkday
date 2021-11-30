@@ -14,7 +14,7 @@ export default function TopicsHeader() {
         <Link
           key={item.name}
           href={
-            "/topics/" +
+            "/blog/" +
             slugify(item.name, {
               lower: true,
             })
