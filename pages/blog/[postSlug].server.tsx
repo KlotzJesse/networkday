@@ -4,6 +4,7 @@ import DynamicComponent from "../../components/DynamicComponent.server";
 import Footer from "../../components/Footer.server";
 import Header from "../../components/Header.client";
 import fetchData from "../../lib/fetchData";
+import readingTime from "../../lib/readingTime";
 import useData from "../../lib/useData";
 import ErrorPage from "../404";
 
@@ -14,6 +15,14 @@ export default function BlogPost({ router }) {
   );
 
   if (!story.content) return <ErrorPage />;
+
+  let text = story.content.title;
+
+  story.content.body.map((blok) => {
+    blok.body.map((comp) => {
+      text += " " + (comp.title ?? comp.content);
+    });
+  });
 
   return (
     <div className="bg-white">
@@ -65,7 +74,7 @@ export default function BlogPost({ router }) {
               </p>
             </div>
             <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 min-w-32 md:mt-0">
-              10 Minuten lesen • <span>30. November 2021</span>
+              {readingTime(text)} • <span>30. November 2021</span>
             </p>
           </div>
           <div className="w-full mt-4 prose max-w-none ">
