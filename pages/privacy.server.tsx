@@ -122,10 +122,11 @@ export default function Impressum() {
             <p className="mt-8 text-xl leading-8 text-gray-500">
               Die Vorgaben der EU-Datenschutz-Grundverordnung, im folgenden
               DS-GVO, sowie BDSG (neu), gelten ab dem 25.05.2018. Hiermit
-              informieren wir Sie über die durch die gastronomy.world und Krauss
-              GmbH durchgeführte Verarbeitung personenbezogener Daten nach
-              Maßgabe dieser Verordnung (vgl. Art.13 DS-GVO). Bitte lesen Sie
-              sich unsere Datenschutzinformation sorgfältig durch.
+              informieren wir Sie über die durch die gastronomy.world und
+              network-day.de und Krauss GmbH durchgeführte Verarbeitung
+              personenbezogener Daten nach Maßgabe dieser Verordnung (vgl.
+              Art.13 DS-GVO). Bitte lesen Sie sich unsere Datenschutzinformation
+              sorgfältig durch.
             </p>
           </div>
           <div className="mx-auto mt-6 prose prose-lg text-gray-500 prose-indigo">
