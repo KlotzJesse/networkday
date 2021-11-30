@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import CTA from "./CTA.client";
 import Exhibitors from "./Exhibitors.client";
 import Footer from "./Footer.server";
 import Header from "./Header.client";
@@ -24,6 +25,7 @@ const Components = {
   speakerListHome: SpeakerListHome,
   heading: Heading,
   text: Text,
+  cta: CTA,
 };
 
 const DynamicComponent = ({ blok }) => {
