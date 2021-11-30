@@ -8,7 +8,7 @@ const CTA = () => {
         <div className="w-1/2 bg-indigo-600 md:h-full rounded-2xl">
           <img
             className="object-cover w-full h-full rounded-2xl"
-            src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?i?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&blend=6366F1&sat=-100&blend-mode=multiplyhttps://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&blend=6366F1&sat=-100&blend-mode=multiply"
+            src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?i?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&blend=6366F1&sat=-100&blend-mode=multiply"
             alt=""
           />
         </div>
