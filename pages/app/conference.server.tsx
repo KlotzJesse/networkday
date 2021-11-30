@@ -92,7 +92,7 @@ export default function Conference(request) {
               <BlueJeansMeeting />
             </div>
           </div>
-          <div className="flex flex-col w-3/6 space-y-5">
+          {/* <div className="flex flex-col w-3/6 space-y-5">
             <div className="p-3 space-y-3 bg-white shadow-md rounded-xl">
               <h2 style={{ fontWeight: "bold" }}>Kontaktmöglichkeiten</h2>
               <div className="flex items-center p-3 space-x-5 bg-gray-100 cursor-pointer hover:bg-gray-200 rounded-xl">
@@ -193,8 +193,8 @@ export default function Conference(request) {
                   />
                 </svg>
               </div>
-            </div> */}
-          </div>
+            </div> }
+          </div> */}
         </div>
       </main>
     </div>
