@@ -7,10 +7,11 @@ function NetworkDayApp({ Component, pageProps }: AppProps) {
     <div>
       <Head>
         <title>#NetworkDay</title>
-        <meta name="description">
-          Das Digital Event zur Nachhaltigkeit als Wirtschaftsfaktor im
-          Außer-Haus-Markt.
-        </meta>
+        <meta httpEquiv="Content-Language" content="de" />
+        <meta
+          name="description"
+          content="Das Digital Event zur Nachhaltigkeit als Wirtschaftsfaktor im Außer-Haus-Markt."
+        ></meta>
       </Head>
       <Component {...pageProps} />
     </div>
