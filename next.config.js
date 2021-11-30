@@ -17,6 +17,7 @@ module.exports = {
       "image.jimcdn.com",
       "www.gastronomy.world",
       "mir-s3-cdn-cf.behance.net",
+      "www.byodo.de",
     ],
   },
 };
