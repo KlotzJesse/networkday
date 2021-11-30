@@ -266,11 +266,11 @@ const Header = () => {
             </Popover>
           </Popover.Group>
           <div className="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
-            <Link href="/register" passHref>
+            {/* <Link href="/register" passHref>
               <a className="text-base font-medium text-gray-500 whitespace-nowrap hover:text-gray-900">
                 Zugang reservieren
               </a>
-            </Link>
+            </Link> */}
             <Link href="https://www.gastronomy.world" passHref>
               <a
                 target="_blank"
