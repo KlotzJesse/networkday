@@ -6,7 +6,7 @@ import HeroIcon from "./HeroIcon";
 
 export default function TopicsHeader() {
   const topics = useData("topics", () => fetchData(`/api/topics`));
-  console.log(topics);
+  co;
 
   return (
     <div>
