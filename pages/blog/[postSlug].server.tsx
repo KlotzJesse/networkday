@@ -29,7 +29,7 @@ export default function BlogPost({ router }) {
     <div className="bg-white">
       <Header />
       <div className="flex w-screen px-4 pt-8 mx-auto space-x-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-        <nav className="sticky w-1/4 h-full top-32">
+        <nav className="sticky hidden w-1/4 h-full top-32 md:block">
           <p className="font-bold uppercase">Zusammenfassung</p>
 
           <ul className="list-decimal list-inside">
