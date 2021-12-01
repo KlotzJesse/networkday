@@ -101,7 +101,7 @@ export default function MeetingPage({ router }) {
               <BlueJeansMeeting meetingId={meetingId} />
             </div>
           </div>
-          <div className="flex space-x-6">
+          <div className="flex flex-col space-x-6 space-y-6 md:flex-row">
             {speakerList.map((speaker) => {
               return <RoomCard key={speaker.name} speaker={speaker} />;
             })}
