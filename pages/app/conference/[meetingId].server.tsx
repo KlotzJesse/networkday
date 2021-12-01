@@ -97,7 +97,7 @@ export default function MeetingPage({ router }) {
         </div>
         <div className="flex flex-col space-y-6">
           <div className="flex items-center justify-center w-full space-x-6">
-            <div className="w-full h-full mr-5 bg-white shadow-md rounded-3xl aspect-w-16 aspect-h-9">
+            <div className="w-full h-screen mr-5 bg-white shadow-md rounded-3xl aspect-w-16 aspect-h-9">
               <BlueJeansMeeting meetingId={meetingId} />
             </div>
           </div>
