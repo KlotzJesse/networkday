@@ -1,5 +1,6 @@
 import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
+import prisma from "../../../lib/prisma";
 
 declare module 'next-auth' {
   interface Session {
@@ -32,6 +33,17 @@ export const authOptions: NextAuthOptions = {
         //     headers: { "Content-Type": "application/json" }
         //   })
         //   const user = await res.json()
+
+        const user = await prisma.user.create({
+          data: {
+            email: credentials.mail ,
+            name: credentials.username,
+            company: credentials.company
+          },
+        })
+
+        console.log(user)
+
 
         // If no error and we have user data, return it
         return { id: 10, name: credentials.username, company: credentials.company, email: credentials.mail };

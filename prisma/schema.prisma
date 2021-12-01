@@ -28,3 +28,16 @@ model Topic {
   icon        String?
   img         String?
 }
+
+model User {
+  id      Int     @id @default(autoincrement())
+  email   String  @unique
+  name    String?
+  company String?
+  role    Role    @default(USER)
+}
+
+enum Role {
+  USER
+  ADMIN
+}
