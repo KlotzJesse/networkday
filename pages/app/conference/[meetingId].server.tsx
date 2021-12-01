@@ -1,11 +1,15 @@
 import Link from "next/link";
-import BlueJeansMeeting from "../../components/BlueJeansMeeting.client";
-import RoomCard from "../../components/RoomCard.client";
-import fetchData from "../../lib/fetchData";
-import useData from "../../lib/useData";
+import BlueJeansMeeting from "../../../components/BlueJeansMeeting.client";
+import RoomCard from "../../../components/RoomCard.client";
+import fetchData from "../../../lib/fetchData";
+import useData from "../../../lib/useData";
 
-export default function Conference() {
+export default function MeetingPage({ router }) {
   const speakerList = useData("speaker", () => fetchData(`/api/speakers`));
+
+  const meetingId = router.route.split("/app/conference/")[1] ?? "642997757";
+
+  console.log(meetingId);
 
   return (
     <div className="flex">
@@ -94,7 +98,7 @@ export default function Conference() {
         <div className="flex flex-col space-y-6">
           <div className="flex items-center justify-center w-full space-x-6">
             <div className="w-full h-full mr-5 bg-white shadow-md rounded-3xl aspect-w-16 aspect-h-9">
-              <BlueJeansMeeting />
+              <BlueJeansMeeting meetingId={meetingId} />
             </div>
           </div>
           <div className="flex space-x-6">

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export const RoomCard = ({ speaker }) => {
@@ -24,15 +25,14 @@ export const RoomCard = ({ speaker }) => {
         Wie Vegane Produkte Nachhaltigkeit beeinflussen
       </p> */}
       <p className="my-6 font-semibold tracking-wide text-gray-700 text-md ">
-        Wie Vegane Produkte Nachhaltigkeit beeinflussen
+        {speaker.Topic.name}
       </p>
 
-      <button
-        type="button"
-        className="w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-blue-800 rounded-lg shadow-md hover:bg-blue-900 focus:ring-blue-700 focus:ring-offset-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 "
-      >
-        Raum betreten
-      </button>
+      <Link href={"/app/conference/" + speaker.meetingId} passHref>
+        <a className="w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-blue-800 rounded-lg shadow-md hover:bg-blue-900 focus:ring-blue-700 focus:ring-offset-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 ">
+          Raum betreten
+        </a>
+      </Link>
     </div>
   );
 };
