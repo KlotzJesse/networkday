@@ -1,15 +1,10 @@
 import Link from "next/link";
-import BlueJeansMeeting from "../../../components/BlueJeansMeeting.client";
-import RoomCard from "../../../components/RoomCard.client";
-import fetchData from "../../../lib/fetchData";
-import useData from "../../../lib/useData";
+import RoomCard from "../../components/RoomCard.client";
+import fetchData from "../../lib/fetchData";
+import useData from "../../lib/useData";
 
 export default function MeetingPage({ router }) {
   const speakerList = useData("speaker", () => fetchData(`/api/speakers`));
-
-  const meetingId = router.route.split("/app/conference/")[1] ?? "642997757";
-
-  console.log(meetingId);
 
   return (
     <div className="flex items-center justify-center md:items-start md:justify-start">
@@ -36,7 +31,7 @@ export default function MeetingPage({ router }) {
           </Link>
         </div>
         <Link href="/app/conference" passHref>
-          <div className="p-2 text-white bg-blue-900 rounded-xl">
+          <div className="p-2 text-gray-700 hover:bg-blue-900 hover:text-white rounded-xl">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-5 h-5"
@@ -54,7 +49,7 @@ export default function MeetingPage({ router }) {
           </div>
         </Link>
         <Link href="/app/rooms" passHref>
-          <div className="p-2 text-gray-700 hover:bg-blue-900 hover:text-white rounded-xl">
+          <div className="p-2 text-white bg-blue-900 rounded-xl">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-7 w-7"
@@ -100,11 +95,6 @@ export default function MeetingPage({ router }) {
           </div> */}
         </div>
         <div className="flex flex-col space-y-6">
-          <div className="flex items-center justify-center w-full space-x-6">
-            <div className="w-full h-screen bg-white shadow-md rounded-3xl aspect-w-16 aspect-h-9">
-              <BlueJeansMeeting meetingId={meetingId} />
-            </div>
-          </div>
           <div className="flex flex-col space-y-6 md:space-y-0 md:space-x-6 md:flex-row">
             {speakerList.map((speaker) => {
               return <RoomCard key={speaker.name} speaker={speaker} />;
