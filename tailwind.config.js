@@ -9,6 +9,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      flex: {
+        carouselMd: "0 0 33%",
+        carouselSm: "0 0 100%",
+      },
       fontFamily: {
         sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
       },
