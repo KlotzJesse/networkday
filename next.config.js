@@ -1,11 +1,10 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  optimizeFonts: true,
+  swcMinify: true,
   experimental: {
     concurrentFeatures: true,
-    // optimizeCss: true,
-    //optimizeImages: true,
     serverComponents: true,
+    reactRoot: true,
   },
   images: {
     domains: [
