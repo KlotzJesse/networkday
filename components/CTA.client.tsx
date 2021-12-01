@@ -1,15 +1,20 @@
 import { ExternalLinkIcon } from "@heroicons/react/outline";
+import Image from "next/image";
 import React from "react";
 
 const CTA = () => {
   return (
     <div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div className="flex flex-col w-full bg-gray-800 md:flex-row not-prose rounded-2xl">
-        <div className="md:w-1/2">
-          <img
+        <div className="relative h-full md:w-1/2">
+          <Image
             className="object-cover w-full h-full rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none"
-            src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?i?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&blend=6366F1&sat=-100&blend-mode=multiply"
-            alt=""
+            src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?i?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=608&q=60&blend=6366F1&sat=-100&blend-mode=multiply"
+            alt="Netzwerk Plattform"
+            width="608"
+            objectFit="cover"
+            height="418"
+            layout="responsive"
           />
         </div>
         <div className="px-4 py-12 md:w-1/2 sm:px-6 lg:px-8 lg:py-16">
