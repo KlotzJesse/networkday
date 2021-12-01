@@ -3,7 +3,7 @@ import React from "react";
 
 export const RoomCard = ({ speaker }) => {
   return (
-    <div className="w-full max-w-xs p-6 overflow-hidden bg-white shadow-lg rounded-xl ">
+    <div className="w-full p-6 overflow-hidden bg-white shadow-lg max-w-1/4 rounded-xl ">
       <div className="flex flex-col items-center justify-between md:flex-row">
         <div className="flex items-center justify-start flex-grow w-full">
           <a href="#" className="relative block">

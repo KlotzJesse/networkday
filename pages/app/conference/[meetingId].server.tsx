@@ -12,7 +12,7 @@ export default function MeetingPage({ router }) {
   console.log(meetingId);
 
   return (
-    <div className="flex">
+    <div className="flex items-center justify-center">
       <aside className="sticky top-0 flex-col items-center hidden h-screen py-5 space-y-10 bg-white shadow px-7 md:flex">
         <div className="pb-10">
           <Link href="/" passHref>
@@ -97,7 +97,7 @@ export default function MeetingPage({ router }) {
         </div>
         <div className="flex flex-col space-y-6">
           <div className="flex items-center justify-center w-full space-x-6">
-            <div className="w-full h-screen mr-5 bg-white shadow-md rounded-3xl aspect-w-16 aspect-h-9">
+            <div className="w-full h-screen bg-white shadow-md rounded-3xl aspect-w-16 aspect-h-9">
               <BlueJeansMeeting meetingId={meetingId} />
             </div>
           </div>
