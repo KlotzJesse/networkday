@@ -7,6 +7,7 @@ import Heading from "./Heading.client";
 import Hero from "./Hero.client";
 import SpeakerListHome from "./home/SpeakerListHome.client";
 import Page from "./Page.server";
+import Quote from "./Quote";
 import Speaker from "./Speaker.server";
 import Steps from "./Steps.client";
 import Text from "./Text.client";
@@ -26,6 +27,7 @@ const Components = {
   heading: Heading,
   text: Text,
   cta: CTA,
+  quote: Quote,
 };
 
 const DynamicComponent = ({ blok }) => {
