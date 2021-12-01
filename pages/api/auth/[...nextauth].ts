@@ -37,7 +37,7 @@ export const authOptions: NextAuthOptions = {
           where: { email: credentials.mail}
         })
 
-        if(!user) {
+        if(!dbUser) {
   
 
           let user = await prisma.user.create({
