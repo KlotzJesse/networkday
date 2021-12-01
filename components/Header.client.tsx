@@ -15,7 +15,7 @@ import fetcher from "../lib/fetcher";
 import HeroIcon from "./HeroIcon";
 
 const callsToAction = [
-  { name: "Zugang reservieren", href: "/register", icon: PlayIcon },
+  { name: "Zugang reservieren", href: "/auth/signup", icon: PlayIcon },
   { name: "Hilfe", href: "/help", icon: PhoneIcon },
 ];
 const resources = [
@@ -266,11 +266,11 @@ const Header = () => {
             </Popover>
           </Popover.Group>
           <div className="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
-            {/* <Link href="/register" passHref>
+            <Link href="/auth/signup" passHref>
               <a className="text-base font-medium text-gray-500 whitespace-nowrap hover:text-gray-900">
                 Zugang reservieren
               </a>
-            </Link> */}
+            </Link>
             <Link href="https://www.gastronomy.world" passHref>
               <a
                 target="_blank"
@@ -379,7 +379,7 @@ const Header = () => {
                 ))}
               </div>
               <div>
-                <Link href="/register" passHref>
+                <Link href="/auth/signup" passHref>
                   <a className="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700">
                     Zugang reservieren
                   </a>
