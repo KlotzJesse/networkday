@@ -68,12 +68,17 @@ export default function BlogPost({ router }) {
           </h1>
           <div className="flex flex-col items-start justify-between w-full mt-2 md:flex-row md:items-center">
             <div className="flex items-center">
-              <p className="ml-2 text-sm text-gray-700 dark:text-gray-300">
-                @gastronomy.world
-              </p>
+              <p className="ml-2 text-sm text-gray-500 ">@gastronomy.world</p>
             </div>
-            <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 min-w-32 md:mt-0">
-              {readingTime(text)} • <span>30. November 2021</span>
+            <p className="mt-2 text-sm text-gray-500 min-w-32 md:mt-0">
+              {readingTime(text)} •{" "}
+              <span>
+                {new Date(story.published_at).toLocaleDateString("de-DE", {
+                  day: "2-digit",
+                  month: "long",
+                  year: "numeric",
+                })}
+              </span>
             </p>
           </div>
           <div className="w-full mt-4 prose max-w-none ">
