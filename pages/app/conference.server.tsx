@@ -1,10 +1,15 @@
 import Link from "next/link";
 import BlueJeansMeeting from "../../components/BlueJeansMeeting.client";
+import RoomCard from "../../components/RoomCard.client";
+import fetchData from "../../lib/fetchData";
+import useData from "../../lib/useData";
 
-export default function Conference(request) {
+export default function Conference() {
+  const speakerList = useData("speaker", () => fetchData(`/api/speakers`));
+
   return (
-    <div className="flex max-h-screen">
-      <div className="sticky top-0 flex-col items-center hidden h-screen py-5 space-y-10 bg-white shadow px-7 md:flex">
+    <div className="flex">
+      <aside className="sticky top-0 flex-col items-center hidden h-screen py-5 space-y-10 bg-white shadow px-7 md:flex">
         <div className="pb-10">
           <Link href="/" passHref>
             <a>
@@ -58,9 +63,9 @@ export default function Conference(request) {
             />
           </svg>
         </div>
-      </div>
+      </aside>
 
-      <main className="flex flex-col flex-grow px-4 py-5 mx-auto md:px-24 lg:px-8">
+      <main className="flex flex-col flex-grow px-4 py-5 mx-auto overflow-scroll md:px-24 lg:px-8">
         <div>
           {/* <div className="relative flex items-center w-1/4 mb-16">
             <span className="absolute z-10 flex items-center justify-center w-8 h-full py-3 pl-3 text-base font-normal leading-snug text-center text-gray-300 bg-transparent rounded">
@@ -86,11 +91,16 @@ export default function Conference(request) {
             />
           </div> */}
         </div>
-        <div className="flex">
+        <div className="flex flex-col space-y-6">
           <div className="flex items-center justify-center w-full space-x-6">
             <div className="w-full h-full mr-5 bg-white shadow-md rounded-3xl aspect-w-16 aspect-h-9">
               <BlueJeansMeeting />
             </div>
+          </div>
+          <div className="flex space-x-6">
+            {speakerList.map((speaker) => {
+              return <RoomCard key={speaker.name} speaker={speaker} />;
+            })}
           </div>
           {/* <div className="flex flex-col w-3/6 space-y-5">
             <div className="p-3 space-y-3 bg-white shadow-md rounded-xl">
