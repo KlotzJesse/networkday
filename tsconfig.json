@@ -22,7 +22,7 @@
     "pages/app/disabled.ts",
     "pages/api/components/_middleware.js",
     "pages/api/auth/[...nextauth].ts",
-    "lib/slugify.js"
+    "lib/slugify.ts"
   ],
   "exclude": ["node_modules"]
 }
