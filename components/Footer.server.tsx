@@ -1,6 +1,6 @@
 import Link from "next/link";
-import slugify from "slugify";
 import fetchData from "../lib/fetchData";
+import slug from "../lib/slugify";
 import useData from "../lib/useData";
 
 export default function Footer() {
@@ -56,15 +56,7 @@ export default function Footer() {
               {topics.map((topic) => {
                 return (
                   <li key={topic.name}>
-                    <Link
-                      href={
-                        "/blog/" +
-                        slugify(topic.name, {
-                          lower: true,
-                        })
-                      }
-                      passHref
-                    >
+                    <Link href={"/blog/" + slug(topic.name)} passHref>
                       <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
                         {topic.name}
                       </a>

@@ -1,10 +1,10 @@
 import Image from "next/image";
-import slugify from "slugify";
 import DynamicComponent from "../../components/DynamicComponent.server";
 import Footer from "../../components/Footer.server";
 import Header from "../../components/Header.client";
 import fetchData from "../../lib/fetchData";
 import readingTime from "../../lib/readingTime";
+import slug from "../../lib/slugify";
 import useData from "../../lib/useData";
 import ErrorPage from "../404";
 
@@ -37,9 +37,7 @@ export default function BlogPost({ router }) {
               if (!section.name) return;
               return (
                 <li key={section._uid} className="text-sm leading-10">
-                  <a href={"#" + slugify(section.name, { lower: true })}>
-                    {section.name}
-                  </a>
+                  <a href={"#" + slug(section.name)}>{section.name}</a>
                 </li>
               );
             })}
@@ -98,10 +96,7 @@ export default function BlogPost({ router }) {
                 return <DynamicComponent key={entry._uid} blok={entry} />;
               }
               return (
-                <section
-                  key={entry._uid}
-                  id={slugify(entry.name, { lower: true })}
-                >
+                <section key={entry._uid} id={slug(entry.name)}>
                   {entry.body.map((subEntry) => {
                     return (
                       <DynamicComponent key={subEntry._uid} blok={subEntry} />

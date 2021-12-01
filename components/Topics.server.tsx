@@ -1,6 +1,6 @@
 import Image from "next/image";
-import slugify from "slugify";
 import fetchData from "../lib/fetchData";
+import slug from "../lib/slugify";
 import useData from "../lib/useData";
 import Carousel from "./Carousel.client";
 
@@ -35,12 +35,7 @@ export default function Topics() {
                     <p className="mb-3 leading-relaxed">{item.description}</p>
                     <div className="flex flex-wrap items-center ">
                       <a
-                        href={
-                          "/blog/" +
-                          slugify(item.name, {
-                            lower: true,
-                          })
-                        }
+                        href={"/blog/" + slug(item.name)}
                         className="inline-flex items-center text-indigo-500 md:mb-2 lg:mb-0"
                       >
                         Mehr erfahren

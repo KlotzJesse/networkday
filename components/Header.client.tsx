@@ -9,9 +9,9 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import Link from "next/link";
 import { Fragment } from "react";
-import slugify from "slugify";
 import useSWR from "swr";
 import fetcher from "../lib/fetcher";
+import slug from "../lib/slugify";
 import HeroIcon from "./HeroIcon";
 
 const callsToAction = [
@@ -123,12 +123,7 @@ const Header = () => {
                           {topics.map((item) => (
                             <Link
                               key={item.name}
-                              href={
-                                "/blog/" +
-                                slugify(item.name, {
-                                  lower: true,
-                                })
-                              }
+                              href={"/blog/" + slug(item.name)}
                               passHref
                             >
                               <a className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50">
@@ -328,12 +323,7 @@ const Header = () => {
                   {topics.map((item) => (
                     <Link
                       key={item.name}
-                      href={
-                        "/blog/" +
-                        slugify(item.name, {
-                          lower: true,
-                        })
-                      }
+                      href={"/blog/" + slug(item.name)}
                       passHref
                     >
                       <a className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50">

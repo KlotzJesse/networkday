@@ -1,5 +1,4 @@
 import Link from "next/link";
-import slugify from "slugify";
 import fetchData from "../lib/fetchData";
 import useData from "../lib/useData";
 import HeroIcon from "./HeroIcon";
@@ -11,16 +10,7 @@ export default function TopicsHeader() {
   return (
     <div>
       {topics.map((item) => (
-        <Link
-          key={item.name}
-          href={
-            "/blog/" +
-            slugify(item.name, {
-              lower: true,
-            })
-          }
-          passHref
-        >
+        <Link key={item.name} href={"/blog/" + slug(item.name)} passHref>
           <a className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50">
             <HeroIcon
               name={item.icon}
