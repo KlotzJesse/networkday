@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useRef } from "react";
 
-export default function Auth() {
+export default function Signin() {
   let nameInput = useRef(null);
   let companyInput = useRef(null);
   let mailInput = useRef(null);
