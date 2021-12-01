@@ -12,7 +12,7 @@ export default function MeetingPage({ router }) {
   console.log(meetingId);
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center md:items-start md:justify-start">
       <aside className="sticky top-0 flex-col items-center hidden h-screen py-5 space-y-10 bg-white shadow px-7 md:flex">
         <div className="pb-10">
           <Link href="/" passHref>
