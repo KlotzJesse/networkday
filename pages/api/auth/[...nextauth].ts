@@ -33,20 +33,26 @@ export const authOptions: NextAuthOptions = {
         //     headers: { "Content-Type": "application/json" }
         //   })
         //   const user = await res.json()
+        let user = await prisma.user.findUnique({
+          where: { email: credentials.mail}
+        })
 
-        const user = await prisma.user.create({
+        if(!user) {
+  
+
+          user = await prisma.user.create({
           data: {
             email: credentials.mail ,
             name: credentials.username,
             company: credentials.company
           },
         })
-
-        console.log(user)
+                
+      }
 
 
         // If no error and we have user data, return it
-        return { id: 10, name: credentials.username, company: credentials.company, email: credentials.mail };
+        return { id: 10, name: user.name, company: user.company, email: user.email };
       },
     }),
   ],
