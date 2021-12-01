@@ -5,9 +5,9 @@ const CTA = () => {
   return (
     <div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div className="flex flex-col w-full bg-gray-800 md:flex-row not-prose rounded-2xl">
-        <div className="bg-indigo-600 md:w-1/2 rounded-2xl">
+        <div className="md:w-1/2">
           <img
-            className="object-cover w-full h-full rounded-2xl"
+            className="object-cover w-full h-full rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none"
             src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?i?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&blend=6366F1&sat=-100&blend-mode=multiply"
             alt=""
           />
