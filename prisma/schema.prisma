@@ -3,12 +3,13 @@
 
 generator client {
   provider        = "prisma-client-js"
-  previewFeatures = ["dataProxy"]
+  previewFeatures = ["dataProxy", "referentialIntegrity"]
 }
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
+  provider             = "mysql"
+  url                  = env("DATABASE_URL")
+  referentialIntegrity = "prisma"
 }
 
 model Speaker {
@@ -17,6 +18,8 @@ model Speaker {
   updatedAt  DateTime @updatedAt
   name       String?
   profileImg String?
+  meetingId  String?
+  Topic      Topic?
 }
 
 model Topic {
@@ -27,6 +30,8 @@ model Topic {
   description String?
   icon        String?
   img         String?
+  speaker     Speaker  @relation(fields: [speakerId], references: [id])
+  speakerId   Int      @unique
 }
 
 model User {
