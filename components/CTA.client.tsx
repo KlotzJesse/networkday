@@ -21,9 +21,9 @@ const CTA = () => {
               Netzwerken beim Digital Event wie auf der Messe
             </p>
             <p className="mt-3 text-lg text-gray-300">
-              Lassen Sie sich gerne zu dem naechsten Event erinnern oder
-              betreten Sie direkt die Hauptbuehne und tauschen sich gemeinsam zu
-              den Themen aus.
+              Lassen Sie sich gerne zu dem nächsten Event erinnern oder betreten
+              Sie direkt die Hauptbühne und tauschen sich gemeinsam zu den
+              Themen aus.
             </p>
             <div className="mt-8">
               <div className="inline-flex rounded-md shadow">

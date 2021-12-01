@@ -19,6 +19,7 @@ export default function BlogPost({ router }) {
   let text = story.content.title;
 
   story.content.body.map((blok) => {
+    if (!blok.body) return;
     blok.body.map((comp) => {
       text += " " + (comp.title ?? comp.content);
     });
@@ -27,18 +28,16 @@ export default function BlogPost({ router }) {
   return (
     <div className="bg-white">
       <Header />
-      <div className="flex w-screen px-4 pt-16 mx-auto space-x-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+      <div className="flex w-screen px-4 pt-8 mx-auto space-x-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <nav className="sticky w-1/4 h-full top-32">
           <p className="font-bold uppercase">Zusammenfassung</p>
 
           <ul className="list-decimal list-inside">
             {story.content.body.map((section) => {
+              if (!section.name) return;
               return (
-                <li key={section._uid}>
-                  <a
-                    className="leading-10"
-                    href={"#" + slugify(section.name, { lower: true })}
-                  >
+                <li key={section._uid} className="text-sm leading-10">
+                  <a href={"#" + slugify(section.name, { lower: true })}>
                     {section.name}
                   </a>
                 </li>
@@ -90,6 +89,9 @@ export default function BlogPost({ router }) {
             </div>
 
             {story.content.body.map((entry) => {
+              if (!entry.name) {
+                return <DynamicComponent key={entry._uid} blok={entry} />;
+              }
               return (
                 <section
                   key={entry._uid}
