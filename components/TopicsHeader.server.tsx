@@ -1,5 +1,6 @@
 import Link from "next/link";
 import fetchData from "../lib/fetchData";
+import slug from "../lib/slugify";
 import useData from "../lib/useData";
 import HeroIcon from "./HeroIcon";
 
