@@ -10,23 +10,23 @@ import Header from "../components/Header.client";
 const supportLinks = [
   {
     name: "Vertrieb",
-    href: "#",
+    href: "tel:+4981919375923",
     description:
-      "Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.",
+      "Falls Sie Fragen an unser Verkaufsteam haben, freuen wir uns Sie gerne persönlich per Telefon zu betreuen..",
     icon: PhoneIcon,
   },
   {
     name: "Technische Hilfe",
-    href: "#",
+    href: "tel:+4981919375923",
     description:
-      "Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.",
+      "Bei technischen Problem und weiteren Fragen oder falls Sie Unterstützung benötigen, steht Ihnen jederzeit unser Service Team telefonisch zur Verfügung.",
     icon: SupportIcon,
   },
   {
     name: "Presse anfragen",
-    href: "#",
+    href: "mailto:info@gastronomy.world",
     description:
-      "Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.",
+      "Für Presse anfragen bitten wir Sie eine E-Mail an info@gastronomy.world zu senden.",
     icon: NewspaperIcon,
   },
 ];
@@ -53,9 +53,7 @@ export default function Help() {
             Hilfe Center
           </h1>
           <p className="max-w-3xl mt-6 text-xl text-gray-300">
-            Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate
-            id malesuada non. Cras aliquet purus dui laoreet diam sed lacus,
-            fames. Dui, amet, nec sit pulvinar.
+            Ratschläge und Antworten
           </p>
         </div>
       </div>
@@ -95,6 +93,7 @@ export default function Help() {
                 >
                   Kontaktieren<span aria-hidden="true"> &rarr;</span>
                 </a>
+                oder per Telefon: +49 8191 93759-23
               </div>
             </div>
           ))}
