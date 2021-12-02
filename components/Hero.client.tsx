@@ -34,7 +34,7 @@ const Hero = ({ blok }) => {
               </p>
               <p className="max-w-lg mx-auto mt-6 text-2xl font-bold tracking-tight text-center text-white sm:max-w-3xl">
                 {" "}
-                am 01.12.2021 ab 14:00 bis 15:00 Uhr{" "}
+                am 27.01.2022 ab 14:00 bis 15:00 Uhr{" "}
               </p>
               <div className="max-w-sm mx-auto mt-10 sm:max-w-none sm:flex sm:justify-center">
                 <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-1 sm:gap-5">

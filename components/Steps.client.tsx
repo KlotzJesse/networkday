@@ -8,7 +8,7 @@ export default function Step() {
               <dl className="bg-white rounded-lg shadow-lg sm:grid sm:grid-cols-3">
                 <div className="flex flex-col p-6 text-center border-b border-gray-100 sm:border-0 sm:border-r">
                   <dt className="order-2 mt-2 text-lg font-medium leading-6 text-gray-600">
-                    01.12.2021 ab 14:00 Uhr bis 15:00 Uhr
+                    27.01.2022 ab 14:00 Uhr bis 15:00 Uhr
                   </dt>
                   <dd className="order-1 text-5xl font-extrabold text-indigo-600">
                     Wann?
