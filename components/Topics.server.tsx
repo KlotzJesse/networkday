@@ -26,7 +26,7 @@ export default function Topics() {
                     alt="blog"
                   />
                   <div className="p-6">
-                    <h2 className="mb-1 text-xs font-medium tracking-widest text-gray-400 title-font">
+                    <h2 className="mb-1 text-xs font-medium tracking-widest text-gray-600 title-font">
                       Thema
                     </h2>
                     <h1 className="mb-3 text-lg font-medium text-gray-900 title-font">
