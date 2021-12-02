@@ -19,8 +19,8 @@ export default function Topics() {
               <div className="p-4 embla__slide__inner">
                 <div className="h-full overflow-hidden bg-white border-2 border-gray-200 rounded-lg border-opacity-60">
                   <Image
-                    width="720px"
-                    height="400px"
+                    width="365"
+                    height="202"
                     className="object-cover object-center w-full lg:h-48 md:h-36"
                     src={item.img}
                     alt="blog"

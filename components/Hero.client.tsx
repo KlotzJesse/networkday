@@ -12,8 +12,10 @@ const Hero = ({ blok }) => {
               <Image
                 priority
                 layout="fill"
+                width="1216"
+                height="602"
                 alt="HeaderImage"
-                className="object-cover w-full h-full"
+                className="object-cover"
                 src={blok.BackgroundImage.filename}
               />
               <div
