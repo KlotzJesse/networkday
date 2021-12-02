@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -5,14 +6,16 @@ export const RoomCard = ({ speaker }) => {
   return (
     <div className="w-full p-6 overflow-hidden bg-white shadow-lg max-w-1/4 rounded-xl ">
       <div className="flex flex-col items-center justify-between md:flex-row">
-        <div className="flex items-center justify-start flex-grow w-full">
-          <a href="#" className="relative block">
-            <img
-              alt="profil"
+        <div className="flex items-center justify-start flex-grow w-full ">
+          <div className="w-10 h-10">
+            <Image
+              alt={speaker.name}
               src={speaker.profileImg}
-              className="object-cover w-10 h-10 mx-auto rounded-full "
+              width="40"
+              height="40"
+              className="object-cover mx-auto rounded-full "
             />
-          </a>
+          </div>
           <div className="flex flex-col items-start ml-4">
             <span className="text-sm text-gray-700">{speaker.name}</span>
             {/* <span className="text-sm font-light text-gray-400 ">

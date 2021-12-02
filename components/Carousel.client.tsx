@@ -50,7 +50,9 @@ export const DotButton = ({ selected, onClick }) => (
     className={`embla__dot ${selected ? "is-selected" : ""}`}
     type="button"
     onClick={onClick}
-  />
+  >
+    Slide
+  </button>
 );
 
 export default Carousel;

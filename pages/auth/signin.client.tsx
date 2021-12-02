@@ -86,7 +86,6 @@ export default function Signin() {
                     ref={nameInput}
                     placeholder="Max Mustermann"
                     className="w-full px-5 py-3 my-2 border-red-700 rounded-xl bg-gray-50 hover:bg-gray-100"
-                    autoFocus
                   ></input>
                   <p className="hidden mb-4 text-xs text-red-700">
                     Es muss ein Name angegeben werden.
