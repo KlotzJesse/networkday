@@ -35,7 +35,6 @@ export default function Help() {
   return (
     <div className="bg-white">
       <Header />
-      {/* Header */}
       <div className="relative pb-32 bg-gray-800">
         <div className="absolute inset-0">
           <img
@@ -58,7 +57,6 @@ export default function Help() {
         </div>
       </div>
 
-      {/* Overlapping cards */}
       <section
         className="relative z-10 px-4 pb-32 mx-auto -mt-32 max-w-7xl sm:px-6 lg:px-8"
         aria-labelledby="contact-heading"

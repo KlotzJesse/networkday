@@ -9,16 +9,6 @@ const links = [
     href: "/",
     icon: BookOpenIcon,
   },
-  // {
-  //   title: "API Reference",
-  //   description: "A complete API reference for our libraries",
-  //   icon: ViewListIcon,
-  // },
-  // {
-  //   title: "Guides",
-  //   description: "Installation guides that cover popular setups",
-  //   icon: BookmarkAltIcon,
-  // },
   {
     title: "Blog",
     description: "Lesen Sie unsere neuesten Nachrichten und Artikel",

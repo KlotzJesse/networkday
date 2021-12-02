@@ -42,12 +42,6 @@ const Hero = ({ blok }) => {
                       Als Gast beitreten{" "}
                     </a>
                   </Link>
-                  {/* <Link href={"/register"} passHref>
-                    <a className="flex items-center justify-center px-4 py-3 text-base font-medium text-white bg-blue-500 border border-transparent rounded-md shadow-sm bg-opacity-60 hover:bg-opacity-70 sm:px-8">
-                      {" "}
-                      Zugang reservieren{" "}
-                    </a>
-                  </Link> */}
                 </div>
               </div>
             </div>

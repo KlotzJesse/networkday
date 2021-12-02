@@ -35,14 +35,9 @@ export default function SpeakerListHome() {
                         src={speaker.profileImg}
                       />
                     </div>
-                    {/* <img
-                      className="w-16 h-16 rounded-full lg:w-20 lg:h-20"
-                      src={speaker.profileImg}
-                      alt=""
-                    /> */}
+
                     <div className="space-y-1 text-lg font-medium leading-6">
                       <h3>{speaker.name}</h3>
-                      {/* <p className="text-indigo-600">Test</p> */}
                     </div>
                   </div>
                 </li>
