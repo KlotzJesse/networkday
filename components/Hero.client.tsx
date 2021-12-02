@@ -8,10 +8,10 @@ const Hero = ({ blok }) => {
         <div className="absolute inset-x-0 bottom-0 h-1/2" />
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
-            <div className="inset-0">
+            <div className="absolute inset-0">
               <Image
                 priority
-                layout="fill"
+                objectFit="cover"
                 width="1216"
                 height="602"
                 alt="HeaderImage"
