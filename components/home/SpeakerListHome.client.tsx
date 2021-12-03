@@ -29,9 +29,10 @@ export default function SpeakerListHome() {
                   <div className="flex items-center space-x-4 lg:space-x-6">
                     <div className="relative w-16 h-16 rounded-full lg:w-20 lg:h-20">
                       <Image
-                        layout="fill"
+                        layout="responsive"
                         className="rounded-full"
-                        objectFit="cover"
+                        width="80"
+                        height="80"
                         src={speaker.profileImg}
                         alt={speaker.name}
                       />

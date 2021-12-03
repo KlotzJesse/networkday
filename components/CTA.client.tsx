@@ -12,7 +12,6 @@ const CTA = () => {
             src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?i?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=608&q=60&blend=6366F1&sat=-100&blend-mode=multiply"
             alt="Netzwerk Plattform"
             width="608"
-            objectFit="cover"
             height="418"
             layout="responsive"
           />
