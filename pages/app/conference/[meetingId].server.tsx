@@ -1,8 +1,8 @@
+import BlueJeansMeeting from "@components/BlueJeansMeeting.client";
+import RoomCard from "@components/RoomCard.client";
+import fetchData from "@lib/fetchData";
+import useData from "@lib/useData";
 import Link from "next/link";
-import BlueJeansMeeting from "../../../components/BlueJeansMeeting.client";
-import RoomCard from "../../../components/RoomCard.client";
-import fetchData from "../../../lib/fetchData";
-import useData from "../../../lib/useData";
 
 export default function MeetingPage({ router }) {
   const speakerList = useData("speaker", () => fetchData(`/api/speakers`));

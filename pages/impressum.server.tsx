@@ -1,5 +1,5 @@
-import Footer from "../components/Footer.server";
-import Header from "../components/Header.client";
+import Footer from "@components/Footer.server";
+import Header from "@components/Header.client";
 
 export default function Impressum() {
   return (

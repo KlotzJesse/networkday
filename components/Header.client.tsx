@@ -7,11 +7,11 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
+import fetcher from "@lib/fetcher";
+import slug from "@lib/slugify";
 import Link from "next/link";
 import { Fragment } from "react";
 import useSWR from "swr";
-import fetcher from "../lib/fetcher";
-import slug from "../lib/slugify";
 import HeroIcon from "./HeroIcon";
 
 const callsToAction = [

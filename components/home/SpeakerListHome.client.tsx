@@ -1,6 +1,6 @@
+import fetchData from "@lib/fetchData";
+import useData from "@lib/useData";
 import Image from "next/image";
-import fetchData from "../../lib/fetchData";
-import useData from "../../lib/useData";
 
 export default function SpeakerListHome() {
   const speakerList = useData("speaker", () => fetchData(`/api/speakers`));

@@ -1,12 +1,12 @@
 /* This example requires Tailwind CSS v2.0+ */
+import Footer from "@components/Footer.server";
+import Header from "@components/Header.client";
 import {
   NewspaperIcon,
   PhoneIcon,
   SupportIcon,
 } from "@heroicons/react/outline";
 import Image from "next/image";
-import Footer from "../components/Footer.server";
-import Header from "../components/Header.client";
 
 const supportLinks = [
   {

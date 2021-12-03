@@ -1,11 +1,11 @@
+import DynamicComponent from "@components/DynamicComponent.server";
+import Footer from "@components/Footer.server";
+import Header from "@components/Header.client";
+import fetchData from "@lib/fetchData";
+import readingTime from "@lib/readingTime";
+import slug from "@lib/slugify";
+import useData from "@lib/useData";
 import Image from "next/image";
-import DynamicComponent from "../../components/DynamicComponent.server";
-import Footer from "../../components/Footer.server";
-import Header from "../../components/Header.client";
-import fetchData from "../../lib/fetchData";
-import readingTime from "../../lib/readingTime";
-import slug from "../../lib/slugify";
-import useData from "../../lib/useData";
 import ErrorPage from "../404";
 
 export default function BlogPost({ router }) {

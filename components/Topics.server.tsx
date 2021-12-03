@@ -1,7 +1,7 @@
+import fetchData from "@lib/fetchData";
+import slug from "@lib/slugify";
+import useData from "@lib/useData";
 import Image from "next/image";
-import fetchData from "../lib/fetchData";
-import slug from "../lib/slugify";
-import useData from "../lib/useData";
 import Carousel from "./Carousel.client";
 
 export default function Topics() {

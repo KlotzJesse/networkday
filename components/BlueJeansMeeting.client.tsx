@@ -1,5 +1,5 @@
+import fetcher from "@lib/fetcher";
 import useSWRImmutable from "swr/immutable";
-import fetcher from "../lib/fetcher";
 
 export const BlueJeansMeeting = ({ meetingId }) => {
   const session = useSWRImmutable("/api/session", fetcher);
