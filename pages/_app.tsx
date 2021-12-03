@@ -2,6 +2,10 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import "../styles/globals.css";
 
+export function reportWebVitals(metric) {
+  console.log(metric);
+}
+
 function NetworkDayApp({ Component, pageProps }: AppProps) {
   return (
     <div>
