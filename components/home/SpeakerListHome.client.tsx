@@ -33,6 +33,7 @@ export default function SpeakerListHome() {
                         className="rounded-full"
                         width="80"
                         height="80"
+                        objectFit="cover"
                         src={speaker.profileImg}
                         alt={speaker.name}
                       />
