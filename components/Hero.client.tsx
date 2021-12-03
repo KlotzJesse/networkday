@@ -13,7 +13,6 @@ const Hero = ({ blok }) => {
               objectFit="cover"
               layout="fill"
               alt="HeaderImage"
-              className="object-cover"
               src={blok.BackgroundImage.filename}
             />
             <div
