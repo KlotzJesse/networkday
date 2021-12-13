@@ -15,10 +15,10 @@
     "@prisma/client": "^3.6.0",
     "@tailwindcss/aspect-ratio": "^0.3.0",
     "embla-carousel-react": "^6.0.2",
-    "next": "^12.0.5-canary.13",
+    "next": "12.0.8-canary.4",
     "next-auth": "0.0.0-pr.3307.e9e46c15",
-    "react": "^18.0.0-beta-a65ceef37-20211130",
-    "react-dom": "^18.0.0-beta-a65ceef37-20211130",
+    "react": "^18.0.0-rc.0",
+    "react-dom": "^18.0.0-rc.0",
     "sharp": "^0.29.3",
     "slugify": "^1.6.3",
     "swr": "^1.0.1"
