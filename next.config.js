@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  swcMinify: true,
+  //swcMinify: true, : disable as long as buggy
   experimental: {
     concurrentFeatures: true,
     serverComponents: true,
