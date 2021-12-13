@@ -33,7 +33,8 @@
     "pages/app/_middleware.server.ts",
     "pages/api/components/_middleware.js",
     "pages/api/auth/[...nextauth].ts",
-    "lib/slugify.ts"
+    "lib/slugify.ts",
+    "pages/app/_middleware.js"
   ],
   "exclude": ["node_modules"]
 }
