@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://www.network-day.de/sitemap.xml
