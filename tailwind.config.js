@@ -2,7 +2,6 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  mode: "jit",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
@@ -12,9 +11,6 @@ module.exports = {
       flex: {
         carouselMd: "0 0 33%",
         carouselSm: "0 0 100%",
-      },
-      fontFamily: {
-        sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         red: {
@@ -327,12 +323,6 @@ module.exports = {
         outline: "0 0 0 3px rgba(101, 31, 255, 0.4)",
       },
     },
-  },
-  variants: {
-    scale: ["responsive", "hover", "focus", "group-hover"],
-    textColor: ["responsive", "hover", "focus", "group-hover"],
-    opacity: ["responsive", "hover", "focus", "group-hover"],
-    backgroundColor: ["responsive", "hover", "focus", "group-hover"],
   },
   plugins: [
     require("@tailwindcss/aspect-ratio"),
