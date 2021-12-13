@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 export default async function middleware(req, event) {
   const session = await getToken({ req, secret: process.env.AUTH_SECRET });
-  console.log(session)
+  console.log(session);
 
   // You could also check for any property on the session object,
   // like role === "admin" or name === "John Doe", etc.
