@@ -7,7 +7,7 @@ module.exports = {
     reactRoot: true,
   },
   images: {
-    formats: ["image/webp"],
+    formats: ["image/webp", "image/avif"],
     domains: [
       "images.unsplash.com",
       "a.storyblok.com",
