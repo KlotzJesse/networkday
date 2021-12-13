@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   //swcMinify: true, : disable as long as buggy
+  rewrites: async () => [
+    {
+      source: "/sitemap.xml",
+      destination: "/api/sitemap",
+    },
+  ],
   experimental: {
     concurrentFeatures: true,
     serverComponents: true,
