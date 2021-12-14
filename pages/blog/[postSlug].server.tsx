@@ -1,7 +1,6 @@
 import DynamicComponent from "@components/DynamicComponent.server";
 import Footer from "@components/Footer.server";
 import Header from "@components/Header.client";
-import NewsStructuredData from "@components/NewsStructuredData.client";
 import SEO from "@components/SEO.client";
 import fetchData from "@lib/fetchData";
 import readingTime from "@lib/readingTime";
@@ -65,7 +64,6 @@ export default function BlogPost({ router }) {
           </svg>
         </nav>
         <div>
-          <NewsStructuredData />
           <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl ">
             {story.content.title}
           </h1>
