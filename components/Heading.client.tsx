@@ -1,4 +1,12 @@
-export const Heading = ({ blok }) => {
+interface HeadingBlok {
+  title: string;
+}
+
+interface HeadingProps {
+  blok: HeadingBlok;
+}
+
+export const Heading = ({ blok }: HeadingProps) => {
   return (
     <h2 id={blok.title} className="group">
       <a
@@ -6,7 +14,7 @@ export const Heading = ({ blok }) => {
         href={`#${blok.title}`}
       >
         <svg
-          className="h-6 w-6"
+          className="w-6 h-6"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"

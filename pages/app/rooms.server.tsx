@@ -1,9 +1,9 @@
-import RoomCard from "@components/RoomCard.client";
+import RoomCard, { SpeakerWithTopic } from "@components/RoomCard.client";
 import fetchData from "@lib/fetchData";
 import useData from "@lib/useData";
 import Link from "next/link";
 
-export default function MeetingPage({ router }) {
+export default function MeetingPage() {
   const speakerList = useData("speaker", () => fetchData(`/api/speakers`));
 
   return (
@@ -96,7 +96,7 @@ export default function MeetingPage({ router }) {
         </div>
         <div className="flex flex-col space-y-6">
           <div className="flex flex-col space-y-6 md:space-y-0 md:space-x-6 md:flex-row">
-            {speakerList.map((speaker) => {
+            {speakerList.map((speaker: SpeakerWithTopic) => {
               return <RoomCard key={speaker.name} speaker={speaker} />;
             })}
           </div>

@@ -1,12 +1,12 @@
-const cache = {};
+const cache: { [key: string]: any } = {};
 
-export default function useData(key, fetcher) {
+export default function useData(key: string, fetcher: Function) {
   if (!cache[key]) {
-    let data;
-    let promise;
+    let data: any;
+    let promise: any;
     cache[key] = () => {
       if (data !== undefined) return data;
-      if (!promise) promise = fetcher().then((r) => (data = r));
+      if (!promise) promise = fetcher().then((r: any) => (data = r));
       throw promise;
     };
   }

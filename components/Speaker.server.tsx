@@ -1,9 +1,10 @@
 import fetchData from "@lib/fetchData";
 import useData from "@lib/useData";
+import { Speaker } from "@prisma/client";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Speaker() {
+export default function SpeakerPage() {
   const speakerList = useData("speaker", () => fetchData(`/api/speakers`));
 
   return (
@@ -24,7 +25,7 @@ export default function Speaker() {
         </p>
       </div>
       <div className="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
-        {speakerList.map((speaker) => {
+        {speakerList.map((speaker: Speaker) => {
           return (
             <Link key={speaker.name} href={"/"} passHref>
               <a aria-label="View Item">
@@ -33,8 +34,8 @@ export default function Speaker() {
                     width="720px"
                     height="700px"
                     className="object-cover w-full h-56 md:h-64 xl:h-80"
-                    src={speaker.profileImg}
-                    alt={speaker.name}
+                    src={speaker.profileImg as string}
+                    alt={speaker.name as string}
                   />
                   <div className="absolute inset-x-0 bottom-0 px-6 py-4 bg-black bg-opacity-75">
                     <p className="text-sm font-medium tracking-wide text-white">

@@ -2,37 +2,36 @@ import SEO from "@components/SEO.client";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useRef } from "react";
+import React, { MouseEvent, useRef } from "react";
 
 export default function Signin() {
-  let nameInput = useRef(null);
-  let companyInput = useRef(null);
-  let mailInput = useRef(null);
+  let nameInput = useRef<HTMLInputElement>(null);
+  let companyInput = useRef<HTMLInputElement>(null);
+  let mailInput = useRef<HTMLInputElement>(null);
 
-  const handleLogin = (e) => {
-    if (!nameInput.current.value) {
+  const handleLogin = (e: MouseEvent<HTMLButtonElement>) => {
+    if (null !== nameInput.current && !nameInput.current.value) {
       nameInput.current.classList.add("border");
-      nameInput.current.nextSibling.classList.remove("hidden");
+      (nameInput.current.nextSibling! as HTMLElement).classList.remove(
+        "hidden"
+      );
     }
-    if (!companyInput.current.value) {
+    if (null !== companyInput.current && !companyInput.current.value) {
       companyInput.current.classList.add("border");
-      companyInput.current.nextSibling.classList.remove("hidden");
+      (companyInput.current.nextSibling! as HTMLElement).classList.remove(
+        "hidden"
+      );
     }
-    if (!mailInput.current.value) {
+    if (null !== mailInput.current && !mailInput.current.value) {
       mailInput.current.classList.add("border");
-      mailInput.current.nextSibling.classList.remove("hidden");
-    }
-    if (
-      !nameInput.current.value ||
-      !companyInput.current.value ||
-      !mailInput.current.value
-    ) {
-      return;
+      (mailInput.current.nextSibling! as HTMLElement).classList.remove(
+        "hidden"
+      );
     }
     signIn("credentials", {
-      username: nameInput.current.value,
-      company: companyInput.current.value,
-      mail: mailInput.current.value,
+      username: null !== nameInput.current && nameInput.current.value,
+      company: null !== companyInput.current && companyInput.current.value,
+      mail: null !== mailInput.current && mailInput.current.value,
       callbackUrl: "/app/conference",
     });
   };

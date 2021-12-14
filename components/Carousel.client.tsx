@@ -1,7 +1,17 @@
 import useEmblaCarousel from "embla-carousel-react";
-import React, { useCallback, useEffect, useState } from "react";
+import React, {
+  MouseEventHandler,
+  ReactChildren,
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
 
-export const Carousel = ({ children }) => {
+interface CarouselProps {
+  children: ReactChildren;
+}
+
+export const Carousel = ({ children }: CarouselProps) => {
   const [viewportRef, embla] = useEmblaCarousel({
     skipSnaps: false,
     containScroll: "trimSnaps",
@@ -33,26 +43,31 @@ export const Carousel = ({ children }) => {
         </div>
       </div>
       <div className="embla__dots">
-        {children.slice(2).map((_, index) => (
-          <DotButton
-            key={index}
-            selected={index === selectedIndex}
-            onClick={() => scrollTo(index)}
-          />
-        ))}
+        {React.Children.toArray(children)
+          .slice(2)
+          .map((_, index) => (
+            <DotButton
+              key={index}
+              selected={index === selectedIndex}
+              onClick={() => scrollTo(index)}
+            />
+          ))}
       </div>
     </div>
   );
 };
 
-export const DotButton = ({ selected, onClick }) => (
+interface DotButtonProps {
+  selected: boolean;
+  onClick: MouseEventHandler;
+}
+
+export const DotButton = ({ selected, onClick }: DotButtonProps) => (
   <button
     className={`embla__dot ${selected ? "is-selected" : ""}`}
     type="button"
     onClick={onClick}
-  >
-    Slide
-  </button>
+  />
 );
 
 export default Carousel;

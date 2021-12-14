@@ -26,6 +26,7 @@ export const authOptions: NextAuthOptions = {
         mail: { label: "E-Mail", type: "text" },
       },
       async authorize(credentials) {
+        if(!credentials) throw new Error("No credentials?")
         // (i.e., the request IP address)
         //   const res = await fetch("/your/endpoint", {
         //     method: 'POST',

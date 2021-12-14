@@ -1,7 +1,11 @@
 import fetcher from "@lib/fetcher";
 import useSWRImmutable from "swr/immutable";
 
-export const BlueJeansMeeting = ({ meetingId }) => {
+interface BlueJeansMeetingProps {
+  meetingId: number;
+}
+
+export const BlueJeansMeeting = ({ meetingId }: BlueJeansMeetingProps) => {
   const session = useSWRImmutable("/api/session", fetcher);
   if (session.error) return session.error.message;
   if (!session.data) return "Loading";

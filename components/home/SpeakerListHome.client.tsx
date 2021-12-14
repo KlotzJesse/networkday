@@ -1,5 +1,6 @@
 import fetchData from "@lib/fetchData";
 import useData from "@lib/useData";
+import { Speaker } from "@prisma/client";
 import Image from "next/image";
 
 export default function SpeakerListHome() {
@@ -24,7 +25,7 @@ export default function SpeakerListHome() {
               role="list"
               className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8"
             >
-              {speakerList.map((speaker) => (
+              {speakerList.map((speaker: Speaker) => (
                 <li key={speaker.name}>
                   <div className="flex items-center space-x-4 lg:space-x-6">
                     <div className="relative w-16 h-16 rounded-full lg:w-20 lg:h-20">
@@ -34,8 +35,8 @@ export default function SpeakerListHome() {
                         width="80"
                         height="80"
                         objectFit="cover"
-                        src={speaker.profileImg}
-                        alt={speaker.name}
+                        src={speaker.profileImg as string}
+                        alt={speaker.name as string}
                       />
                     </div>
 

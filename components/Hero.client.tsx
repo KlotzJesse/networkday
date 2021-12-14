@@ -1,7 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const Hero = ({ blok }) => {
+interface HeroBlok {
+  Heading: string;
+  Subtitle: string;
+  Description: string;
+  BackgroundImage: BackgroundImage;
+}
+
+interface BackgroundImage {
+  filename: string;
+}
+
+interface HeroProps {
+  blok: HeroBlok;
+}
+
+const Hero = ({ blok }: HeroProps) => {
   return (
     <div className="">
       <div className="relative bg-white">

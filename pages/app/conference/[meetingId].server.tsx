@@ -1,10 +1,10 @@
 import BlueJeansMeeting from "@components/BlueJeansMeeting.client";
-import RoomCard from "@components/RoomCard.client";
+import RoomCard, { SpeakerWithTopic } from "@components/RoomCard.client";
 import fetchData from "@lib/fetchData";
 import useData from "@lib/useData";
 import Link from "next/link";
 
-export default function MeetingPage({ router }) {
+export default function MeetingPage({ router }: { router: any }) {
   const speakerList = useData("speaker", () => fetchData(`/api/speakers`));
 
   const meetingId = router.route.split("/app/conference/")[1] ?? "642997757";
@@ -104,7 +104,7 @@ export default function MeetingPage({ router }) {
             </div>
           </div>
           <div className="flex flex-col space-y-6 md:space-y-0 md:space-x-6 md:flex-row">
-            {speakerList.map((speaker) => {
+            {speakerList.map((speaker: SpeakerWithTopic) => {
               return <RoomCard key={speaker.name} speaker={speaker} />;
             })}
           </div>

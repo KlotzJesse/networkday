@@ -1,6 +1,7 @@
 import fetchData from "@lib/fetchData";
 import slug from "@lib/slugify";
 import useData from "@lib/useData";
+import { Topic } from "@prisma/client";
 import Link from "next/link";
 
 export default function Footer() {
@@ -53,10 +54,10 @@ export default function Footer() {
           <div className="col-span-2">
             <p className="font-semibold tracking-wide text-gray-800">Themen</p>
             <ul className="mt-2 space-y-2">
-              {topics.map((topic) => {
+              {topics.map((topic: Topic) => {
                 return (
                   <li key={topic.name}>
-                    <Link href={"/blog/" + slug(topic.name)} passHref>
+                    <Link href={"/blog/" + slug(topic.name as string)} passHref>
                       <a className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">
                         {topic.name}
                       </a>

@@ -1,9 +1,11 @@
 import fetchData from "@lib/fetchData";
+import { NextApiRequest, NextApiResponse } from "next";
 
-const createSitemap = (links, posts) => `<?xml version="1.0" encoding="UTF-8"?>
+
+const createSitemap = (links: any, posts: any) => `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
         ${links
-          .map(link => {
+          .map((link : any) => {
             return `
                 <url>
                     <loc>${`https://www.network-day.de/${link.full_slug}`}</loc>
@@ -13,7 +15,7 @@ const createSitemap = (links, posts) => `<?xml version="1.0" encoding="UTF-8"?>
           })
           .join('')}
           ${posts
-            .map(post => {
+            .map((post : any) => {
               return `
                   <url>
                       <loc>${`https://www.network-day.de/${post.full_slug}`}</loc>
@@ -34,7 +36,7 @@ const createSitemap = (links, posts) => `<?xml version="1.0" encoding="UTF-8"?>
     </urlset>
     `;
 
-export default async function handler(req, res) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     var data = await (await fetch(`https://api.storyblok.com/v1/cdn/stories?token=wM296GLYg0BtNHBdvqcsuwtt&excluding_slugs=*blog*&cv=${new Date().getTime()}`)).json();
 
 

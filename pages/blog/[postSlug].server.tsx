@@ -9,7 +9,7 @@ import useData from "@lib/useData";
 import Image from "next/image";
 import ErrorPage from "../404";
 
-export default function BlogPost({ router }) {
+export default function BlogPost({ router }: { router: any }) {
   const postSlug = router.route.split("/")[2];
   const story = useData("blogPost", () =>
     fetchData(`/api/components/blog/${postSlug}`)
@@ -19,9 +19,9 @@ export default function BlogPost({ router }) {
 
   let text = story.content.title;
 
-  story.content.body.map((blok) => {
+  story.content.body.map((blok: any) => {
     if (!blok.body) return;
-    blok.body.map((comp) => {
+    blok.body.map((comp: any) => {
       text += " " + (comp.title ?? comp.content);
     });
   });
@@ -36,7 +36,7 @@ export default function BlogPost({ router }) {
           <p className="font-bold uppercase">Zusammenfassung</p>
 
           <ul className="list-decimal list-inside">
-            {story.content.body.map((section) => {
+            {story.content.body.map((section: any) => {
               if (!section.name) return;
               return (
                 <li key={section._uid} className="text-sm leading-10">
@@ -94,13 +94,13 @@ export default function BlogPost({ router }) {
               />
             </div>
 
-            {story.content.body.map((entry) => {
+            {story.content.body.map((entry: any) => {
               if (!entry.name) {
                 return <DynamicComponent key={entry._uid} blok={entry} />;
               }
               return (
                 <section key={entry._uid} id={slug(entry.name)}>
-                  {entry.body.map((subEntry) => {
+                  {entry.body.map((subEntry: any) => {
                     return (
                       <DynamicComponent key={subEntry._uid} blok={subEntry} />
                     );

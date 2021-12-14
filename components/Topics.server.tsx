@@ -1,6 +1,7 @@
 import fetchData from "@lib/fetchData";
 import slug from "@lib/slugify";
 import useData from "@lib/useData";
+import { Topic } from "@prisma/client";
 import Image from "next/image";
 import Carousel from "./Carousel.client";
 
@@ -11,7 +12,7 @@ export default function Topics() {
     <section className="text-gray-600 body-font">
       <div className="container px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <Carousel>
-          {topics.slice(0, 4).map((item) => (
+          {topics.slice(0, 4).map((item: Topic) => (
             <div
               key={item.name}
               className="flex-carouselSm md:flex-carouselMd embla__slide"
@@ -22,7 +23,7 @@ export default function Topics() {
                     width="365"
                     height="202"
                     className="object-cover object-center w-full lg:h-48 md:h-36"
-                    src={item.img}
+                    src={item.img as string}
                     alt="blog"
                   />
                   <div className="p-6">
@@ -35,7 +36,7 @@ export default function Topics() {
                     <p className="mb-3 leading-relaxed">{item.description}</p>
                     <div className="flex flex-wrap items-center ">
                       <a
-                        href={"/blog/" + slug(item.name)}
+                        href={"/blog/" + slug(item.name as string)}
                         className="inline-flex items-center text-indigo-500 md:mb-2 lg:mb-0"
                       >
                         Mehr erfahren

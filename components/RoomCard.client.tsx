@@ -1,16 +1,29 @@
+import { Prisma } from "@prisma/client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export const RoomCard = ({ speaker }) => {
+const speakersWithTopic = Prisma.validator<Prisma.SpeakerArgs>()({
+  include: { Topic: true },
+});
+
+export type SpeakerWithTopic = Prisma.SpeakerGetPayload<
+  typeof speakersWithTopic
+>;
+
+interface RoomCardProps {
+  speaker: SpeakerWithTopic;
+}
+
+export const RoomCard = ({ speaker }: RoomCardProps) => {
   return (
     <div className="w-full p-6 overflow-hidden bg-white shadow-lg max-w-1/4 rounded-xl ">
       <div className="flex flex-col items-center justify-between md:flex-row">
         <div className="flex items-center justify-start flex-grow w-full ">
           <div className="w-10 h-10">
             <Image
-              alt={speaker.name}
-              src={speaker.profileImg}
+              alt={speaker.name as string}
+              src={speaker.profileImg as string}
               width="40"
               height="40"
               className="object-cover mx-auto rounded-full "
@@ -28,7 +41,7 @@ export const RoomCard = ({ speaker }) => {
         Wie Vegane Produkte Nachhaltigkeit beeinflussen
       </p> */}
       <p className="my-6 font-semibold tracking-wide text-gray-700 text-md ">
-        {speaker.Topic.name}
+        {speaker.Topic && speaker.Topic.name}
       </p>
 
       <Link href={"/app/conference/" + speaker.meetingId} passHref>

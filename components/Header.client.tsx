@@ -8,9 +8,10 @@ import {
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import slug from "@lib/slugify";
+import { Topic } from "@prisma/client";
 import Link from "next/link";
 import { Fragment } from "react";
-import HeroIcon from "./HeroIcon";
+import HeroIcon, { IconName } from "./HeroIcon";
 
 const callsToAction = [
   { name: "Zugang reservieren", href: "/auth/signup", icon: PlayIcon },
@@ -46,11 +47,21 @@ const resources = [
   // },
 ];
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-const Header = ({ recentPosts, topics }) => {
+interface HeaderProps {
+  recentPosts: any;
+  topics: any;
+}
+
+interface RecentPost {
+  name: string;
+  full_slug: string;
+}
+
+const Header = ({ recentPosts, topics }: HeaderProps) => {
   return (
     <nav>
       <Popover className="relative bg-white">
@@ -116,19 +127,21 @@ const Header = ({ recentPosts, topics }) => {
                       <Popover.Panel className="absolute z-50 w-screen max-w-md px-2 mt-3 -ml-4 transform sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                         <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                           <div className="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
-                            {topics.map((item) => (
+                            {topics.map((item: Topic) => (
                               <Link
                                 key={item.name}
-                                href={"/blog/" + slug(item.name)}
+                                href={"/blog/" + slug(item.name as string)}
                                 passHref
                               >
                                 <a className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50">
-                                  <HeroIcon
-                                    name={item.icon}
-                                    className="flex-shrink-0 w-6 h-6 text-indigo-600"
-                                    aria-hidden="true"
-                                    outline
-                                  />
+                                  {item.icon && (
+                                    <HeroIcon
+                                      name={item.icon as IconName}
+                                      className="flex-shrink-0 w-6 h-6 text-indigo-600"
+                                      aria-hidden="true"
+                                      outline
+                                    />
+                                  )}
                                   <div className="ml-4">
                                     <p className="text-base font-medium text-gray-900">
                                       {item.name}
@@ -225,18 +238,23 @@ const Header = ({ recentPosts, topics }) => {
                                 Neuste Beiträge
                               </h3>
                               <ul role="list" className="mt-4 space-y-4">
-                                {recentPosts.slice(0, 3).map((post) => (
-                                  <li
-                                    key={post.name}
-                                    className="text-base truncate"
-                                  >
-                                    <Link href={"/" + post.full_slug} passHref>
-                                      <a className="font-medium text-gray-900 hover:text-gray-700">
-                                        {post.name}
-                                      </a>
-                                    </Link>
-                                  </li>
-                                ))}
+                                {recentPosts
+                                  .slice(0, 3)
+                                  .map((post: RecentPost) => (
+                                    <li
+                                      key={post.name}
+                                      className="text-base truncate"
+                                    >
+                                      <Link
+                                        href={"/" + post.full_slug}
+                                        passHref
+                                      >
+                                        <a className="font-medium text-gray-900 hover:text-gray-700">
+                                          {post.name}
+                                        </a>
+                                      </Link>
+                                    </li>
+                                  ))}
                               </ul>
                             </div>
                             <div className="mt-5 text-sm">
@@ -316,15 +334,15 @@ const Header = ({ recentPosts, topics }) => {
                 </div>
                 <div className="mt-6">
                   <nav className="grid gap-y-8">
-                    {topics.map((item) => (
+                    {topics.map((item: Topic) => (
                       <Link
                         key={item.name}
-                        href={"/blog/" + slug(item.name)}
+                        href={"/blog/" + slug(item.name as string)}
                         passHref
                       >
                         <a className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50">
                           <HeroIcon
-                            name={item.icon}
+                            name={item.icon as IconName}
                             className="flex-shrink-0 w-6 h-6 text-indigo-600"
                             aria-hidden="true"
                             outline

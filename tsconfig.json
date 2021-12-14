@@ -15,7 +15,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "incremental": true,
@@ -34,7 +34,9 @@
     "pages/api/components/_middleware.js",
     "pages/api/auth/[...nextauth].ts",
     "lib/slugify.ts",
-    "pages/_middleware.js"
+    "pages/_middleware.js",
+    "components/Page.server.js",
+    "components/DynamicComponent.server.js"
   ],
   "exclude": ["node_modules"]
 }
