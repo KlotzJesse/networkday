@@ -1,6 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import Footer from "@components/Footer.server";
 import Header from "@components/Header.client";
+import SEO from "@components/SEO.client";
 import {
   NewspaperIcon,
   PhoneIcon,
@@ -35,6 +36,7 @@ const supportLinks = [
 export default function Help() {
   return (
     <div className="bg-white">
+      <SEO canonical={`https://www.network-day.de/help`} />
       <Header />
       <div className="relative pb-32 bg-gray-800">
         <div className="absolute inset-0">

@@ -1,4 +1,5 @@
 import DynamicComponent from "@components/DynamicComponent.server";
+import SEO from "@components/SEO.client";
 import fetchData from "@lib/fetchData";
 import useData from "@lib/useData";
 
@@ -8,6 +9,7 @@ export default function Speaker() {
   );
   return (
     <div>
+      <SEO canonical={`https://www.network-day.de/speaker`} />
       <DynamicComponent blok={story.content} />
     </div>
   );

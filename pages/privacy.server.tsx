@@ -1,9 +1,11 @@
 import Footer from "@components/Footer.server";
 import Header from "@components/Header.client";
+import SEO from "@components/SEO.client";
 
 export default function Impressum() {
   return (
     <div>
+      <SEO canonical={`https://www.network-day.de/privacy`} />
       <Header />
       <div className="relative py-16 overflow-hidden bg-white">
         <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">

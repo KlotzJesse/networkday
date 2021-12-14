@@ -1,3 +1,4 @@
+import SEO from "@components/SEO.client";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -38,6 +39,7 @@ export default function Signin() {
 
   return (
     <section>
+      <SEO canonical={`https://www.network-day.de/auth/signin`} />
       <div className="flex max-h-screen">
         <div
           className="h-screen md:w-2/6 md:p-10"
