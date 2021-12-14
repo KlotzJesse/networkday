@@ -1,6 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
 import Footer from "@components/Footer.server";
-import Header from "@components/Header.client";
+import Head from "@components/Header.server";
 import SEO from "@components/SEO.client";
 import {
   NewspaperIcon,
@@ -37,7 +37,7 @@ export default function Help() {
   return (
     <div className="bg-white">
       <SEO canonical={`https://www.network-day.de/help`} />
-      <Header />
+      <Head />
       <div className="relative pb-32 bg-gray-800">
         <div className="absolute inset-0">
           <Image
