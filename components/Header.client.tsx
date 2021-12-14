@@ -51,9 +51,6 @@ function classNames(...classes) {
 }
 
 const Header = ({ recentPosts, topics }) => {
-  // const recentPosts = useSWR("/api/components/blog", fetcher).data ?? [];
-  // const topics = useSWR("/api/topics", fetcher).data ?? [];
-
   return (
     <nav>
       <Popover className="relative bg-white">
