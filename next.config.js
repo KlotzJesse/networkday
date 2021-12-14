@@ -7,6 +7,10 @@ module.exports = {
       destination: "/api/sitemap",
     },
   ],
+  i18n: {
+    locales: ["de-DE"],
+    defaultLocale: "de-DE",
+  },
   experimental: {
     concurrentFeatures: true,
     serverComponents: true,
