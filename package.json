@@ -15,7 +15,7 @@
     "@prisma/client": "^3.6.0",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "embla-carousel-react": "^6.0.2",
-    "next": "12.0.8-canary.6",
+    "next": "12.0.8-canary.4",
     "next-auth": "4.0.5",
     "next-seo": "^4.28.1",
     "react": "^18.0.0-rc.0",
