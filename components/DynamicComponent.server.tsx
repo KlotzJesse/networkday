@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import CTA from "./CTA.client";
 import Exhibitors from "./Exhibitors.client";
 import Footer from "./Footer.server";
-import Header from "./Header.client";
+import Head from "./Header.server";
 import Heading from "./Heading.client";
 import Hero from "./Hero.client";
 import SpeakerListHome from "./home/SpeakerListHome.client";
@@ -15,7 +15,7 @@ import Topics from "./Topics.server";
 
 // resolve Storyblok components to Next.js components
 const Components = {
-  header: Header,
+  header: Head,
   hero: Hero,
   speaker: Speaker,
   steps: Steps,

@@ -7,11 +7,9 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
-import fetcher from "@lib/fetcher";
 import slug from "@lib/slugify";
 import Link from "next/link";
 import { Fragment } from "react";
-import useSWR from "swr";
 import HeroIcon from "./HeroIcon";
 
 const callsToAction = [
@@ -52,9 +50,9 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-const Header = () => {
-  const recentPosts = useSWR("/api/components/blog", fetcher).data ?? [];
-  const topics = useSWR("/api/topics", fetcher).data ?? [];
+const Header = ({ recentPosts, topics }) => {
+  // const recentPosts = useSWR("/api/components/blog", fetcher).data ?? [];
+  // const topics = useSWR("/api/topics", fetcher).data ?? [];
 
   return (
     <nav>
