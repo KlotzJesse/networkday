@@ -33,7 +33,7 @@ const createSitemap = (links, posts) => `<?xml version="1.0" encoding="UTF-8"?>
     `;
 
 export default async function handler(req, res) {
-    var data = await (await fetch(`https://api.storyblok.com/v1/cdn/stories?token=wM296GLYg0BtNHBdvqcsuwtt&excluding_slugs=*blog*`)).json();
+    var data = await (await fetch(`https://api.storyblok.com/v1/cdn/stories?token=wM296GLYg0BtNHBdvqcsuwtt&excluding_slugs=*blog*&cv=${new Date().getTime()}`)).json();
 
     var blog = await fetchData("/api/components/blog");
 
