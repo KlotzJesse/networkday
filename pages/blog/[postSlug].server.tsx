@@ -1,6 +1,6 @@
 import DynamicComponent from "@components/DynamicComponent.server";
 import Footer from "@components/Footer.server";
-import Header from "@components/Header.client";
+import Head from "@components/Header.server";
 import SEO from "@components/SEO.client";
 import fetchData from "@lib/fetchData";
 import readingTime from "@lib/readingTime";
@@ -30,7 +30,7 @@ export default function BlogPost({ router }) {
     <div className="bg-white">
       <SEO canonical={`https://www.network-day.de/${story.full_slug}`} />
 
-      <Header />
+      <Head />
       <div className="flex w-screen px-4 pt-8 mx-auto space-x-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <nav className="sticky hidden w-1/4 h-full top-32 md:block">
           <p className="font-bold uppercase">Zusammenfassung</p>
