@@ -25,9 +25,8 @@ const Hero = ({ blok }: HeroProps) => {
           <div className="absolute inset-0">
             <Image
               priority
-              width="1216"
-              height="602"
-              layout="responsive"
+              layout="fill"
+              objectFit="cover"
               alt="HeaderImage"
               src={blok.BackgroundImage.filename}
             />
