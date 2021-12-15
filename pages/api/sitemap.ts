@@ -8,7 +8,7 @@ const createSitemap = (links: any, posts: any) => `<?xml version="1.0" encoding=
           .map((link : any) => {
             return `
                 <url>
-                    <loc>${`https://www.network-day.de/${link.path ? link.path : link.full_slug}`}</loc>
+                    <loc>${`https://www.network-day.de${link.path ? link.path : "/" + link.full_slug}`}</loc>
                     <lastmod>${link.published_at.split("T")[0]}</lastmod>
                 </url>
             `;
