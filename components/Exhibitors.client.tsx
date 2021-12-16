@@ -1,7 +1,7 @@
 export default function Exhibitors() {
   return (
-    <div className="w-screen bg-white">
-      <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:py-16 lg:px-8">
+    <div className="bg-white ">
+      <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-24">
         <p className="text-base font-semibold tracking-wider text-center text-gray-600 uppercase">
           Das Vertrauen von über 6 sehr starker Marken
         </p>
