@@ -3,7 +3,7 @@ import slug from "@lib/slugify";
 import useData from "@lib/useData";
 import { Topic } from "@prisma/client";
 import Image from "next/image";
-import Carousel from "./Carousel.client";
+import ScrollDrag from "./ScrollDrag.client";
 
 export default function Topics() {
   const topics = useData("topics", () => fetchData(`/api/topics`));
@@ -11,13 +11,13 @@ export default function Topics() {
   return (
     <section className="text-gray-600 body-font">
       <div className="container px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <Carousel>
-          {topics.slice(0, 4).map((item: Topic) => (
+        <ScrollDrag>
+          {topics.map((item: Topic, index: number) => (
             <div
               key={item.name}
-              className="flex-carouselSm md:flex-carouselMd embla__slide"
+              className="flex-carouselSm md:flex-carouselMd cursor-grabbing snap-center shrink-0"
             >
-              <div className="p-4 embla__slide__inner">
+              <div className="p-4">
                 <div className="h-full overflow-hidden bg-white border-2 border-gray-200 rounded-lg border-opacity-60">
                   <Image
                     width="365"
@@ -59,7 +59,7 @@ export default function Topics() {
               </div>
             </div>
           ))}
-        </Carousel>
+        </ScrollDrag>
       </div>
     </section>
   );

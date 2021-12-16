@@ -3627,6 +3627,11 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
+use-draggable-scroll@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/use-draggable-scroll/-/use-draggable-scroll-0.1.0.tgz#ca7967eeec9d6a53f965b84f9c295c214aa43ed7"
+  integrity sha512-mX6nT3cUqOTtA+8QUH9HfdKtzI6Oquj9QIB0wALWZYmWogNQ746MaUcmqKOKCIlt2UH6egxhSKNPiSlfEqmKhA==
+
 use-subscription@1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/use-subscription/-/use-subscription-1.5.1.tgz#73501107f02fad84c6dd57965beb0b75c68c42d1"
