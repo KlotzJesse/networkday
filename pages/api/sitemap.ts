@@ -43,6 +43,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     var blog = await fetchData("/api/components/blog");
 
     res.setHeader('Content-Type', 'application/xml')
+    res.setHeader('Cache-Control', 's-maxage=10, stale-while-revalidate=59');
   
    res.write(createSitemap(data.stories, blog))
    res.end()
