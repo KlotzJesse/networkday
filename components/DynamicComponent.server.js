@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import CTA from "./CTA.client";
 import Exhibitors from "./Exhibitors.client";
 import Footer from "./Footer.server";
@@ -36,9 +35,9 @@ const DynamicComponent = ({ blok }) => {
     const Component = Components[blok.component];
     // wrap with SbEditable for visual editing
     return (
-      <Suspense fallback={"Loading..."}>
-        <Component blok={blok} />
-      </Suspense>
+      // <Suspense fallback={"Loading..."}>
+      <Component blok={blok} />
+      // </Suspense>
     );
   }
 
