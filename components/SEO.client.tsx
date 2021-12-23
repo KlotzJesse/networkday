@@ -9,13 +9,11 @@ interface SEOProps {
 
 export const SEO = (props: SEOProps) => {
   return (
-    <div>
-      <NextSeo
-        canonical={props.canonical}
-        title={props.title}
-        description={props.description}
-      />
-    </div>
+    <NextSeo
+      canonical={props.canonical}
+      title={props.title}
+      description={props.description}
+    />
   );
 };
 
