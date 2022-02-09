@@ -1,7 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import Footer from "@components/Footer.server";
-import Head from "@components/Header.server";
 import SEO from "@components/SEO.client";
+import Head from "@components/ServerHeader.server";
 import {
   NewspaperIcon,
   PhoneIcon,

@@ -1,7 +1,5 @@
 import MeetingPage from "./[meetingId].server";
 
-export const ConferencePage = ({ router }: { router: any }) => {
+export default function ConferencePage({ router }: { router: any }) {
   return <MeetingPage router={router} />;
-};
-
-export default ConferencePage;
+}

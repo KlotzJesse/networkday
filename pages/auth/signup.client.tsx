@@ -1,6 +1,5 @@
 import Signin from "./signin.client";
 
-export const Signup = () => {
+export default function Signup() {
   return <Signin />;
-};
-export default Signup;
+}

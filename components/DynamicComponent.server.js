@@ -1,12 +1,13 @@
+import { Suspense } from "react";
 import CTA from "./CTA.client";
 import Exhibitors from "./Exhibitors.client";
 import Footer from "./Footer.server";
-import Head from "./Header.server";
 import Heading from "./Heading.client";
 import Hero from "./Hero.client";
 import SpeakerListHome from "./home/SpeakerListHome.client";
 import Page from "./Page.server";
 import Quote from "./Quote";
+import Head from "./ServerHeader.server";
 import Speaker from "./Speaker.server";
 import Steps from "./Steps.client";
 import Text from "./Text.client";
@@ -29,15 +30,15 @@ const Components = {
   quote: Quote,
 };
 
-const DynamicComponent = ({ blok }) => {
+export default function DynamicComponent({ blok }) {
   // check if component is defined above
   if (typeof Components[blok.component] !== "undefined") {
     const Component = Components[blok.component];
     // wrap with SbEditable for visual editing
     return (
-      // <Suspense fallback={"Loading..."}>
-      <Component blok={blok} />
-      // </Suspense>
+      <Suspense fallback={"Loading..."}>
+        <Component blok={blok} />
+      </Suspense>
     );
   }
 
@@ -47,6 +48,4 @@ const DynamicComponent = ({ blok }) => {
       The component <strong>{blok.component}</strong> has not been created yet.
     </p>
   );
-};
-
-export default DynamicComponent;
+}

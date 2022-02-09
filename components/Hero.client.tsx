@@ -16,7 +16,7 @@ interface HeroProps {
   blok: HeroBlok;
 }
 
-const Hero = ({ blok }: HeroProps) => {
+export default function Hero({ blok }: HeroProps) {
   return (
     <div className="bg-white ">
       <div className="absolute inset-x-0 bottom-0 h-1/2" />
@@ -61,6 +61,4 @@ const Hero = ({ blok }: HeroProps) => {
       </div>
     </div>
   );
-};
-
-export default Hero;
+}

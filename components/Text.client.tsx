@@ -5,8 +5,6 @@ interface TextProps {
   blok: TextBlok;
 }
 
-export const Text = ({ blok }: TextProps) => {
+export default function Text({ blok }: TextProps) {
   return <p>{blok.content}</p>;
-};
-
-export default Text;
+}

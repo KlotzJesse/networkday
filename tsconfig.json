@@ -36,7 +36,9 @@
     "lib/slugify.ts",
     "pages/_middleware.js",
     "components/Page.server.js",
-    "components/DynamicComponent.server.js"
+    "components/DynamicComponent.server.js",
+    "pages/liveshow.client.jsx",
+    "components/ServerHeader.server.jsx"
   ],
   "exclude": ["node_modules"]
 }

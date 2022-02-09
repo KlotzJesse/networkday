@@ -1,6 +1,6 @@
 import Footer from "@components/Footer.server";
-import Head from "@components/Header.server";
 import SEO from "@components/SEO.client";
+import Head from "@components/ServerHeader.server";
 
 export default function Impressum() {
   return (

@@ -7,7 +7,7 @@ interface SEOProps {
   canonical: string;
 }
 
-export const SEO = (props: SEOProps) => {
+export default function SEO(props: SEOProps) {
   return (
     <NextSeo
       canonical={props.canonical}
@@ -15,6 +15,4 @@ export const SEO = (props: SEOProps) => {
       description={props.description}
     />
   );
-};
-
-export default SEO;
+}

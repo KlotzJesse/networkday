@@ -10,29 +10,30 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
-    "@headlessui/react": "^1.4.1",
+    "@fullpage/react-fullpage": "^0.1.19",
+    "@headlessui/react": "0.0.0-insiders.6fc28c6",
     "@heroicons/react": "^1.0.5",
     "@prisma/client": "^3.6.0",
     "@tailwindcss/aspect-ratio": "^0.4.0",
-    "next": "12.0.8-canary.12",
-    "next-auth": "4.0.5",
-    "next-seo": "^4.28.1",
+    "next": "12.0.10",
+    "next-auth": "4.2.1",
+    "next-seo": "^5.1.0",
     "react": "^18.0.0-rc.0",
     "react-dom": "^18.0.0-rc.0",
-    "sharp": "^0.29.3",
+    "sharp": "^0.30.0",
     "slugify": "^1.6.3",
     "swr": "^1.0.1"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.0-alpha.3",
-    "@types/node": "16.11.13",
-    "@types/react": "17.0.37",
+    "@types/node": "17.0.16",
+    "@types/react": "17.0.39",
     "autoprefixer": "^10.4.0",
-    "eslint": "8.4.1",
-    "eslint-config-next": "12.0.8-canary.6",
+    "eslint": "8.8.0",
+    "eslint-config-next": "12.0.10",
     "postcss": "^8.4.5",
     "prisma": "^3.6.0",
     "tailwindcss": "^3.0.2",
-    "typescript": "4.5.4"
+    "typescript": "4.5.5"
   }
 }

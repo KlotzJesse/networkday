@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   //swcMinify: true, : disable as long as buggy
-  reactStrictMode: true,
+  reactStrictMode: false,
   rewrites: async () => [
     {
       source: "/sitemap.xml",
@@ -14,7 +14,7 @@ module.exports = {
     reactRoot: true,
   },
   images: {
-    formats: ["image/avif", "image/webp"],
+    formats: ["image/webp"],
     domains: [
       "images.unsplash.com",
       "a.storyblok.com",

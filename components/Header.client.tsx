@@ -61,7 +61,10 @@ interface RecentPost {
   full_slug: string;
 }
 
-const Header = ({ recentPosts, topics }: HeaderProps) => {
+export default function Header({ recentPosts, topics }: HeaderProps) {
+  topics = topics ?? [];
+  recentPosts = recentPosts ?? [];
+
   return (
     <nav>
       <Popover className="relative bg-white">
@@ -130,7 +133,7 @@ const Header = ({ recentPosts, topics }: HeaderProps) => {
                           <div className="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                             {topics.map((item: Topic) => (
                               <Link
-                                key={item.name}
+                                key={item.id + "_topic"}
                                 href={"/blog/" + slug(item.name as string)}
                                 passHref
                               >
@@ -157,7 +160,10 @@ const Header = ({ recentPosts, topics }: HeaderProps) => {
                           </div>
                           <div className="px-5 py-5 space-y-6 bg-gray-50 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                             {callsToAction.map((item) => (
-                              <div key={item.name} className="flow-root">
+                              <div
+                                key={item.name + "_CTA"}
+                                className="flow-root"
+                              >
                                 <Link href={item.href} passHref>
                                   <a className="flex items-center p-3 -m-3 text-base font-medium text-gray-900 rounded-md hover:bg-gray-100">
                                     <item.icon
@@ -216,7 +222,11 @@ const Header = ({ recentPosts, topics }: HeaderProps) => {
                         <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                           <div className="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8">
                             {resources.map((item) => (
-                              <Link key={item.name} href={item.href} passHref>
+                              <Link
+                                key={item.name + "_resTw"}
+                                href={item.href}
+                                passHref
+                              >
                                 <a className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-50">
                                   <item.icon
                                     className="flex-shrink-0 w-6 h-6 text-indigo-600"
@@ -244,7 +254,7 @@ const Header = ({ recentPosts, topics }: HeaderProps) => {
                                   .slice(0, 3)
                                   .map((post: RecentPost) => (
                                     <li
-                                      key={post.name}
+                                      key={post.name + "_post"}
                                       className="text-base truncate"
                                     >
                                       <Link
@@ -339,7 +349,7 @@ const Header = ({ recentPosts, topics }: HeaderProps) => {
                   <nav className="grid gap-y-8">
                     {topics.map((item: Topic) => (
                       <Link
-                        key={item.name}
+                        key={item.name + "_topic_two"}
                         href={"/blog/" + slug(item.name as string)}
                         passHref
                       >
@@ -378,7 +388,11 @@ const Header = ({ recentPosts, topics }: HeaderProps) => {
                     </a>
                   </Link>
                   {resources.map((item) => (
-                    <Link key={item.name} href={item.href} passHref>
+                    <Link
+                      key={item.name + "_resource"}
+                      href={item.href}
+                      passHref
+                    >
                       <a className="text-base font-medium text-gray-900 hover:text-gray-700">
                         {item.name}
                       </a>
@@ -410,6 +424,4 @@ const Header = ({ recentPosts, topics }: HeaderProps) => {
       </Popover>
     </nav>
   );
-};
-
-export default Header;
+}

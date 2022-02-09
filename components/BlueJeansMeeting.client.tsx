@@ -5,7 +5,7 @@ interface BlueJeansMeetingProps {
   meetingId: number;
 }
 
-export const BlueJeansMeeting = ({ meetingId }: BlueJeansMeetingProps) => {
+export default function BlueJeansMeeting({ meetingId }: BlueJeansMeetingProps) {
   const session = useSWRImmutable("/api/session", fetcher);
   if (session.error) return session.error.message;
   if (!session.data) return "Loading";
@@ -19,6 +19,4 @@ export const BlueJeansMeeting = ({ meetingId }: BlueJeansMeetingProps) => {
       height="1080px"
     ></iframe>
   );
-};
-
-export default BlueJeansMeeting;
+}

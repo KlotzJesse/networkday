@@ -6,7 +6,7 @@ interface HeadingProps {
   blok: HeadingBlok;
 }
 
-export const Heading = ({ blok }: HeadingProps) => {
+export default function Heading({ blok }: HeadingProps) {
   return (
     <h2 id={blok.title} className="group">
       <a
@@ -30,6 +30,4 @@ export const Heading = ({ blok }: HeadingProps) => {
       {blok.title}
     </h2>
   );
-};
-
-export default Heading;
+}

@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-interface whyProps {}
+interface WhyProps {}
 
-export const why = (props: whyProps) => {
+export default function Why(props: WhyProps) {
   return (
     <div className="w-screen h-screen overflow-y-auto snap-y snap-mandatory">
       <section className="relative h-screen snap-start">
@@ -72,5 +72,4 @@ export const why = (props: whyProps) => {
       </section>
     </div>
   );
-};
-export default why;
+}

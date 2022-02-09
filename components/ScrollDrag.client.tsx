@@ -4,7 +4,7 @@ interface ScrollDragProps {
   children: ReactChildren;
 }
 
-export const ScrollDrag = (props: ScrollDragProps) => {
+export default function ScrollDrag(props: ScrollDragProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   const [isScrolling, setIsScrolling] = useState(false);
@@ -79,6 +79,4 @@ export const ScrollDrag = (props: ScrollDragProps) => {
       </div>
     </div>
   );
-};
-
-export default ScrollDrag;
+}

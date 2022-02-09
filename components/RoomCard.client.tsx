@@ -14,8 +14,7 @@ export type SpeakerWithTopic = Prisma.SpeakerGetPayload<
 interface RoomCardProps {
   speaker: SpeakerWithTopic;
 }
-
-export const RoomCard = ({ speaker }: RoomCardProps) => {
+export default function RoomCard({ speaker }: RoomCardProps) {
   return (
     <div className="w-full p-6 overflow-hidden bg-white shadow-lg max-w-1/4 rounded-xl ">
       <div className="flex flex-col items-center justify-between md:flex-row">
@@ -51,6 +50,4 @@ export const RoomCard = ({ speaker }: RoomCardProps) => {
       </Link>
     </div>
   );
-};
-
-export default RoomCard;
+}

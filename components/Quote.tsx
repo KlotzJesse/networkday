@@ -5,8 +5,6 @@ interface QuoteProps {
   blok: QuoteBlok;
 }
 
-export const Quote = ({ blok }: QuoteProps) => {
+export default function Quote({ blok }: QuoteProps) {
   return <blockquote>{blok.content}</blockquote>;
-};
-
-export default Quote;
+}
