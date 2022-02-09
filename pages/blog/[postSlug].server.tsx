@@ -11,7 +11,7 @@ import { Suspense } from "react";
 
 export default function BlogPost({ router }: { router: any }) {
   const postSlug = router.route.split("/")[2];
-  const story = useData("blogPost", () =>
+  const story = useData("blogPost_" + postSlug, () =>
     fetchData(`/api/components/blog/${postSlug}`)
   );
 
