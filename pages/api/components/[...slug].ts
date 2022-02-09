@@ -8,6 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   if(data.stories == "This record could not be found") {
     data = await (await fetch(`https://api.storyblok.com/v1/cdn/stories/?version=draft&token=wM296GLYg0BtNHBdvqcsuwtt&cv=${new Date().getTime()}&starts_with=${(slug as string[]).join("/")}`)).json();
+
     return res.status(200).json(data.stories);
   }
   

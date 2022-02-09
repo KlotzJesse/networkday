@@ -6,16 +6,17 @@ import fetchData from "@lib/fetchData";
 import readingTime from "@lib/readingTime";
 import slug from "@lib/slugify";
 import useData from "@lib/useData";
+import ErrorPage from "@pages/404";
 import Image from "next/image";
 import { Suspense } from "react";
 
 export default function BlogPost({ router }: { router: any }) {
-  const postSlug = router.route.split("/")[2];
+  const postSlug = router.query.postSlug;
   const story = useData("blogPost_" + postSlug, () =>
     fetchData(`/api/components/blog/${postSlug}`)
   );
 
-  if (!story.content) return <div>Empty blog page</div>;
+  if (!story.content) return <ErrorPage />;
 
   let text = story.content.title;
 
@@ -85,16 +86,18 @@ export default function BlogPost({ router }: { router: any }) {
               </p>
             </div>
             <div className="w-full mt-4 prose max-w-none ">
-              <div className="relative h-96">
-                <Image
-                  priority
-                  alt="Test"
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-xl"
-                  src={story.content.image.filename}
-                />
-              </div>
+              {story.content.image.filename && (
+                <div className="relative h-96">
+                  <Image
+                    priority
+                    alt="Test"
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-xl"
+                    src={story.content.image.filename}
+                  />
+                </div>
+              )}
 
               {story.content.body.map((entry: any) => {
                 if (!entry.name) {
