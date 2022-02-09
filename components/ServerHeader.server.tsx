@@ -11,7 +11,7 @@ export default function Head(props: HeaderProps) {
 
   return (
     <>
-      <Header recentPosts={[recentPosts]} topics={topics} />
+      <Header recentPosts={recentPosts} topics={topics} />
     </>
   );
 }
