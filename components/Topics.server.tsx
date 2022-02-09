@@ -34,7 +34,8 @@ export default function Topics() {
                       {item.name}
                     </h1>
                     <p className="mb-3 leading-relaxed">{item.description}</p>
-                    <div className="flex flex-wrap items-center ">
+                    <div className="flex-wrap items-center hidden">
+                      {/*FlEX*/}
                       <a
                         href={"/blog/" + slug(item.name as string)}
                         className="inline-flex items-center text-indigo-500 md:mb-2 lg:mb-0"
