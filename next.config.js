@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  swcMinify: true, //: disable as long as buggy
+  swcMinify: false, //: disable as long as buggy
   reactStrictMode: false,
   rewrites: async () => [
     {
@@ -9,7 +9,6 @@ module.exports = {
     },
   ],
   experimental: {
-    concurrentFeatures: true,
     serverComponents: true,
     reactRoot: true,
     runtime: "edge",
