@@ -34,7 +34,7 @@
     "pages/api/components/_middleware.js",
     "pages/api/auth/[...nextauth].ts",
     "lib/slugify.ts",
-    "pages/_middleware.js",
+    "pages/blog/_middleware.js",
     "components/Page.server.js",
     "components/DynamicComponent.server.js",
     "pages/liveshow.client.jsx",
