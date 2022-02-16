@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   swcMinify: false, //: disable as long as buggy
-  reactStrictMode: true,
+  reactStrictMode: false,
   rewrites: async () => [
     {
       source: "/sitemap.xml",
