@@ -1,10 +1,4 @@
-import "@styles/globals.css";
-
-export default function App({ children }) {
-  return children;
-}
-
-/*import SEO from "@lib/next-seo.config";
+import SEO from "@lib/next-seo.config";
 import "@styles/globals.css";
 import { DefaultSeo } from "next-seo";
 import type { AppProps } from "next/app";
@@ -24,4 +18,3 @@ export default function NetworkDayApp({ Component, pageProps }: AppProps) {
     </div>
   );
 }
-*/
