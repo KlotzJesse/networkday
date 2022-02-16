@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   swcMinify: false, //: disable as long as buggy
-  reactStrictMode: false,
+  reactStrictMode: true,
   rewrites: async () => [
     {
       source: "/sitemap.xml",
@@ -10,7 +10,6 @@ module.exports = {
   ],
   experimental: {
     serverComponents: true,
-    reactRoot: true,
     runtime: "edge",
   },
   images: {

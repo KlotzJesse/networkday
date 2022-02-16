@@ -4,7 +4,7 @@ import { DefaultSeo } from "next-seo";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 
-function NetworkDayApp({ Component, pageProps }: AppProps) {
+export default function NetworkDayApp({ Component, pageProps }: AppProps) {
   return (
     <div>
       <Head>
@@ -18,5 +18,3 @@ function NetworkDayApp({ Component, pageProps }: AppProps) {
     </div>
   );
 }
-
-export default NetworkDayApp;

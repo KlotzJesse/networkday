@@ -22,13 +22,15 @@ export default function Hero({ blok }: HeroProps) {
       <div className="absolute inset-x-0 bottom-0 h-1/2" />
       <div className="relative mx-auto shadow-xl max-w-7xl sm:px-6 lg:px-8 sm:rounded-2xl sm:overflow-hidden">
         <div className="absolute inset-0">
-          <Image
-            priority
-            layout="fill"
-            objectFit="cover"
-            alt="HeaderImage"
-            src={blok.BackgroundImage.filename}
-          />
+          <div className="relative w-full h-full">
+            <Image
+              priority
+              layout="fill"
+              objectFit="cover"
+              alt="HeaderImage"
+              src={blok.BackgroundImage.filename}
+            />
+          </div>
           <div
             className="absolute inset-0 bg-green-900"
             style={{ mixBlendMode: "multiply" }}
